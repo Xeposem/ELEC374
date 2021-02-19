@@ -1,0 +1,724 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Quartus\Datapath\simulation\modelsim
+Ealu
+Z1 w1613516774
+Z2 DPx4 work 14 components_all 0 22 f3nfFQ5Z2m2jl?mNG963i0
+Z3 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 dD:\Quartus\Datapath\simulation\modelsim
+Z8 8D:/Quartus/Datapath/alu.vhd
+Z9 FD:/Quartus/Datapath/alu.vhd
+l0
+L7
+Vb;a3?OcLYWd9Dn49BzAHX0
+Z10 OV;C;10.1d;51
+31
+Z11 !s108 1613763908.352000
+Z12 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/alu.vhd|
+Z13 !s107 D:/Quartus/Datapath/alu.vhd|
+Z14 o-93 -work work -O0
+Z15 tExplicit 1
+!s100 NF?U:M<;iT=O`HKjV?1jZ1
+!i10b 1
+Abehav
+R2
+R3
+R4
+R5
+R6
+DEx4 work 3 alu 0 22 b;a3?OcLYWd9Dn49BzAHX0
+l28
+L16
+V2WUjKfkHi?SaEXgZOVU<h2
+R10
+31
+R11
+R12
+R13
+R14
+R15
+!s100 n0[@46blMnokV]:JW7[Oz2
+!i10b 1
+Ealu_path
+Z16 w1613516247
+R2
+Z17 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R3
+R4
+R5
+R6
+R7
+Z18 8D:/Quartus/Datapath/ALU_path.vhd
+Z19 FD:/Quartus/Datapath/ALU_path.vhd
+l0
+L7
+V>mKC3Tl1TYoNz15:bcl=S2
+R10
+31
+Z20 !s108 1613763908.171000
+Z21 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/ALU_path.vhd|
+Z22 !s107 D:/Quartus/Datapath/ALU_path.vhd|
+R14
+R15
+!s100 IQcC6Z0n1mMzCLCTjn;`A1
+!i10b 1
+Astructure
+R2
+R17
+R3
+R4
+R5
+R6
+DEx4 work 8 alu_path 0 22 >mKC3Tl1TYoNz15:bcl=S2
+l28
+L22
+VcV:F:?hiRi?jjoX>BMJVB3
+R10
+31
+R20
+R21
+R22
+R14
+R15
+!s100 mc=oDFT55;;ci^U9=BlQo0
+!i10b 1
+Ebooth_logic
+Z23 w1612749890
+R17
+R3
+R4
+R5
+R6
+R7
+Z24 8D:/Quartus/Datapath/booth_logic.vhd
+Z25 FD:/Quartus/Datapath/booth_logic.vhd
+l0
+L6
+VQ7ez675[0VAiDeLY=@4cm1
+R10
+31
+Z26 !s108 1613763907.165000
+Z27 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/booth_logic.vhd|
+Z28 !s107 D:/Quartus/Datapath/booth_logic.vhd|
+R14
+R15
+!s100 _Oc<TASH@WL0Jl[?=RIAQ1
+!i10b 1
+Alogic
+R17
+R3
+R4
+R5
+R6
+DEx4 work 11 booth_logic 0 22 Q7ez675[0VAiDeLY=@4cm1
+l14
+L13
+V^b@ZkA<liAzOdi4k6NFz81
+R10
+31
+R26
+R27
+R28
+R14
+R15
+!s100 [TjP:_kHG97izk`CdDP8Y3
+!i10b 1
+Pcomponents_all
+R5
+R6
+w1613515968
+R7
+8D:/Quartus/Datapath/components_all.vhd
+FD:/Quartus/Datapath/components_all.vhd
+l0
+L4
+Vf3nfFQ5Z2m2jl?mNG963i0
+R10
+31
+R14
+R15
+!s100 AT`^ddFA4?iJSgc9`RZ9:2
+!i10b 1
+!s108 1613763907.499000
+!s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/components_all.vhd|
+!s107 D:/Quartus/Datapath/components_all.vhd|
+Edatapath
+Z29 w1613762882
+R2
+R3
+R4
+R5
+R6
+R7
+Z30 8D:/Quartus/Datapath/datapath.vhd
+Z31 FD:/Quartus/Datapath/datapath.vhd
+l0
+L6
+V4GP8HM3e4Lb0O_SAa>T341
+R10
+31
+Z32 !s108 1613763908.519000
+Z33 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/datapath.vhd|
+Z34 !s107 D:/Quartus/Datapath/datapath.vhd|
+R14
+R15
+!s100 EDoG5@DLSIlR:oM_fHQ5Q3
+!i10b 1
+Abehav
+R2
+R3
+R4
+R5
+R6
+DEx4 work 8 datapath 0 22 4GP8HM3e4Lb0O_SAa>T341
+l61
+L26
+V4ECMVfQ@7A[RQ0ZMGih@_2
+R10
+31
+R32
+R33
+R34
+R14
+R15
+!s100 Kldfkz[a1eQV:C>FG]PjD2
+!i10b 1
+Edatapath_and_tb
+Z35 w1613763888
+R5
+R6
+R7
+Z36 8D:/Quartus/Datapath/datapath_and_tb.vhd
+Z37 FD:/Quartus/Datapath/datapath_and_tb.vhd
+l0
+L4
+VbA=7_PX>j;E`TA`k@bP3H3
+!s100 7PZ?:UWZYSBA[<97aZ@Oi0
+R10
+31
+!i10b 1
+Z38 !s108 1613763908.705000
+Z39 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/datapath_and_tb.vhd|
+Z40 !s107 D:/Quartus/Datapath/datapath_and_tb.vhd|
+R14
+R15
+Alogic
+R5
+R6
+DEx4 work 15 datapath_and_tb 0 22 bA=7_PX>j;E`TA`k@bP3H3
+l48
+L7
+VN9]0e4h]aX[8J;oYT4CfS1
+!s100 4m3CfM_K^An7=M2b09TJ20
+R10
+31
+!i10b 1
+R38
+R39
+R40
+R14
+R15
+Eencoder32to5
+Z41 w1612815575
+R3
+R4
+R5
+R6
+R7
+Z42 8D:/Quartus/Datapath/encoder32to5.vhd
+Z43 FD:/Quartus/Datapath/encoder32to5.vhd
+l0
+L5
+Vf]@d?>Kj@KVXIKzE[]6_l1
+R10
+31
+Z44 !s108 1613763907.056000
+Z45 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/encoder32to5.vhd|
+Z46 !s107 D:/Quartus/Datapath/encoder32to5.vhd|
+R14
+R15
+!s100 3zKJ?>W>Q1`o?z@5mMj8X1
+!i10b 1
+Abehav
+R3
+R4
+R5
+R6
+DEx4 work 12 encoder32to5 0 22 f]@d?>Kj@KVXIKzE[]6_l1
+l12
+L11
+VdiVgJFJoLCh<bdznf6L=F0
+R10
+31
+R44
+R45
+R46
+R14
+R15
+!s100 U0WXHS8m;8eV=1GaR<Dkl0
+!i10b 1
+Elpm_add_sua
+Z47 w1613516406
+R5
+R6
+R7
+Z48 8D:/Quartus/Datapath/lpm_add_sua.vhd
+Z49 FD:/Quartus/Datapath/lpm_add_sua.vhd
+l0
+L42
+Vkk6;Q]m@CaLEb93n6gCbb1
+R10
+31
+Z50 !s108 1613763906.742000
+Z51 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/lpm_add_sua.vhd|
+Z52 !s107 D:/Quartus/Datapath/lpm_add_sua.vhd|
+R14
+R15
+!s100 M2>nDj5WNLgP?[XUB2VLL2
+!i10b 1
+Asyn
+R5
+R6
+DEx4 work 11 lpm_add_sua 0 22 kk6;Q]m@CaLEb93n6gCbb1
+l78
+L54
+VBi@>4c73HY`ezRR2dT`@70
+R10
+31
+R50
+R51
+R52
+R14
+R15
+!s100 Sa0chUFWT:7aiXcBEUV<00
+!i10b 1
+Elpm_divida
+Z53 w1612819587
+R5
+R6
+R7
+Z54 8D:/Quartus/Datapath/lpm_divida.vhd
+Z55 FD:/Quartus/Datapath/lpm_divida.vhd
+l0
+L42
+V7V6]i4TM2hFMSS_5^6JNE1
+R10
+31
+Z56 !s108 1613763906.489000
+Z57 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/lpm_divida.vhd|
+Z58 !s107 D:/Quartus/Datapath/lpm_divida.vhd|
+R14
+R15
+!s100 ]^emcJL?EEHUK^SLM9U>S3
+!i10b 1
+Asyn
+R5
+R6
+DEx4 work 10 lpm_divida 0 22 7V6]i4TM2hFMSS_5^6JNE1
+l77
+L53
+V?8@9`SIA[X1NdTaa23D5]1
+R10
+31
+R56
+R57
+R58
+R14
+R15
+!s100 34]=2ZSTAH0nH=<DJ_kE50
+!i10b 1
+Elpm_mua
+Z59 w1612818177
+Z60 DPx3 lpm 14 lpm_components 0 22 aHRA3clF>2DcWDhgFTAbM3
+R5
+R6
+R7
+Z61 8D:/Quartus/Datapath/lpm_mua.vhd
+Z62 FD:/Quartus/Datapath/lpm_mua.vhd
+l0
+L42
+V??5WR3X^zZ?]ZaoR_^;I32
+R10
+31
+Z63 !s108 1613763906.591000
+Z64 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/lpm_mua.vhd|
+Z65 !s107 D:/Quartus/Datapath/lpm_mua.vhd|
+R14
+R15
+!s100 J<4EY4GnR8RL3EkV=Id1>2
+!i10b 1
+Asyn
+R60
+R5
+R6
+DEx4 work 7 lpm_mua 0 22 ??5WR3X^zZ?]ZaoR_^;I32
+l122
+L83
+V1kNU>1m2Gek]7U0=T3C7Q1
+R10
+31
+R63
+R64
+R65
+R14
+R15
+!s100 T16n8[j2YWDgUd36S[Cek3
+!i10b 1
+Emdr
+Z66 w1612816956
+R2
+R3
+R4
+R5
+R6
+R7
+Z67 8D:/Quartus/Datapath/MDR.vhd
+Z68 FD:/Quartus/Datapath/MDR.vhd
+l0
+L6
+VgGM`bbAGgCln]O9zXDVo@2
+R10
+31
+Z69 !s108 1613763907.925000
+Z70 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/MDR.vhd|
+Z71 !s107 D:/Quartus/Datapath/MDR.vhd|
+R14
+R15
+!s100 ;^[iQ_VGB4XY5joAEnVSm1
+!i10b 1
+Abehav
+R2
+R3
+R4
+R5
+R6
+DEx4 work 3 mdr 0 22 gGM`bbAGgCln]O9zXDVo@2
+l19
+L17
+VXQghd81e=]EH3SbPilL1N1
+R10
+31
+R69
+R70
+R71
+R14
+R15
+!s100 :<hhH_f2jjC85^gO9NamO1
+!i10b 1
+Enegate32
+Z72 w1613515223
+R17
+R3
+R4
+R5
+R6
+R7
+Z73 8D:/Quartus/Datapath/negate32.vhd
+Z74 FD:/Quartus/Datapath/negate32.vhd
+l0
+L6
+V;5;m0O[c^akhWNVnM8gi>0
+R10
+31
+Z75 !s108 1613763907.589000
+Z76 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/negate32.vhd|
+Z77 !s107 D:/Quartus/Datapath/negate32.vhd|
+R14
+R15
+!s100 gLlH5`V?eeOL]__Kb1TG:2
+!i10b 1
+Alogic
+R17
+R3
+R4
+R5
+R6
+DEx4 work 8 negate32 0 22 ;5;m0O[c^akhWNVnM8gi>0
+l14
+L13
+VJIUbgC:A^;eP8khkOmQK@1
+R10
+31
+R75
+R76
+R77
+R14
+R15
+!s100 =V2a@Ei7bX;W4:S=<V5;J2
+!i10b 1
+Eregister32bit
+Z78 w1612809255
+R4
+R3
+R5
+R6
+R7
+Z79 8D:/Quartus/Datapath/register32bit.vhd
+Z80 FD:/Quartus/Datapath/register32bit.vhd
+l0
+L6
+VHGjjeZZ3`PH77W]2mUW362
+R10
+31
+Z81 !s108 1613763906.848000
+Z82 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/register32bit.vhd|
+Z83 !s107 D:/Quartus/Datapath/register32bit.vhd|
+R14
+R15
+!s100 3MP5VCIkh0O:5]HPn4zbF1
+!i10b 1
+Abehav
+R4
+R3
+R5
+R6
+DEx4 work 13 register32bit 0 22 HGjjeZZ3`PH77W]2mUW362
+l17
+L16
+Vf[zzP`bchFDb3m@8olKbF0
+R10
+31
+R81
+R82
+R83
+R14
+R15
+!s100 SH9Kend@7[:nU44<SUIMA0
+!i10b 1
+Eregister64bit
+Z84 w1612818393
+R4
+R3
+R5
+R6
+R7
+Z85 8D:/Quartus/Datapath/register64bit.vhd
+Z86 FD:/Quartus/Datapath/register64bit.vhd
+l0
+L6
+VVzWE11Jh<_lRnJQL=9?b73
+R10
+31
+Z87 !s108 1613763906.951000
+Z88 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/register64bit.vhd|
+Z89 !s107 D:/Quartus/Datapath/register64bit.vhd|
+R14
+R15
+!s100 KKkTl[PYbWcNZ0Ba;^aRI1
+!i10b 1
+Abehav
+R4
+R3
+R5
+R6
+DEx4 work 13 register64bit 0 22 VzWE11Jh<_lRnJQL=9?b73
+l19
+L18
+V7D5^Of3YE5oj1CX`:MiGO2
+R10
+31
+R87
+R88
+R89
+R14
+R15
+!s100 Tm1@jFPEU`F1JNgL2z4>81
+!i10b 1
+Erol32
+Z90 w1612756027
+R5
+R6
+R7
+Z91 8D:/Quartus/Datapath/rol32.vhd
+Z92 FD:/Quartus/Datapath/rol32.vhd
+l0
+L7
+VY@Id@FDd:D_R@@o5LSY^c3
+R10
+31
+Z93 !s108 1613763907.276000
+Z94 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/rol32.vhd|
+Z95 !s107 D:/Quartus/Datapath/rol32.vhd|
+R14
+R15
+!s100 Eh<EFXXnb;BA7VH<5QA@B0
+!i10b 1
+Asyn
+R5
+R6
+DEx4 work 5 rol32 0 22 Y@Id@FDd:D_R@@o5LSY^c3
+l39
+L17
+VF03Yg4LBI:FI[e3zTclc62
+R10
+31
+R93
+R94
+R95
+R14
+R15
+!s100 EGDS1^zUnQ^]6TBf]8jOD1
+!i10b 1
+Eror32
+Z96 w1612756140
+R5
+R6
+R7
+Z97 8D:/Quartus/Datapath/ror32.vhd
+Z98 FD:/Quartus/Datapath/ror32.vhd
+l0
+L7
+Vnok2KGPn:b7A:IzmEJabk0
+R10
+31
+Z99 !s108 1613763907.377000
+Z100 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/ror32.vhd|
+Z101 !s107 D:/Quartus/Datapath/ror32.vhd|
+R14
+R15
+!s100 <Em2YLebkE?P>Q:A;>B>93
+!i10b 1
+Asyn
+R5
+R6
+DEx4 work 5 ror32 0 22 nok2KGPn:b7A:IzmEJabk0
+l39
+L17
+VShfVz7f;@hcRc2Rz0NIQD0
+R10
+31
+R99
+R100
+R101
+R14
+R15
+!s100 k?3mFA9_Z:lQ6]bI0FX[01
+!i10b 1
+Eshl32
+Z102 w1613515205
+R17
+R3
+R4
+R5
+R6
+R7
+Z103 8D:/Quartus/Datapath/shl32.vhd
+Z104 FD:/Quartus/Datapath/shl32.vhd
+l0
+L6
+VKEUKUQ7kHQi??B[@]W_`l1
+R10
+31
+Z105 !s108 1613763907.698000
+Z106 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/shl32.vhd|
+Z107 !s107 D:/Quartus/Datapath/shl32.vhd|
+R14
+R15
+!s100 JD746f87K51[<EQ261;Sa1
+!i10b 1
+Alogic
+R17
+R3
+R4
+R5
+R6
+DEx4 work 5 shl32 0 22 KEUKUQ7kHQi??B[@]W_`l1
+l14
+L13
+VNm;kGlGX3CblRj6067:dG3
+R10
+31
+R105
+R106
+R107
+R14
+R15
+!s100 Bj]^@DCQj2iShG6;VFVmg0
+!i10b 1
+Eshr32
+Z108 w1613515212
+R17
+R3
+R4
+R5
+R6
+R7
+Z109 8D:/Quartus/Datapath/shr32.vhd
+Z110 FD:/Quartus/Datapath/shr32.vhd
+l0
+L6
+VBEiKU@FjNn>o1:fGB7=7N2
+R10
+31
+Z111 !s108 1613763907.809000
+Z112 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/shr32.vhd|
+Z113 !s107 D:/Quartus/Datapath/shr32.vhd|
+R14
+R15
+!s100 UoKh9=E_ROMg^Mi_j^nNS3
+!i10b 1
+Alogic
+R17
+R3
+R4
+R5
+R6
+DEx4 work 5 shr32 0 22 BEiKU@FjNn>o1:fGB7=7N2
+l14
+L13
+VYMR<Wh;WJ6Glzla9UdW>@3
+R10
+31
+R111
+R112
+R113
+R14
+R15
+!s100 ?n8bb2J[c:Y<P6g]d0^EH0
+!i10b 1
+Ethe_bus
+Z114 w1612819480
+R2
+R3
+R4
+R5
+R6
+R7
+Z115 8D:/Quartus/Datapath/the_bus.vhd
+Z116 FD:/Quartus/Datapath/the_bus.vhd
+l0
+L6
+Vj@bjnedXn[`Z5kJcA40MD3
+R10
+31
+Z117 !s108 1613763908.033000
+Z118 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/Datapath/the_bus.vhd|
+Z119 !s107 D:/Quartus/Datapath/the_bus.vhd|
+R14
+R15
+!s100 FNdkH`[8L1TZA4lS_4YJ;2
+!i10b 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+DEx4 work 7 the_bus 0 22 j@bjnedXn[`Z5kJcA40MD3
+l47
+L44
+Vig9K=M6VgJQi1oNS5WAm13
+R10
+31
+R117
+R118
+R119
+R14
+R15
+!s100 93_bNjX@1Z[m5`b9QRz2o0
+!i10b 1

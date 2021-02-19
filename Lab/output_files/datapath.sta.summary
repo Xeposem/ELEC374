@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -124.617
+TNS   : -15035.446
+
+Type  : Slow 1200mV 85C Model Setup 'encoderin[0]'
+Slack : -106.893
+TNS   : -4817.489
+
+Type  : Slow 1200mV 85C Model Hold 'encoderin[0]'
+Slack : -20.066
+TNS   : -985.080
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 1.080
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'encoderin[0]'
+Slack : -17.169
+TNS   : -33025.498
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -771.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -111.294
+TNS   : -13495.058
+
+Type  : Slow 1200mV 0C Model Setup 'encoderin[0]'
+Slack : -96.517
+TNS   : -4339.011
+
+Type  : Slow 1200mV 0C Model Hold 'encoderin[0]'
+Slack : -17.756
+TNS   : -869.335
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.989
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'encoderin[0]'
+Slack : -15.081
+TNS   : -29333.358
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -771.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -71.320
+TNS   : -8698.920
+
+Type  : Fast 1200mV 0C Model Setup 'encoderin[0]'
+Slack : -62.452
+TNS   : -2804.812
+
+Type  : Fast 1200mV 0C Model Hold 'encoderin[0]'
+Slack : -11.865
+TNS   : -583.308
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.479
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'encoderin[0]'
+Slack : -10.242
+TNS   : -16533.717
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -775.295
+
+------------------------------------------------------------

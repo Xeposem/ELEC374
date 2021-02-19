@@ -1,0 +1,13 @@
+
+
+D:/Quartus/Datapath/lpm_add_sub.vhd
+
+Feb 08 03PM:58:53>: Variation file name (lpm_add_sub) is identical with the name of one of its sub-components.
+
+MegaWizard Plug-In Manager will rename the variation to "lpm_add_sua" to prevent compilation errors
+
+D:/Quartus/Datapath/lpm_mux.vhd
+
+Feb 08 04PM:02:57>: Variation file name (lpm_mux) is identical with the name of one of its sub-components.
+
+MegaWizard Plug-In Manager will rename the variation to "lpm_mua" to prevent compilation errors

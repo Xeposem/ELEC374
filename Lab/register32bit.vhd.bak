@@ -1,0 +1,28 @@
+Library ieee;
+Use ieee.std_logic_1164.ALL;
+Use ieee.std_logic_arith.ALL;
+Use ieee.std_logic_unsigned.ALL;
+
+entity register32bit is Port(
+D : in std_logic_vector (31 downto 0);
+ld : in std_logic; 
+clr : in std_logic;
+clk : in std_logic;
+Q: out std_logic_vector (31 downto 0)); 
+
+end entity register32bit;
+
+
+architecture behav of register32bit is 
+begin
+	process(clk, clr)
+		begin
+			if clr = '1' then 
+				Q<= (others=>'0');
+			elsif rising_edge(clk) then
+            if ld = '1' then
+                Q <= D;
+            end if;
+        end if;
+    end process;
+end behav;

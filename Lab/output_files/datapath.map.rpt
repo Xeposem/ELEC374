@@ -1,0 +1,795 @@
+Analysis & Elaboration report for datapath
+Fri Feb 19 16:17:18 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration IP Cores Summary
+  5. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component
+  6. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component
+  7. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component
+  8. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component
+  9. Parameter Settings for User Entity Instance: the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component
+ 10. Analysis & Elaboration Settings
+ 11. Port Connectivity Checks: "the_bus:datapathBus"
+ 12. Port Connectivity Checks: "register32bit:outport_register"
+ 13. Port Connectivity Checks: "register32bit:inport_register"
+ 14. Port Connectivity Checks: "ALU_path:alu_datapath"
+ 15. Port Connectivity Checks: "register32bit:MAR"
+ 16. Port Connectivity Checks: "MDR:MD_R"
+ 17. Port Connectivity Checks: "register32bit:IR"
+ 18. Port Connectivity Checks: "register32bit:PC"
+ 19. Port Connectivity Checks: "register32bit:LO"
+ 20. Port Connectivity Checks: "register32bit:HI"
+ 21. Port Connectivity Checks: "register32bit:R15"
+ 22. Port Connectivity Checks: "register32bit:R14"
+ 23. Port Connectivity Checks: "register32bit:R13"
+ 24. Port Connectivity Checks: "register32bit:R12"
+ 25. Port Connectivity Checks: "register32bit:R11"
+ 26. Port Connectivity Checks: "register32bit:R10"
+ 27. Port Connectivity Checks: "register32bit:R9"
+ 28. Port Connectivity Checks: "register32bit:R8"
+ 29. Port Connectivity Checks: "register32bit:R7"
+ 30. Port Connectivity Checks: "register32bit:R6"
+ 31. Port Connectivity Checks: "register32bit:R5"
+ 32. Port Connectivity Checks: "register32bit:R4"
+ 33. Port Connectivity Checks: "register32bit:R3"
+ 34. Port Connectivity Checks: "register32bit:R2"
+ 35. Port Connectivity Checks: "register32bit:R1"
+ 36. Port Connectivity Checks: "register32bit:R0"
+ 37. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                       ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Elaboration Status      ; Successful - Fri Feb 19 16:17:18 2021           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; datapath                                        ;
+; Top-level Entity Name              ; datapath                                        ;
+; Family                             ; Cyclone III                                     ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
++------------------------------------+-------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration IP Cores Summary                                                                                                                                 ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+-------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                   ; IP Include File                     ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+-------------------------------------+
+; Altera ; LPM_ADD_SUB  ; N/A     ; N/A          ; N/A          ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub ; D:/Quartus/Datapath/lpm_add_sua.vhd ;
+; Altera ; LPM_DIVIDE   ; N/A     ; N/A          ; N/A          ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv     ; D:/Quartus/Datapath/lpm_divida.vhd  ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux                     ; D:/Quartus/Datapath/lpm_mua.vhd     ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                   ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Signed Integer                                                                         ;
+; LPM_WIDTHD             ; 32             ; Signed Integer                                                                         ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                ;
+; CBXI_PARAMETER         ; lpm_divide_hjp ; Untyped                                                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                         ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component ;
++------------------------+-------------+-------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                            ;
++------------------------+-------------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 32          ; Signed Integer                                                                                  ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                         ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                         ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                         ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                                         ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                         ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                         ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                         ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                         ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                              ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                                                         ;
+; USE_WYS                ; OFF         ; Untyped                                                                                         ;
+; STYLE                  ; FAST        ; Untyped                                                                                         ;
+; CBXI_PARAMETER         ; add_sub_ich ; Untyped                                                                                         ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                  ;
++------------------------+-------------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+; Parameter Name ; Value           ; Type                                                                                       ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+; LPM_PIPELINE   ; 0               ; Untyped                                                                                    ;
+; LPM_SHIFTTYPE  ; ROTATE          ; Untyped                                                                                    ;
+; LPM_WIDTH      ; 32              ; Signed Integer                                                                             ;
+; LPM_WIDTHDIST  ; 5               ; Signed Integer                                                                             ;
+; CBXI_PARAMETER ; lpm_clshift_jhc ; Untyped                                                                                    ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+; Parameter Name ; Value           ; Type                                                                                       ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+; LPM_PIPELINE   ; 0               ; Untyped                                                                                    ;
+; LPM_SHIFTTYPE  ; ROTATE          ; Untyped                                                                                    ;
+; LPM_WIDTH      ; 32              ; Signed Integer                                                                             ;
+; LPM_WIDTHDIST  ; 5               ; Signed Integer                                                                             ;
+; CBXI_PARAMETER ; lpm_clshift_iib ; Untyped                                                                                    ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+---------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                ;
++------------------------+-------------+---------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                        ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                      ;
+; LPM_WIDTH              ; 32          ; Signed Integer                                                      ;
+; LPM_SIZE               ; 32          ; Signed Integer                                                      ;
+; LPM_WIDTHS             ; 5           ; Signed Integer                                                      ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                      ;
+; CBXI_PARAMETER         ; mux_k9e     ; Untyped                                                             ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                             ;
++------------------------+-------------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; datapath           ; datapath           ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "the_bus:datapathBus" ;
++---------+-------+----------+--------------------+
+; Port    ; Type  ; Severity ; Details            ;
++---------+-------+----------+--------------------+
+; muxin24 ; Input ; Info     ; Stuck at GND       ;
+; muxin25 ; Input ; Info     ; Stuck at GND       ;
+; muxin26 ; Input ; Info     ; Stuck at GND       ;
+; muxin27 ; Input ; Info     ; Stuck at GND       ;
+; muxin28 ; Input ; Info     ; Stuck at GND       ;
+; muxin29 ; Input ; Info     ; Stuck at GND       ;
+; muxin30 ; Input ; Info     ; Stuck at GND       ;
+; muxin31 ; Input ; Info     ; Stuck at GND       ;
++---------+-------+----------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register32bit:outport_register"                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; clr  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "register32bit:inport_register" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; clr  ; Input ; Info     ; Stuck at VCC                    ;
++------+-------+----------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_path:alu_datapath"                                                                  ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; clr      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register32bit:MAR"                                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; clr  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "MDR:MD_R"   ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; clr  ; Input ; Info     ; Stuck at VCC ;
++------+-------+----------+--------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:IR" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:PC" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:LO" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:HI" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R15" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; clr  ; Input ; Info     ; Stuck at VCC        ;
++------+-------+----------+---------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R14" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; clr  ; Input ; Info     ; Stuck at VCC        ;
++------+-------+----------+---------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R13" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; clr  ; Input ; Info     ; Stuck at VCC        ;
++------+-------+----------+---------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R12" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; clr  ; Input ; Info     ; Stuck at VCC        ;
++------+-------+----------+---------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R11" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; clr  ; Input ; Info     ; Stuck at VCC        ;
++------+-------+----------+---------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R10" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; clr  ; Input ; Info     ; Stuck at VCC        ;
++------+-------+----------+---------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R9" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R8" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R7" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R6" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R5" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R4" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R3" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R2" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R1" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register32bit:R0" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; clr  ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Elaboration
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Feb 19 16:17:14 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datapath -c datapath --analysis_and_elaboration
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_divida.vhd
+    Info (12022): Found design unit 1: lpm_divida-SYN
+    Info (12023): Found entity 1: lpm_divida
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_mua.vhd
+    Info (12022): Found design unit 1: lpm_mua-SYN
+    Info (12023): Found entity 1: lpm_mua
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_add_sua.vhd
+    Info (12022): Found design unit 1: lpm_add_sua-SYN
+    Info (12023): Found entity 1: lpm_add_sua
+Info (12021): Found 2 design units, including 1 entities, in source file register32bit.vhd
+    Info (12022): Found design unit 1: register32bit-behav
+    Info (12023): Found entity 1: register32bit
+Info (12021): Found 2 design units, including 1 entities, in source file register64bit.vhd
+    Info (12022): Found design unit 1: register64bit-behav
+    Info (12023): Found entity 1: register64bit
+Info (12021): Found 2 design units, including 1 entities, in source file mdr.vhd
+    Info (12022): Found design unit 1: MDR-behav
+    Info (12023): Found entity 1: MDR
+Info (12021): Found 2 design units, including 1 entities, in source file encoder32to5.vhd
+    Info (12022): Found design unit 1: encoder32to5-behav
+    Info (12023): Found entity 1: encoder32to5
+Info (12021): Found 2 design units, including 1 entities, in source file the_bus.vhd
+    Info (12022): Found design unit 1: the_bus-structure
+    Info (12023): Found entity 1: the_bus
+Info (12021): Found 2 design units, including 1 entities, in source file booth_logic.vhd
+    Info (12022): Found design unit 1: booth_logic-logic
+    Info (12023): Found entity 1: booth_logic
+Info (12021): Found 2 design units, including 1 entities, in source file alu_path.vhd
+    Info (12022): Found design unit 1: ALU_path-structure
+    Info (12023): Found entity 1: ALU_path
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: alu-behav
+    Info (12023): Found entity 1: alu
+Info (12021): Found 2 design units, including 1 entities, in source file rol32.vhd
+    Info (12022): Found design unit 1: rol32-SYN
+    Info (12023): Found entity 1: rol32
+Info (12021): Found 2 design units, including 1 entities, in source file ror32.vhd
+    Info (12022): Found design unit 1: ror32-SYN
+    Info (12023): Found entity 1: ror32
+Info (12021): Found 1 design units, including 0 entities, in source file components_all.vhd
+    Info (12022): Found design unit 1: components_all
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: datapath-behav
+    Info (12023): Found entity 1: datapath
+Info (12021): Found 2 design units, including 1 entities, in source file negate32.vhd
+    Info (12022): Found design unit 1: negate32-logic
+    Info (12023): Found entity 1: negate32
+Info (12021): Found 2 design units, including 1 entities, in source file shl32.vhd
+    Info (12022): Found design unit 1: shl32-logic
+    Info (12023): Found entity 1: shl32
+Info (12021): Found 2 design units, including 1 entities, in source file shr32.vhd
+    Info (12022): Found design unit 1: shr32-logic
+    Info (12023): Found entity 1: shr32
+Info (12021): Found 2 design units, including 1 entities, in source file datapath_and_tb.vhd
+    Info (12022): Found design unit 1: datapath_and_tb-logic
+    Info (12023): Found entity 1: datapath_and_tb
+Info (12021): Found 2 design units, including 1 entities, in source file datapath_or_tb.vhd
+    Info (12022): Found design unit 1: datapath_or_tb-logic
+    Info (12023): Found entity 1: datapath_or_tb
+Info (12021): Found 2 design units, including 1 entities, in source file datapath_add_tb.vhd
+    Info (12022): Found design unit 1: datapath_add_tb-logic
+    Info (12023): Found entity 1: datapath_add_tb
+Info (12021): Found 2 design units, including 1 entities, in source file datapath_sub_tb.vhd
+    Info (12022): Found design unit 1: datapath_sub_tb-logic
+    Info (12023): Found entity 1: datapath_sub_tb
+Info (12021): Found 2 design units, including 1 entities, in source file datapath_mul_tb.vhd
+    Info (12022): Found design unit 1: datapath_mul_tb-logic
+    Info (12023): Found entity 1: datapath_mul_tb
+Info (12021): Found 2 design units, including 1 entities, in source file datapath_div_tb.vhd
+    Info (12022): Found design unit 1: datapath_div_tb-logic
+    Info (12023): Found entity 1: datapath_div_tb
+Info (12021): Found 2 design units, including 1 entities, in source file datapath_shr_tb.vhd
+    Info (12022): Found design unit 1: datapath_shr_tb-logic
+    Info (12023): Found entity 1: datapath_shr_tb
+Info (12021): Found 2 design units, including 1 entities, in source file datapath_shl_tb.vhd
+    Info (12022): Found design unit 1: datapath_shl_tb-logic
+    Info (12023): Found entity 1: datapath_shl_tb
+Info (12021): Found 2 design units, including 1 entities, in source file datapath_ror_tb.vhd
+    Info (12022): Found design unit 1: datapath_ror_tb-logic
+    Info (12023): Found entity 1: datapath_ror_tb
+Info (12021): Found 2 design units, including 1 entities, in source file datapath_rol_tb.vhd
+    Info (12022): Found design unit 1: datapath_rol_tb-logic
+    Info (12023): Found entity 1: datapath_rol_tb
+Info (12021): Found 2 design units, including 1 entities, in source file datapath_neg_tb.vhd
+    Info (12022): Found design unit 1: datapath_neg_tb-logic
+    Info (12023): Found entity 1: datapath_neg_tb
+Info (12021): Found 2 design units, including 1 entities, in source file datapath_not_tb.vhd
+    Info (12022): Found design unit 1: datapath_not_tb-logic
+    Info (12023): Found entity 1: datapath_not_tb
+Info (12127): Elaborating entity "datapath" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(28): used implicit default value for signal "in_port" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(28): object "out_port" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(52): used implicit default value for signal "C_sign_extended" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(56): object "overflow" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(57): object "MARout" assigned a value but never read
+Info (12128): Elaborating entity "register32bit" for hierarchy "register32bit:R0"
+Info (12128): Elaborating entity "MDR" for hierarchy "MDR:MD_R"
+Info (12128): Elaborating entity "ALU_path" for hierarchy "ALU_path:alu_datapath"
+Info (12128): Elaborating entity "alu" for hierarchy "ALU_path:alu_datapath|alu:the_alu"
+Info (12128): Elaborating entity "booth_logic" for hierarchy "ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul"
+Info (10041): Inferred latch for "sum[31]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[32]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[33]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[34]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[35]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[36]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[37]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[38]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[39]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[40]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[41]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[42]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[43]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[44]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[45]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[46]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[47]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[48]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[49]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[50]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[51]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[52]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[53]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[54]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[55]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[56]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[57]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[58]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[59]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[60]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[61]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[62]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[63]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[30]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[29]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[28]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[27]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[26]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[25]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[24]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[23]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[22]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[21]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[20]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[19]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[18]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[17]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[16]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[15]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[14]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[13]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[12]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[11]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[10]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[9]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[8]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[7]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[6]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[5]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[4]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[3]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[2]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[1]" at booth_logic.vhd(24)
+Info (10041): Inferred latch for "sum[0]" at booth_logic.vhd(24)
+Info (12128): Elaborating entity "lpm_divida" for hierarchy "ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv"
+Info (12128): Elaborating entity "lpm_divide" for hierarchy "ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component"
+Info (12130): Elaborated megafunction instantiation "ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component"
+Info (12133): Instantiated megafunction "ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component" with the following parameter:
+    Info (12134): Parameter "lpm_drepresentation" = "SIGNED"
+    Info (12134): Parameter "lpm_hint" = "LPM_REMAINDERPOSITIVE=TRUE"
+    Info (12134): Parameter "lpm_nrepresentation" = "SIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_DIVIDE"
+    Info (12134): Parameter "lpm_widthd" = "32"
+    Info (12134): Parameter "lpm_widthn" = "32"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hjp.tdf
+    Info (12023): Found entity 1: lpm_divide_hjp
+Info (12128): Elaborating entity "lpm_divide_hjp" for hierarchy "ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_39h.tdf
+    Info (12023): Found entity 1: sign_div_unsign_39h
+Info (12128): Elaborating entity "sign_div_unsign_39h" for hierarchy "ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated|sign_div_unsign_39h:divider"
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_t8f.tdf
+    Info (12023): Found entity 1: alt_u_div_t8f
+Info (12128): Elaborating entity "alt_u_div_t8f" for hierarchy "ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated|sign_div_unsign_39h:divider|alt_u_div_t8f:divider"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_unc.tdf
+    Info (12023): Found entity 1: add_sub_unc
+Info (12128): Elaborating entity "add_sub_unc" for hierarchy "ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated|sign_div_unsign_39h:divider|alt_u_div_t8f:divider|add_sub_unc:add_sub_0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_vnc.tdf
+    Info (12023): Found entity 1: add_sub_vnc
+Info (12128): Elaborating entity "add_sub_vnc" for hierarchy "ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated|sign_div_unsign_39h:divider|alt_u_div_t8f:divider|add_sub_vnc:add_sub_1"
+Info (12128): Elaborating entity "lpm_add_sua" for hierarchy "ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component"
+Info (12130): Elaborated megafunction instantiation "ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component"
+Info (12133): Instantiated megafunction "ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "UNUSED"
+    Info (12134): Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_ADD_SUB"
+    Info (12134): Parameter "lpm_width" = "32"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ich.tdf
+    Info (12023): Found entity 1: add_sub_ich
+Info (12128): Elaborating entity "add_sub_ich" for hierarchy "ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component|add_sub_ich:auto_generated"
+Info (12128): Elaborating entity "ror32" for hierarchy "ALU_path:alu_datapath|alu:the_alu|ror32:aluRor"
+Info (12128): Elaborating entity "lpm_clshift" for hierarchy "ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component"
+Info (12130): Elaborated megafunction instantiation "ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component"
+Info (12133): Instantiated megafunction "ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component" with the following parameter:
+    Info (12134): Parameter "lpm_shifttype" = "ROTATE"
+    Info (12134): Parameter "lpm_type" = "LPM_CLSHIFT"
+    Info (12134): Parameter "lpm_width" = "32"
+    Info (12134): Parameter "lpm_widthdist" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_clshift_jhc.tdf
+    Info (12023): Found entity 1: lpm_clshift_jhc
+Info (12128): Elaborating entity "lpm_clshift_jhc" for hierarchy "ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component|lpm_clshift_jhc:auto_generated"
+Info (12128): Elaborating entity "rol32" for hierarchy "ALU_path:alu_datapath|alu:the_alu|rol32:aluRol"
+Info (12128): Elaborating entity "lpm_clshift" for hierarchy "ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component"
+Info (12130): Elaborated megafunction instantiation "ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component"
+Info (12133): Instantiated megafunction "ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component" with the following parameter:
+    Info (12134): Parameter "lpm_shifttype" = "ROTATE"
+    Info (12134): Parameter "lpm_type" = "LPM_CLSHIFT"
+    Info (12134): Parameter "lpm_width" = "32"
+    Info (12134): Parameter "lpm_widthdist" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_clshift_iib.tdf
+    Info (12023): Found entity 1: lpm_clshift_iib
+Info (12128): Elaborating entity "lpm_clshift_iib" for hierarchy "ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component|lpm_clshift_iib:auto_generated"
+Info (12128): Elaborating entity "shl32" for hierarchy "ALU_path:alu_datapath|alu:the_alu|shl32:aluShl"
+Info (12128): Elaborating entity "shr32" for hierarchy "ALU_path:alu_datapath|alu:the_alu|shr32:aluShr"
+Info (12128): Elaborating entity "negate32" for hierarchy "ALU_path:alu_datapath|alu:the_alu|negate32:aluNeg"
+Info (12128): Elaborating entity "register64bit" for hierarchy "ALU_path:alu_datapath|register64bit:register_Z"
+Info (12128): Elaborating entity "the_bus" for hierarchy "the_bus:datapathBus"
+Info (12128): Elaborating entity "encoder32to5" for hierarchy "the_bus:datapathBus|encoder32to5:Bus_encoder"
+Info (12128): Elaborating entity "lpm_mua" for hierarchy "the_bus:datapathBus|lpm_mua:Bus_Mux"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+    Info (12134): Parameter "LPM_SIZE" = "32"
+    Info (12134): Parameter "LPM_WIDTHS" = "5"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_k9e.tdf
+    Info (12023): Found entity 1: mux_k9e
+Info (12128): Elaborating entity "mux_k9e" for hierarchy "the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component|mux_k9e:auto_generated"
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4698 megabytes
+    Info: Processing ended: Fri Feb 19 16:17:18 2021
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+
