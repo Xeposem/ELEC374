@@ -206,6 +206,29 @@ component shl32 is port(
 );
 end component shl32;
 ----------------------------------------------------
-TYPE State IS (reset_state0, reset_state1, fetch0, fetch1, fetch2, fetch3, add3, add4, add5, sub3, sub4, sub5, mul3, mul4, mul5, mul6, and3, and4, and5, or3, or4, or5, div3, div4, div5, div6, andi3, andi4, andi5, ori3, ori4, ori5, branch3, branch4, jr3, jal3, jal4, in3, mfhi3, mflo3, shr3, shr4, shr5, shl3, shl4, shl5, ror3, ror4, ror5, rol3, rol4, rol5, neg3, neg4, not3, not4, ld3, ld4, ld5, ld6, ld7, ldi3, ldi4, ldi5, ldr2, ldr3, ldr4, ldr5, ldr6, addi3, addi4, addi5, out3, st3, st4, st5, st6, str3, str4, str5, str6, nop, halt);
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+component R0 is port(
+	input: in std_logic_vector (31 downto 0);
+	R0in: in std_logic;
+	clr: in std_logic;
+	clk: in std_logic;
+	BAout: in std_logic;
+	output : out std_logic_vector (31 downto 0);
+);
+end component R0;
+---------------------------------------------------------
+component sel_and_encode is port (
+	IR_in: in std_logic_vector(31 downto 0);
+	Gra: in std_logic;
+	Grb: in std_logic;
+	Rin: in std_logic;
+	Rout: in std_logic;
+	BAout: in std_logic;
+	C_extended: out std_logic_vector(31 downto 0);
+	R_in: out std_logic_vector(15 downto 0);
+	R_out: out std_logic_vector(15 downto 0)
+);
+end component sel_and_encode;
+---------------------------------------------------------
+
+ 
 end package;

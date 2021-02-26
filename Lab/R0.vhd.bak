@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity R0 is port(
+input: in std_logic_vector (31 downto 0);
+R0in: in std_logic;
+clr: in std_logic;
+clk: in std_logic;
+output : out std_logic_vector (31 downto 0);
+);
+end entity R0;
+
+architecture logic of R0 is 
+signal Q: std_logic_vector (31 downto 0);
+
+begin 
