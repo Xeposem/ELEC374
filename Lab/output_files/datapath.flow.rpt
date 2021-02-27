@@ -1,5 +1,5 @@
 Flow report for datapath
-Fri Feb 19 16:17:18 2021
+Sat Feb 27 18:01:23 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri Feb 19 16:17:18 2021           ;
+; Flow Status                        ; Successful - Sat Feb 27 18:01:23 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; datapath                                        ;
 ; Top-level Entity Name              ; datapath                                        ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/19/2021 16:17:15 ;
+; Start date & time ; 02/27/2021 18:01:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; datapath            ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id      ;
 +--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
-; COMPILER_SIGNATURE_ID                ; 198112230318217.161376943510340       ; --            ; --          ; --              ;
+; COMPILER_SIGNATURE_ID                ; 198112230318217.161446688008508       ; --            ; --          ; --              ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; datapath_and_tb ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; datapath_and_tb                       ; --            ; --          ; eda_simulation  ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation  ;
@@ -82,6 +82,9 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; datapath_and_tb.vhd                   ; --            ; --          ; datapath_and_tb ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; datapath_and_tb                       ; --            ; --          ; datapath_and_tb ;
 ; EDA_TEST_BENCH_NAME                  ; datapath_and_tb                       ; --            ; --          ; eda_simulation  ;
+; IP_TOOL_NAME                         ; RAM: 2-PORT                           ; --            ; --          ; --              ;
+; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --          ; --              ;
+; MISC_FILE                            ; Ram512x32.cmp                         ; --            ; --          ; --              ;
 ; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top             ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top             ;
 ; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top             ;
@@ -96,8 +99,8 @@ applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:04     ; 1.0                     ; 4698 MB             ; 00:00:03                           ;
-; Total                  ; 00:00:04     ; --                      ; --                  ; 00:00:03                           ;
+; Analysis & Elaboration ; 00:00:03     ; 1.0                     ; 4711 MB             ; 00:00:03                           ;
+; Total                  ; 00:00:03     ; --                      ; --                  ; 00:00:03                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

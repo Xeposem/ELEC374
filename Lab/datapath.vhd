@@ -5,22 +5,38 @@ use work.components_all.all;
 
 entity datapath is port (
 clk: in std_logic;
-encoderin: in std_logic_vector(31 downto 0);
-register_enable: in std_logic_vector(31 downto 0);
-Mdatain: in std_logic_vector(31 downto 0);
-MDR_Read: in std_logic;
-ALU_sel: in std_logic_vector(4 downto 0);
-PC_plus: in std_logic;
+--encoderin: in std_logic_vector(31 downto 0);
+--register_enable: in std_logic_vector(31 downto 0);
+--Mdatain: in std_logic_vector(31 downto 0);
+--MDR_Read: in std_logic;
+--ALU_sel: in std_logic_vector(4 downto 0);
+--PC_plus: in std_logic;
 
 in_port: in std_logic_vector (31 downto 0);
-out_port: in std_logic_vector (31 downto 0);
-
-
+out_port: out std_logic_vector (31 downto 0);
 
 BusMuxOut: out std_logic_vector(31 downto 0);
+----------------------------------------------
+R0out	: out std_logic_vector(31 downto 0);
+R1out	: out std_logic_vector(31 downto 0);
 R2out	: out std_logic_vector(31 downto 0);
+R3out	: out std_logic_vector(31 downto 0);
 R4out	: out std_logic_vector(31 downto 0);
 R5out	: out std_logic_vector(31 downto 0);
+-------------------------------------------------
+R6out	: out std_logic_vector(31 downto 0);
+R7out	: out std_logic_vector(31 downto 0);
+R8out	: out std_logic_vector(31 downto 0);
+R9out	: out std_logic_vector(31 downto 0);
+R10out	: out std_logic_vector(31 downto 0);
+--------------------------------------------------
+R11out	: out std_logic_vector(31 downto 0);
+R12out	: out std_logic_vector(31 downto 0);
+R13out	: out std_logic_vector(31 downto 0);
+R14out	: out std_logic_vector(31 downto 0);
+R15out	: out std_logic_vector(31 downto 0);
+
+-------------------------------------------------
 HIout	: out std_logic_vector(31 downto 0);
 LOout	: out std_logic_vector(31 downto 0);
 IRout	: out std_logic_vector(31 downto 0);
@@ -67,14 +83,18 @@ signal RAM_read: std_logic;
 signal RAM_write: std_logic;
 signal baout: std_logic;
 signal Gra: std_logic;
+signal Grb: std_logic;
 signal Grc: std_logic;
 signal Rin: std_logic;
 signal Rout: std_logic;
 signal conff_out: std_logic;
-signal Rin: std_logic;
-signal Rout: std_logic;
 
-
+signal Mdatain: std_logic_vector(31 downto 0);
+signal encoderin: std_logic_vector(31 downto 0);
+signal register_enable: std_logic_vector(31 downto 0);
+signal MDR_Read: std_logic;
+signal ALU_sel: std_logic_vector(4 downto 0);
+signal PC_plus: std_logic;
 
 begin
 default_zeros <= (others =>'0');
@@ -114,11 +134,11 @@ inport_register: register32bit port map ( in_port, register_enable(24),clr,clk, 
 outport_register: register32bit port map (internalBusMuxOut,register_enable(25), clr, clk, out_port);
 
 
-confflogic: conff_logic port map (clk, clr, IIRout(22 downto 19), internalBusMuxOut, register_enable(26), conff_out);
+conff:conff_logic port map (clk, clr, IIRout(20 downto 19), internalBusMuxOut, register_enable(26), conff_out);
 
 Ram: Ram512x32 port map (clk, BusMuxIn_MDR, MARout(8 downto 0), Ram_read, MARout(8 downto 0),Ram_write, Mdatain );
 
-select_and_encode: sel_and_encode port map (IIRout, Gra, Grb, Rin, Rout, baout, C_sign_extended, encoderin(15 downto 0), register_enable(15 downto 0));
+select_and_encode: sel_and_encode port map (IIRout, Gra, Grb, Grc, Rin, Rout, baout, C_sign_extended, encoderin(15 downto 0), register_enable(15 downto 0));
 
 
 datapathBus : the_bus port map (BusMuxIn_R0,BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3, 

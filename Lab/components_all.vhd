@@ -212,7 +212,7 @@ component R0 is port(
 	clr: in std_logic;
 	clk: in std_logic;
 	BAout: in std_logic;
-	output : out std_logic_vector (31 downto 0);
+	output : out std_logic_vector (31 downto 0)
 );
 end component R0;
 ---------------------------------------------------------
@@ -220,6 +220,7 @@ component sel_and_encode is port (
 	IR_in: in std_logic_vector(31 downto 0);
 	Gra: in std_logic;
 	Grb: in std_logic;
+	Grc: in std_logic;
 	Rin: in std_logic;
 	Rout: in std_logic;
 	BAout: in std_logic;
@@ -230,10 +231,12 @@ component sel_and_encode is port (
 end component sel_and_encode;
 ---------------------------------------------------------
 component conff_logic is port (
+	clk : in std_logic;
+	clr: in std_logic;
 	C2_bits: in std_logic_vector(1 downto 0);
 	Busmux_in: in std_logic_vector(31 downto 0);
 	Con_in: in std_logic;
-	Q: out std_logic;
+	Q: out std_logic
 );
 end component conff_logic;
 -----------------------------------------------------------
@@ -248,7 +251,7 @@ component Ram512x32 IS
 		wren		: IN STD_LOGIC  := '0';
 		q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
-component Ram512x32;
+end component Ram512x32;
 ---------------------------------------------------------
  
 end package;

@@ -6,35 +6,36 @@ entity sel_and_encode is port (
 	IR_in: in std_logic_vector(31 downto 0);
 	Gra: in std_logic;
 	Grb: in std_logic;
+	Grc: in std_logic;
 	Rin: in std_logic;
 	Rout: in std_logic;
 	BAout: in std_logic;
 	C_extended: out std_logic_vector(31 downto 0);
 	R_in: out std_logic_vector(15 downto 0);
 	R_out: out std_logic_vector(15 downto 0)
-);
+	);
 end entity sel_and_encode;
 
 architecture logic of sel_and_encode is 
 signal a, b, c : std_logic_vector(3 downto 0);
 signal dec_in: std_logic_vector (3 downto 0);
-signal dec_out: std_logic_vector (3 downto 0);
+signal dec_out: std_logic_vector (15 downto 0);
 begin 
 
-a(3)<= IRin(26) and Gra;
-a(2)<= IRin(25) and Gra;
-a(1)<= IRin(24) and Gra;
-a(0)<= IRin(23) and Gra;
+a(3)<= IR_in(26) and Gra;
+a(2)<= IR_in(25) and Gra;
+a(1)<= IR_in(24) and Gra;
+a(0)<= IR_in(23) and Gra;
 
-b(3)<= IRin(22) and Grb;
-b(2)<= IRin(21) and Grb;
-b(1)<= IRin(20) and Grb;
-b(0)<= IRin(19) and Grb;
+b(3)<= IR_in(22) and Grb;
+b(2)<= IR_in(21) and Grb;
+b(1)<= IR_in(20) and Grb;
+b(0)<= IR_in(19) and Grb;
 
-c(3)<= IRin(18) and Grc;
-c(2)<= IRin(17) and Grc;
-c(1)<= IRin(16) and Grc;
-c(0)<= IRin(15) and Grc;
+c(3)<= IR_in(18) and Grc;
+c(2)<= IR_in(17) and Grc;
+c(1)<= IR_in(16) and Grc;
+c(0)<= IR_in(15) and Grc;
 
 dec_in<= (a or b or c);
 

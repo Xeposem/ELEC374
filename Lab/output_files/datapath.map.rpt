@@ -1,5 +1,5 @@
 Analysis & Elaboration report for datapath
-Fri Feb 19 16:17:18 2021
+Sat Feb 27 18:01:23 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,39 +10,43 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration IP Cores Summary
-  5. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component
-  6. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component
-  7. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component
-  8. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component
-  9. Parameter Settings for User Entity Instance: the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component
- 10. Analysis & Elaboration Settings
- 11. Port Connectivity Checks: "the_bus:datapathBus"
- 12. Port Connectivity Checks: "register32bit:outport_register"
- 13. Port Connectivity Checks: "register32bit:inport_register"
- 14. Port Connectivity Checks: "ALU_path:alu_datapath"
- 15. Port Connectivity Checks: "register32bit:MAR"
- 16. Port Connectivity Checks: "MDR:MD_R"
- 17. Port Connectivity Checks: "register32bit:IR"
- 18. Port Connectivity Checks: "register32bit:PC"
- 19. Port Connectivity Checks: "register32bit:LO"
- 20. Port Connectivity Checks: "register32bit:HI"
- 21. Port Connectivity Checks: "register32bit:R15"
- 22. Port Connectivity Checks: "register32bit:R14"
- 23. Port Connectivity Checks: "register32bit:R13"
- 24. Port Connectivity Checks: "register32bit:R12"
- 25. Port Connectivity Checks: "register32bit:R11"
- 26. Port Connectivity Checks: "register32bit:R10"
- 27. Port Connectivity Checks: "register32bit:R9"
- 28. Port Connectivity Checks: "register32bit:R8"
- 29. Port Connectivity Checks: "register32bit:R7"
- 30. Port Connectivity Checks: "register32bit:R6"
- 31. Port Connectivity Checks: "register32bit:R5"
- 32. Port Connectivity Checks: "register32bit:R4"
- 33. Port Connectivity Checks: "register32bit:R3"
- 34. Port Connectivity Checks: "register32bit:R2"
- 35. Port Connectivity Checks: "register32bit:R1"
- 36. Port Connectivity Checks: "register32bit:R0"
- 37. Analysis & Elaboration Messages
+  5. Source assignments for Ram512x32:Ram|altsyncram:altsyncram_component|altsyncram_3eq1:auto_generated
+  6. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component
+  7. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component
+  8. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component
+  9. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component
+ 10. Parameter Settings for User Entity Instance: Ram512x32:Ram|altsyncram:altsyncram_component
+ 11. Parameter Settings for User Entity Instance: the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component
+ 12. altsyncram Parameter Settings by Entity Instance
+ 13. Analysis & Elaboration Settings
+ 14. Port Connectivity Checks: "the_bus:datapathBus"
+ 15. Port Connectivity Checks: "conff_logic:conff"
+ 16. Port Connectivity Checks: "register32bit:outport_register"
+ 17. Port Connectivity Checks: "register32bit:inport_register"
+ 18. Port Connectivity Checks: "ALU_path:alu_datapath"
+ 19. Port Connectivity Checks: "register32bit:MAR"
+ 20. Port Connectivity Checks: "MDR:MD_R"
+ 21. Port Connectivity Checks: "register32bit:IR"
+ 22. Port Connectivity Checks: "register32bit:PC"
+ 23. Port Connectivity Checks: "register32bit:LO"
+ 24. Port Connectivity Checks: "register32bit:HI"
+ 25. Port Connectivity Checks: "register32bit:R15"
+ 26. Port Connectivity Checks: "register32bit:R14"
+ 27. Port Connectivity Checks: "register32bit:R13"
+ 28. Port Connectivity Checks: "register32bit:R12"
+ 29. Port Connectivity Checks: "register32bit:R11"
+ 30. Port Connectivity Checks: "register32bit:R10"
+ 31. Port Connectivity Checks: "register32bit:R9"
+ 32. Port Connectivity Checks: "register32bit:R8"
+ 33. Port Connectivity Checks: "register32bit:R7"
+ 34. Port Connectivity Checks: "register32bit:R6"
+ 35. Port Connectivity Checks: "register32bit:R5"
+ 36. Port Connectivity Checks: "register32bit:R4"
+ 37. Port Connectivity Checks: "register32bit:R3"
+ 38. Port Connectivity Checks: "register32bit:R2"
+ 39. Port Connectivity Checks: "register32bit:R1"
+ 40. Port Connectivity Checks: "R0:Register0"
+ 41. Analysis & Elaboration Messages
 
 
 
@@ -68,7 +72,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Fri Feb 19 16:17:18 2021           ;
+; Analysis & Elaboration Status      ; Successful - Sat Feb 27 18:01:23 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; datapath                                        ;
 ; Top-level Entity Name              ; datapath                                        ;
@@ -96,15 +100,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration IP Cores Summary                                                                                                                                 ;
-+--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+-------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                   ; IP Include File                     ;
-+--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+-------------------------------------+
-; Altera ; LPM_ADD_SUB  ; N/A     ; N/A          ; N/A          ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub ; D:/Quartus/Datapath/lpm_add_sua.vhd ;
-; Altera ; LPM_DIVIDE   ; N/A     ; N/A          ; N/A          ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv     ; D:/Quartus/Datapath/lpm_divida.vhd  ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux                     ; D:/Quartus/Datapath/lpm_mua.vhd     ;
-+--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+-------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration IP Cores Summary                                                                                                                                   ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+---------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                   ; IP Include File                       ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+---------------------------------------+
+; Altera ; LPM_ADD_SUB  ; N/A     ; N/A          ; N/A          ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub ; D:/Github/ELEC374/Lab/lpm_add_sua.vhd ;
+; Altera ; LPM_DIVIDE   ; N/A     ; N/A          ; N/A          ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv     ; D:/Github/ELEC374/Lab/lpm_divida.vhd  ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux                     ; D:/Github/ELEC374/Lab/lpm_mua.vhd     ;
+; Altera ; RAM: 2-PORT  ; 13.0    ; N/A          ; N/A          ; |datapath|Ram512x32:Ram                                           ; D:/Github/ELEC374/Lab/Ram512x32.vhd   ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Source assignments for Ram512x32:Ram|altsyncram:altsyncram_component|altsyncram_3eq1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------+
+; Assignment                      ; Value              ; From ; To                                    ;
++---------------------------------+--------------------+------+---------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
++---------------------------------+--------------------+------+---------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------+
@@ -186,6 +200,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Ram512x32:Ram|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------+
+; Parameter Name                     ; Value                ; Type                           ;
++------------------------------------+----------------------+--------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                        ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                        ;
+; WIDTH_A                            ; 32                   ; Signed Integer                 ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                 ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WIDTH_B                            ; 32                   ; Signed Integer                 ;
+; WIDTHAD_B                          ; 9                    ; Signed Integer                 ;
+; NUMWORDS_B                         ; 512                  ; Signed Integer                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                        ;
+; RDCONTROL_REG_B                    ; CLOCK0               ; Untyped                        ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                        ;
+; OUTDATA_REG_B                      ; CLOCK0               ; Untyped                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; INIT_FILE                          ; UNUSED               ; Untyped                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                        ;
+; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_3eq1      ; Untyped                        ;
++------------------------------------+----------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component ;
 +------------------------+-------------+---------------------------------------------------------------------+
@@ -203,6 +278,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                             ;
 +------------------------+-------------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                          ;
++-------------------------------------------+-----------------------------------------------+
+; Name                                      ; Value                                         ;
++-------------------------------------------+-----------------------------------------------+
+; Number of entity instances                ; 1                                             ;
+; Entity Instance                           ; Ram512x32:Ram|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                     ;
+;     -- WIDTH_A                            ; 32                                            ;
+;     -- NUMWORDS_A                         ; 512                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                  ;
+;     -- WIDTH_B                            ; 32                                            ;
+;     -- NUMWORDS_B                         ; 512                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                        ;
+;     -- OUTDATA_REG_B                      ; CLOCK0                                        ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                     ;
++-------------------------------------------+-----------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -291,30 +386,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-------------------------------------------------+
-; Port Connectivity Checks: "the_bus:datapathBus" ;
-+---------+-------+----------+--------------------+
-; Port    ; Type  ; Severity ; Details            ;
-+---------+-------+----------+--------------------+
-; muxin24 ; Input ; Info     ; Stuck at GND       ;
-; muxin25 ; Input ; Info     ; Stuck at GND       ;
-; muxin26 ; Input ; Info     ; Stuck at GND       ;
-; muxin27 ; Input ; Info     ; Stuck at GND       ;
-; muxin28 ; Input ; Info     ; Stuck at GND       ;
-; muxin29 ; Input ; Info     ; Stuck at GND       ;
-; muxin30 ; Input ; Info     ; Stuck at GND       ;
-; muxin31 ; Input ; Info     ; Stuck at GND       ;
-+---------+-------+----------+--------------------+
++-------------------------------------------------------+
+; Port Connectivity Checks: "the_bus:datapathBus"       ;
++---------------------+-------+----------+--------------+
+; Port                ; Type  ; Severity ; Details      ;
++---------------------+-------+----------+--------------+
+; muxin24             ; Input ; Info     ; Stuck at GND ;
+; muxin25             ; Input ; Info     ; Stuck at GND ;
+; muxin26             ; Input ; Info     ; Stuck at GND ;
+; muxin27             ; Input ; Info     ; Stuck at GND ;
+; muxin28             ; Input ; Info     ; Stuck at GND ;
+; muxin29             ; Input ; Info     ; Stuck at GND ;
+; muxin30             ; Input ; Info     ; Stuck at GND ;
+; muxin31             ; Input ; Info     ; Stuck at GND ;
+; encoder32in[31..16] ; Input ; Info     ; Stuck at GND ;
++---------------------+-------+----------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "register32bit:outport_register"                                                     ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; clr  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "conff_logic:conff"                                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; clr    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; con_in ; Input  ; Info     ; Stuck at GND                                                                        ;
+; q      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "register32bit:outport_register" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; ld   ; Input ; Info     ; Stuck at GND                     ;
+; clr  ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
 
 
 +-----------------------------------------------------------+
@@ -322,6 +429,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+---------------------------------+
 ; Port ; Type  ; Severity ; Details                         ;
 +------+-------+----------+---------------------------------+
+; ld   ; Input ; Info     ; Stuck at GND                    ;
 ; clr  ; Input ; Info     ; Stuck at VCC                    ;
 +------+-------+----------+---------------------------------+
 
@@ -332,27 +440,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; clr      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; y_enable ; Input  ; Info     ; Stuck at GND                                                                        ;
+; z_enable ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "register32bit:MAR"                                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; clr  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register32bit:MAR"                                                                      ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; ld       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; clr      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; q[31..9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------+
-; Port Connectivity Checks: "MDR:MD_R"   ;
-+------+-------+----------+--------------+
-; Port ; Type  ; Severity ; Details      ;
-+------+-------+----------+--------------+
-; clr  ; Input ; Info     ; Stuck at VCC ;
-+------+-------+----------+--------------+
++----------------------------------------------+
+; Port Connectivity Checks: "MDR:MD_R"         ;
++------------+-------+----------+--------------+
+; Port       ; Type  ; Severity ; Details      ;
++------------+-------+----------+--------------+
+; mdr_enable ; Input ; Info     ; Stuck at GND ;
+; clr        ; Input ; Info     ; Stuck at VCC ;
++------------+-------+----------+--------------+
 
 
 +----------------------------------------------+
@@ -360,6 +472,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------------+
 ; Port ; Type  ; Severity ; Details            ;
 +------+-------+----------+--------------------+
+; ld   ; Input ; Info     ; Stuck at GND       ;
 ; clr  ; Input ; Info     ; Stuck at VCC       ;
 +------+-------+----------+--------------------+
 
@@ -369,6 +482,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------------+
 ; Port ; Type  ; Severity ; Details            ;
 +------+-------+----------+--------------------+
+; ld   ; Input ; Info     ; Stuck at GND       ;
 ; clr  ; Input ; Info     ; Stuck at VCC       ;
 +------+-------+----------+--------------------+
 
@@ -378,6 +492,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------------+
 ; Port ; Type  ; Severity ; Details            ;
 +------+-------+----------+--------------------+
+; ld   ; Input ; Info     ; Stuck at GND       ;
 ; clr  ; Input ; Info     ; Stuck at VCC       ;
 +------+-------+----------+--------------------+
 
@@ -387,6 +502,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------------+
 ; Port ; Type  ; Severity ; Details            ;
 +------+-------+----------+--------------------+
+; ld   ; Input ; Info     ; Stuck at GND       ;
 ; clr  ; Input ; Info     ; Stuck at VCC       ;
 +------+-------+----------+--------------------+
 
@@ -526,13 +642,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------------+
 
 
-+----------------------------------------------+
-; Port Connectivity Checks: "register32bit:R0" ;
-+------+-------+----------+--------------------+
-; Port ; Type  ; Severity ; Details            ;
-+------+-------+----------+--------------------+
-; clr  ; Input ; Info     ; Stuck at VCC       ;
-+------+-------+----------+--------------------+
++------------------------------------------+
+; Port Connectivity Checks: "R0:Register0" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; clr  ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
 
 
 +---------------------------------+
@@ -541,7 +657,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Feb 19 16:17:14 2021
+    Info: Processing started: Sat Feb 27 18:01:20 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datapath -c datapath --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file lpm_divida.vhd
@@ -633,13 +749,38 @@ Info (12021): Found 2 design units, including 1 entities, in source file datapat
 Info (12021): Found 2 design units, including 1 entities, in source file datapath_not_tb.vhd
     Info (12022): Found design unit 1: datapath_not_tb-logic
     Info (12023): Found entity 1: datapath_not_tb
+Info (12021): Found 2 design units, including 1 entities, in source file r0.vhd
+    Info (12022): Found design unit 1: R0-logic
+    Info (12023): Found entity 1: R0
+Info (12021): Found 2 design units, including 1 entities, in source file sel_and_encode.vhd
+    Info (12022): Found design unit 1: sel_and_encode-logic
+    Info (12023): Found entity 1: sel_and_encode
+Info (12021): Found 2 design units, including 1 entities, in source file conff_logic.vhd
+    Info (12022): Found design unit 1: conff_logic-logic
+    Info (12023): Found entity 1: conff_logic
+Info (12021): Found 2 design units, including 1 entities, in source file ram512x32.vhd
+    Info (12022): Found design unit 1: ram512x32-SYN
+    Info (12023): Found entity 1: Ram512x32
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(28): used implicit default value for signal "in_port" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(28): object "out_port" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(52): used implicit default value for signal "C_sign_extended" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(56): object "overflow" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(57): object "MARout" assigned a value but never read
-Info (12128): Elaborating entity "register32bit" for hierarchy "register32bit:R0"
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(79): object "overflow" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(84): used implicit default value for signal "RAM_read" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(85): used implicit default value for signal "RAM_write" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(86): used implicit default value for signal "baout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(87): used implicit default value for signal "Gra" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(88): used implicit default value for signal "Grb" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(89): used implicit default value for signal "Grc" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(90): used implicit default value for signal "Rin" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(91): used implicit default value for signal "Rout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(92): object "conff_out" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(97): used implicit default value for signal "MDR_Read" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(98): used implicit default value for signal "ALU_sel" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(99): used implicit default value for signal "PC_plus" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10873): Using initial value X (don't care) for net "encoderin[31..16]" at datapath.vhd(95)
+Warning (10873): Using initial value X (don't care) for net "register_enable[26..16]" at datapath.vhd(96)
+Info (12128): Elaborating entity "R0" for hierarchy "R0:Register0"
+Warning (10492): VHDL Process Statement warning at R0.vhd(33): signal "Q" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at R0.vhd(33): signal "BAout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "register32bit" for hierarchy "register32bit:R1"
 Info (12128): Elaborating entity "MDR" for hierarchy "MDR:MD_R"
 Info (12128): Elaborating entity "ALU_path" for hierarchy "ALU_path:alu_datapath"
 Info (12128): Elaborating entity "alu" for hierarchy "ALU_path:alu_datapath|alu:the_alu"
@@ -771,6 +912,36 @@ Info (12128): Elaborating entity "shl32" for hierarchy "ALU_path:alu_datapath|al
 Info (12128): Elaborating entity "shr32" for hierarchy "ALU_path:alu_datapath|alu:the_alu|shr32:aluShr"
 Info (12128): Elaborating entity "negate32" for hierarchy "ALU_path:alu_datapath|alu:the_alu|negate32:aluNeg"
 Info (12128): Elaborating entity "register64bit" for hierarchy "ALU_path:alu_datapath|register64bit:register_Z"
+Info (12128): Elaborating entity "conff_logic" for hierarchy "conff_logic:conff"
+Warning (10492): VHDL Process Statement warning at conff_logic.vhd(43): signal "clr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "Ram512x32" for hierarchy "Ram512x32:Ram"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Ram512x32:Ram|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "Ram512x32:Ram|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "Ram512x32:Ram|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone III"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "numwords_b" = "512"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_b" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "widthad_b" = "9"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3eq1.tdf
+    Info (12023): Found entity 1: altsyncram_3eq1
+Info (12128): Elaborating entity "altsyncram_3eq1" for hierarchy "Ram512x32:Ram|altsyncram:altsyncram_component|altsyncram_3eq1:auto_generated"
+Info (12128): Elaborating entity "sel_and_encode" for hierarchy "sel_and_encode:select_and_encode"
 Info (12128): Elaborating entity "the_bus" for hierarchy "the_bus:datapathBus"
 Info (12128): Elaborating entity "encoder32to5" for hierarchy "the_bus:datapathBus|encoder32to5:Bus_encoder"
 Info (12128): Elaborating entity "lpm_mua" for hierarchy "the_bus:datapathBus|lpm_mua:Bus_Mux"
@@ -786,10 +957,10 @@ Info (12133): Instantiated megafunction "the_bus:datapathBus|lpm_mua:Bus_Mux|LPM
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_k9e.tdf
     Info (12023): Found entity 1: mux_k9e
 Info (12128): Elaborating entity "mux_k9e" for hierarchy "the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component|mux_k9e:auto_generated"
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4698 megabytes
-    Info: Processing ended: Fri Feb 19 16:17:18 2021
-    Info: Elapsed time: 00:00:04
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4711 megabytes
+    Info: Processing ended: Sat Feb 27 18:01:23 2021
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 
