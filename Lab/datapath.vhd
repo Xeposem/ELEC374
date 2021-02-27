@@ -63,17 +63,16 @@ signal MARout: std_logic_vector(31 downto 0);
 signal IIRout: std_logic_vector(31 downto 0);
 
 
+signal RAM_read: std_logic;
+signal RAM_write: std_logic;
 signal baout: std_logic;
 signal Gra: std_logic;
 signal Grc: std_logic;
 signal Rin: std_logic;
 signal Rout: std_logic;
-
-
-
-
-
-
+signal conff_out: std_logic;
+signal Rin: std_logic;
+signal Rout: std_logic;
 
 
 
@@ -102,7 +101,9 @@ R15: register32bit port map (internalBusMuxOut, register_enable(15),clr, clk,Bus
 HI : register32bit port map (internalBusMuxOut, register_enable(16),clr, clk,BusMuxIn_HI);
 LO : register32bit port map (internalBusMuxOut, register_enable(17),clr, clk,BusMuxIn_LO);
 PC : register32bit port map (internalBusMuxOut, register_enable(18),clr, clk,BusMuxIn_PC);
+
 IR	: register32bit port map (internalBusMuxOut, register_enable(19),clr, clk, IIRout);
+
 MD_R: MDR port map(MDR_Read, register_enable(20), clr, clk, internalBusMuxOut, Mdatain, BusMuxIn_MDR);
 MAR: register32bit port map (internalBusMuxOut, register_enable(21), clr, clk, MARout);
 
@@ -112,15 +113,37 @@ internalBusMuxOut, PC_plus, ALU_sel, overflow, BusMuxIn_Zlow, BusMuxIn_Zhigh);
 inport_register: register32bit port map ( in_port, register_enable(24),clr,clk, BusMuxIn_Inport);
 outport_register: register32bit port map (internalBusMuxOut,register_enable(25), clr, clk, out_port);
 
+
+confflogic: conff_logic port map (clk, clr, IIRout(22 downto 19), internalBusMuxOut, register_enable(26), conff_out);
+
+Ram: Ram512x32 port map (clk, BusMuxIn_MDR, MARout(8 downto 0), Ram_read, MARout(8 downto 0),Ram_write, Mdatain );
+
+select_and_encode: sel_and_encode port map (IIRout, Gra, Grb, Rin, Rout, baout, C_sign_extended, encoderin(15 downto 0), register_enable(15 downto 0));
+
+
 datapathBus : the_bus port map (BusMuxIn_R0,BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3, 
 BusMuxIn_R4, BusMuxIn_R5, BusMuxIn_R6, BusMuxIn_R7, BusMuxIn_R8, BusMuxIn_R9, BusMuxIn_R10, BusMuxIn_R11,BusMuxIn_R12, BusMuxIn_R13, 
 BusMuxIn_R14, BusMuxIn_R15, BusMuxIn_HI, BusMuxIn_LO, BusMuxIn_Zhigh,BusMuxIn_Zlow, BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_Inport,C_sign_extended, 
 default_zeros, default_zeros, default_zeros, default_zeros, default_zeros, default_zeros, default_zeros, default_zeros, encoderin, internalBusMuxOut);
 
 BusMuxOut <= internalBusMuxOut;
+
+R0out <= BusMuxIn_R0;
+R1out <= BusMuxIn_R1;
 R2out <= BusMuxIn_R2;
+R3out <= BusMuxIn_R3;
 R4out <= BusMuxIn_R4;
 R5out <= BusMuxIn_R5;
+R6out <= BusMuxIn_R6;
+R7out <= BusMuxIn_R7;
+R8out <= BusMuxIn_R8;
+R9out <= BusMuxIn_R9;
+R10out <= BusMuxIn_R10;
+R11out <= BusMuxIn_R11;
+R12out <= BusMuxIn_R12;
+R13out <= BusMuxIn_R13;
+R14out <= BusMuxIn_R14;
+R15out <= BusMuxIn_R15;
 HIout <= BusMuxIn_HI;
 LOout <= BusMuxIn_LO;
 Zout(63 downto 32) <= BusMuxIn_Zhigh;

@@ -229,6 +229,26 @@ component sel_and_encode is port (
 );
 end component sel_and_encode;
 ---------------------------------------------------------
-
+component conff_logic is port (
+	C2_bits: in std_logic_vector(1 downto 0);
+	Busmux_in: in std_logic_vector(31 downto 0);
+	Con_in: in std_logic;
+	Q: out std_logic;
+);
+end component conff_logic;
+-----------------------------------------------------------
+component Ram512x32 IS
+	PORT
+	(
+		clock		: IN STD_LOGIC  := '1';
+		data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+		rdaddress		: IN STD_LOGIC_VECTOR (8 DOWNTO 0);
+		rden		: IN STD_LOGIC  := '1';
+		wraddress		: IN STD_LOGIC_VECTOR (8 DOWNTO 0);
+		wren		: IN STD_LOGIC  := '0';
+		q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+	);
+component Ram512x32;
+---------------------------------------------------------
  
 end package;

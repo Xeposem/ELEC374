@@ -2,6 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity conff_logic is port (
+	clk : in std_logic;
+	clr: in std_logic;
 	C2_bits: in std_logic_vector(1 downto 0);
 	Busmux_in: in std_logic_vector(31 downto 0);
 	Con_in: in std_logic;
@@ -38,11 +40,13 @@ Con_d <= eq or neq or gte or lt;
 
 Conff: process(clk, Con_in) 
 begin 
-	if (clk'event and clk = '1') then 
-		if(Con_in = '1') then 
-			Q<= Con_d;
-		end if;
+if (clr = '0') then 
+	Q<='0';
+elsif (clk'event and clk = '1') then 
+	if(Con_in = '1') then 
+		Q<= Con_d;
 	end if;
+end if;
 	
 end process;
 end architecture logic;

@@ -91,3 +91,5 @@ set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_
 set_global_assignment -name VHDL_FILE R0.vhd
 set_global_assignment -name VHDL_FILE sel_and_encode.vhd
 set_global_assignment -name VHDL_FILE conff_logic.vhd
+set_global_assignment -name QIP_FILE Ram512x32.qip
+set_global_assignment -name VHDL_FILE Ram_Unit.vhd
