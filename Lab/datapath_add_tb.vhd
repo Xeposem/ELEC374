@@ -115,7 +115,7 @@ begin
 			
 			RegEnable_tb <= (others=>'0'), (20=>'1', others=>'0') after 10 ns, (others=>'0') after 25 ns;	-- MDRin
 		when Reg_load2b =>
-			encoderIn_tb <= (others=>'0'), (21 => '1', others => '0')after 10 ns, (others=>'0') after 25 ns;	
+			encoderIn_tb <= (others=>'0'), (21 => '1', others => '0')after 10 ns, (others=>'0') after 25 ns;	--here 21 is MDRout
 			RegEnable_tb <= (others=>'0'), (4 => '1', others => '0')after 10 ns, (others=>'0') after 25 ns;	-- R4 load_en
 			
 		when Reg_load3a =>

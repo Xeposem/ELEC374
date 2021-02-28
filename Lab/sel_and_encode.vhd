@@ -7,8 +7,8 @@ entity sel_and_encode is port (
 	Gra: in std_logic;
 	Grb: in std_logic;
 	Grc: in std_logic;
-	Rin: in std_logic;
-	Rout: in std_logic;
+	Rin: in std_logic; --- Enable signal to the registers
+	Rout: in std_logic; -- input signal to the bus encoder to select which register's output as input to the bus mux
 	BAout: in std_logic;
 	C_extended: out std_logic_vector(31 downto 0);
 	R_in: out std_logic_vector(15 downto 0);
