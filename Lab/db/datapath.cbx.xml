@@ -1,5 +1,10 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="datapath">
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component" CBX_FILE_NAME="lpm_clshift_iib.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component" CBX_FILE_NAME="lpm_clshift_jhc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|Ram512x32:Ram|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_kku1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component" CBX_FILE_NAME="add_sub_ich.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component" CBX_FILE_NAME="lpm_divide_hjp.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
