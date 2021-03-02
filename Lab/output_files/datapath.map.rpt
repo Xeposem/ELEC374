@@ -1,5 +1,5 @@
 Analysis & Elaboration report for datapath
-Sat Feb 27 18:24:46 2021
+Sun Feb 28 23:13:20 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Failed - Sat Feb 27 18:24:46 2021               ;
+; Analysis & Elaboration Status      ; Failed - Sun Feb 28 23:13:20 2021               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; datapath                                        ;
 ; Top-level Entity Name              ; datapath                                        ;
@@ -156,7 +156,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Feb 27 18:24:45 2021
+    Info: Processing started: Sun Feb 28 23:13:19 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datapath -c datapath --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file lpm_divida.vhd
@@ -260,13 +260,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file conff_l
 Info (12021): Found 2 design units, including 1 entities, in source file ram512x32.vhd
     Info (12022): Found design unit 1: ram512x32-SYN
     Info (12023): Found entity 1: Ram512x32
-Error (10577): VHDL error at datapath.vhd(154): actual port "encoderin" of mode "in" cannot be associated with formal port "R_in" of mode "out" File: D:/Github/ELEC374/Lab/datapath.vhd Line: 154
-Error (10599): VHDL error at datapath.vhd(154): can't update value of interface object "encoderin" of mode IN File: D:/Github/ELEC374/Lab/datapath.vhd Line: 154
-Error (10577): VHDL error at datapath.vhd(154): actual port "register_enable" of mode "in" cannot be associated with formal port "R_out" of mode "out" File: D:/Github/ELEC374/Lab/datapath.vhd Line: 154
-Error (10599): VHDL error at datapath.vhd(154): can't update value of interface object "register_enable" of mode IN File: D:/Github/ELEC374/Lab/datapath.vhd Line: 154
-Error: Quartus II 64-Bit Analysis & Elaboration was unsuccessful. 4 errors, 1 warning
+Error (10482): VHDL error at datapath.vhd(116): object "register_enable" is used but not declared File: D:/Github/ELEC374/Lab/datapath.vhd Line: 116
+Error: Quartus II 64-Bit Analysis & Elaboration was unsuccessful. 1 error, 1 warning
     Error: Peak virtual memory: 4615 megabytes
-    Error: Processing ended: Sat Feb 27 18:24:46 2021
+    Error: Processing ended: Sun Feb 28 23:13:20 2021
     Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 
