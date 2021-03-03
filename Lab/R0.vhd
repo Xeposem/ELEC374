@@ -12,28 +12,63 @@ entity R0 is port(
 end entity R0;
 
 architecture logic of R0 is 
-signal Q: std_logic_vector (31 downto 0);
+signal q: std_logic_vector (31 downto 0);
 begin 
 
 process(clk, clr)
 		begin
 			if clr = '0' then 
-				Q<= (others=>'0');
+				q<= (others=>'0');
 			elsif (clk'event and clk='1') then
             if R0in = '1' then
-                Q <= input;
+                q <= input;
             end if;
         end if;
     end process;
 	 
-process(input)
-variable I: std_logic_vector (31 downto 0);
-	begin 
-	for index in 0 to input'length-1 loop 
-		I(index):= (Q(index) and (not BAout));
-	end loop;
-	output<= I;
-end process;
+--process(input, Q)
+--variable I: std_logic_vector (31 downto 0);
+--	begin 
+--	for index in 0 to input'length-1 loop 
+--		I(index):= (Q(index) and (not BAout));
+--	end loop;
+--	output<= I;
+--end process;
+	
+	output(0) <= q(0) and (not BAout);
+	output(1) <= q(1) and (not BAout);
+	output(2) <= q(2) and (not BAout);
+	output(3) <= q(3) and (not BAout);
+	output(4) <= q(4) and (not BAout);
+	output(5) <= q(5) and (not BAout);
+	output(6) <= q(6) and (not BAout);
+	output(7) <= q(7) and (not BAout);
+	output(8) <= q(8) and (not BAout);
+	output(9) <= q(9) and (not BAout);
+	output(10) <= q(10) and (not BAout);
+	output(11) <= q(11) and (not BAout);
+	output(12) <= q(12) and (not BAout);
+	output(13) <= q(13) and (not BAout);
+	output(14) <= q(14) and (not BAout);
+	output(15) <= q(15) and (not BAout);
+	output(16) <= q(16) and (not BAout);
+	output(17) <= q(17) and (not BAout);
+	output(18) <= q(18) and (not BAout);
+	output(19) <= q(19) and (not BAout);
+	output(20) <= q(20) and (not BAout);
+	output(21) <= q(21) and (not BAout);
+	output(22) <= q(22) and (not BAout);
+	output(23) <= q(23) and (not BAout);
+	output(24) <= q(24) and (not BAout);
+	output(25) <= q(25) and (not BAout);
+	output(26) <= q(26) and (not BAout);
+	output(27) <= q(27) and (not BAout);
+	output(28) <= q(28) and (not BAout);
+	output(29) <= q(29) and (not BAout);
+	output(30) <= q(30) and (not BAout);
+	output(31) <= q(31) and (not BAout);
+	
+
 
 end architecture logic;
 

@@ -84,13 +84,13 @@ elsif (ALU_sel = "01110") then
 elsif (ALU_sel = "01111") then 
 	C <= Divout;
 	
-elsif (ALU_sel ="00011") then 
+elsif (ALU_sel ="00011") then -- ADD
 	addorsub <= '1';
 	C(31 downto 0) <= addsubout;
 	C(63 downto 32) <= (others => '0');
 	overflow <= addsuboverflow;
 	
-elsif (ALU_sel ="00100") then 
+elsif (ALU_sel ="00100") then --SUB
 	addorsub <= '0';
 	C(31 downto 0) <= addsubout;
 	C(63 downto 32) <= (others => '0');

@@ -1,5 +1,5 @@
 Analysis & Elaboration report for datapath
-Tue Mar 02 00:01:59 2021
+Wed Mar 03 16:55:52 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,18 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration IP Cores Summary
-  5. Analysis & Elaboration Settings
-  6. Analysis & Elaboration Messages
+  5. Source assignments for Ram512x32:Ram|altsyncram:altsyncram_component|altsyncram_tgu1:auto_generated
+  6. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component
+  7. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component
+  8. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component
+  9. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component
+ 10. Parameter Settings for User Entity Instance: Ram512x32:Ram|altsyncram:altsyncram_component
+ 11. Parameter Settings for User Entity Instance: the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component
+ 12. altsyncram Parameter Settings by Entity Instance
+ 13. Analysis & Elaboration Settings
+ 14. Port Connectivity Checks: "the_bus:datapathBus"
+ 15. Port Connectivity Checks: "ALU_path:alu_datapath"
+ 16. Analysis & Elaboration Messages
 
 
 
@@ -37,7 +47,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Failed - Tue Mar 02 00:01:59 2021               ;
+; Analysis & Elaboration Status      ; Successful - Wed Mar 03 16:55:52 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; datapath                                        ;
 ; Top-level Entity Name              ; datapath                                        ;
@@ -72,8 +82,197 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+---------------------------------------+
 ; Altera ; LPM_ADD_SUB  ; N/A     ; N/A          ; N/A          ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub ; D:/Github/ELEC374/Lab/lpm_add_sua.vhd ;
 ; Altera ; LPM_DIVIDE   ; N/A     ; N/A          ; N/A          ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv     ; D:/Github/ELEC374/Lab/lpm_divida.vhd  ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux                     ; D:/Github/ELEC374/Lab/lpm_mua.vhd     ;
 ; Altera ; RAM: 2-PORT  ; 13.0    ; N/A          ; N/A          ; |datapath|Ram512x32:Ram                                           ; D:/Github/ELEC374/Lab/Ram512x32.vhd   ;
 +--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Source assignments for Ram512x32:Ram|altsyncram:altsyncram_component|altsyncram_tgu1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------+
+; Assignment                      ; Value              ; From ; To                                    ;
++---------------------------------+--------------------+------+---------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
++---------------------------------+--------------------+------+---------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                   ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Signed Integer                                                                         ;
+; LPM_WIDTHD             ; 32             ; Signed Integer                                                                         ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                ;
+; CBXI_PARAMETER         ; lpm_divide_hjp ; Untyped                                                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                         ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component ;
++------------------------+-------------+-------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                            ;
++------------------------+-------------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 32          ; Signed Integer                                                                                  ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                         ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                         ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                         ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                                         ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                         ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                         ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                         ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                         ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                              ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                                                         ;
+; USE_WYS                ; OFF         ; Untyped                                                                                         ;
+; STYLE                  ; FAST        ; Untyped                                                                                         ;
+; CBXI_PARAMETER         ; add_sub_ich ; Untyped                                                                                         ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                  ;
++------------------------+-------------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+; Parameter Name ; Value           ; Type                                                                                       ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+; LPM_PIPELINE   ; 0               ; Untyped                                                                                    ;
+; LPM_SHIFTTYPE  ; ROTATE          ; Untyped                                                                                    ;
+; LPM_WIDTH      ; 32              ; Signed Integer                                                                             ;
+; LPM_WIDTHDIST  ; 5               ; Signed Integer                                                                             ;
+; CBXI_PARAMETER ; lpm_clshift_jhc ; Untyped                                                                                    ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+; Parameter Name ; Value           ; Type                                                                                       ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+; LPM_PIPELINE   ; 0               ; Untyped                                                                                    ;
+; LPM_SHIFTTYPE  ; ROTATE          ; Untyped                                                                                    ;
+; LPM_WIDTH      ; 32              ; Signed Integer                                                                             ;
+; LPM_WIDTHDIST  ; 5               ; Signed Integer                                                                             ;
+; CBXI_PARAMETER ; lpm_clshift_iib ; Untyped                                                                                    ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Ram512x32:Ram|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------+
+; Parameter Name                     ; Value                ; Type                           ;
++------------------------------------+----------------------+--------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                        ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                        ;
+; WIDTH_A                            ; 32                   ; Signed Integer                 ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                 ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WIDTH_B                            ; 32                   ; Signed Integer                 ;
+; WIDTHAD_B                          ; 9                    ; Signed Integer                 ;
+; NUMWORDS_B                         ; 512                  ; Signed Integer                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                        ;
+; RDCONTROL_REG_B                    ; CLOCK0               ; Untyped                        ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                        ;
+; OUTDATA_REG_B                      ; CLOCK0               ; Untyped                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; INIT_FILE                          ; mif.mif              ; Untyped                        ;
+; INIT_FILE_LAYOUT                   ; PORT_B               ; Untyped                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                        ;
+; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_tgu1      ; Untyped                        ;
++------------------------------------+----------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+---------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                ;
++------------------------+-------------+---------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                        ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                      ;
+; LPM_WIDTH              ; 32          ; Signed Integer                                                      ;
+; LPM_SIZE               ; 32          ; Signed Integer                                                      ;
+; LPM_WIDTHS             ; 5           ; Signed Integer                                                      ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                      ;
+; CBXI_PARAMETER         ; mux_k9e     ; Untyped                                                             ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                             ;
++------------------------+-------------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                          ;
++-------------------------------------------+-----------------------------------------------+
+; Name                                      ; Value                                         ;
++-------------------------------------------+-----------------------------------------------+
+; Number of entity instances                ; 1                                             ;
+; Entity Instance                           ; Ram512x32:Ram|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                     ;
+;     -- WIDTH_A                            ; 32                                            ;
+;     -- NUMWORDS_A                         ; 512                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                  ;
+;     -- WIDTH_B                            ; 32                                            ;
+;     -- NUMWORDS_B                         ; 512                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                        ;
+;     -- OUTDATA_REG_B                      ; CLOCK0                                        ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                      ;
++-------------------------------------------+-----------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -162,13 +361,37 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
++-------------------------------------------------+
+; Port Connectivity Checks: "the_bus:datapathBus" ;
++---------+-------+----------+--------------------+
+; Port    ; Type  ; Severity ; Details            ;
++---------+-------+----------+--------------------+
+; muxin25 ; Input ; Info     ; Stuck at GND       ;
+; muxin26 ; Input ; Info     ; Stuck at GND       ;
+; muxin27 ; Input ; Info     ; Stuck at GND       ;
+; muxin28 ; Input ; Info     ; Stuck at GND       ;
+; muxin29 ; Input ; Info     ; Stuck at GND       ;
+; muxin30 ; Input ; Info     ; Stuck at GND       ;
+; muxin31 ; Input ; Info     ; Stuck at GND       ;
++---------+-------+----------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_path:alu_datapath"                                                                  ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Mar 02 00:01:57 2021
+    Info: Processing started: Wed Mar 03 16:55:48 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datapath -c datapath --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file lpm_divida.vhd
@@ -276,11 +499,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file phase2_
     Info (12022): Found design unit 1: ld_tb-logic
     Info (12023): Found entity 1: ld_tb
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(90): object "overflow" assigned a value but never read
-Warning (10873): Using initial value X (don't care) for net "encoderin[31..16]" at datapath.vhd(106)
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(93): object "overflow" assigned a value but never read
 Info (12128): Elaborating entity "R0" for hierarchy "R0:Register0"
-Warning (10492): VHDL Process Statement warning at R0.vhd(33): signal "Q" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at R0.vhd(33): signal "BAout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "register32bit" for hierarchy "register32bit:R1"
 Info (12128): Elaborating entity "MDR" for hierarchy "MDR:MD_R"
 Info (12128): Elaborating entity "ALU_path" for hierarchy "ALU_path:alu_datapath"
@@ -414,7 +634,6 @@ Info (12128): Elaborating entity "shr32" for hierarchy "ALU_path:alu_datapath|al
 Info (12128): Elaborating entity "negate32" for hierarchy "ALU_path:alu_datapath|alu:the_alu|negate32:aluNeg"
 Info (12128): Elaborating entity "register64bit" for hierarchy "ALU_path:alu_datapath|register64bit:register_Z"
 Info (12128): Elaborating entity "conff_logic" for hierarchy "conff_logic:conff"
-Warning (10492): VHDL Process Statement warning at conff_logic.vhd(43): signal "clr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "Ram512x32" for hierarchy "Ram512x32:Ram"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "Ram512x32:Ram|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "Ram512x32:Ram|altsyncram:altsyncram_component"
@@ -435,22 +654,35 @@ Info (12133): Instantiated megafunction "Ram512x32:Ram|altsyncram:altsyncram_com
     Info (12134): Parameter "outdata_reg_b" = "CLOCK0"
     Info (12134): Parameter "power_up_uninitialized" = "FALSE"
     Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
-    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "OLD_DATA"
     Info (12134): Parameter "widthad_a" = "9"
     Info (12134): Parameter "widthad_b" = "9"
     Info (12134): Parameter "width_a" = "32"
     Info (12134): Parameter "width_b" = "32"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kku1.tdf
-    Info (12023): Found entity 1: altsyncram_kku1
-Info (12128): Elaborating entity "altsyncram_kku1" for hierarchy "Ram512x32:Ram|altsyncram:altsyncram_component|altsyncram_kku1:auto_generated"
-Error (113000): Memory Initialization File or Hexadecimal (Intel-Format) File "mif.mif" contains illegal syntax at line 46 File: D:/Github/ELEC374/Lab/mif.mif Line: 46
-Critical Warning (127002): Can't read Memory Initialization File or Hexadecimal (Intel-Format) File mif.mif -- setting all initial values to 0
-Error (12152): Can't elaborate user hierarchy "Ram512x32:Ram|altsyncram:altsyncram_component|altsyncram_kku1:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Error: Quartus II 64-Bit Analysis & Elaboration was unsuccessful. 2 errors, 7 warnings
-    Error: Peak virtual memory: 4667 megabytes
-    Error: Processing ended: Tue Mar 02 00:01:59 2021
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:02
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tgu1.tdf
+    Info (12023): Found entity 1: altsyncram_tgu1
+Info (12128): Elaborating entity "altsyncram_tgu1" for hierarchy "Ram512x32:Ram|altsyncram:altsyncram_component|altsyncram_tgu1:auto_generated"
+Info (12128): Elaborating entity "sel_and_encode" for hierarchy "sel_and_encode:select_and_encode"
+Info (12128): Elaborating entity "the_bus" for hierarchy "the_bus:datapathBus"
+Info (12128): Elaborating entity "encoder32to5" for hierarchy "the_bus:datapathBus|encoder32to5:Bus_encoder"
+Info (12128): Elaborating entity "lpm_mua" for hierarchy "the_bus:datapathBus|lpm_mua:Bus_Mux"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+    Info (12134): Parameter "LPM_SIZE" = "32"
+    Info (12134): Parameter "LPM_WIDTHS" = "5"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_k9e.tdf
+    Info (12023): Found entity 1: mux_k9e
+Info (12128): Elaborating entity "mux_k9e" for hierarchy "the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component|mux_k9e:auto_generated"
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4711 megabytes
+    Info: Processing ended: Wed Mar 03 16:55:52 2021
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 

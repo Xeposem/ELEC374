@@ -26,30 +26,38 @@ signal BusMuxOut_tb	: std_logic_vector(31 downto 0);
 signal R0out_tb		: std_logic_vector(31 downto 0);
 signal R1out_tb		: std_logic_vector(31 downto 0);
 signal R2out_tb		: std_logic_vector(31 downto 0);
-signal R3out_tb		: std_logic_vector(31 downto 0);
-signal R4out_tb		: std_logic_vector(31 downto 0);
-signal R5out_tb		: std_logic_vector(31 downto 0);
-signal R6out_tb		: std_logic_vector(31 downto 0);
-signal R7out_tb		: std_logic_vector(31 downto 0);
-signal R8out_tb		: std_logic_vector(31 downto 0);
-signal R9out_tb		: std_logic_vector(31 downto 0);
-signal R10out_tb		: std_logic_vector(31 downto 0);
-signal R11out_tb		: std_logic_vector(31 downto 0);
-signal R12out_tb		: std_logic_vector(31 downto 0);
-signal R13out_tb		: std_logic_vector(31 downto 0);
-signal R14out_tb		: std_logic_vector(31 downto 0);
-signal R15out_tb		: std_logic_vector(31 downto 0);
+--signal R3out_tb		: std_logic_vector(31 downto 0);
+--signal R4out_tb		: std_logic_vector(31 downto 0);
+--signal R5out_tb		: std_logic_vector(31 downto 0);
+--signal R6out_tb		: std_logic_vector(31 downto 0);
+--signal R7out_tb		: std_logic_vector(31 downto 0);
+--signal R8out_tb		: std_logic_vector(31 downto 0);
+--signal R9out_tb		: std_logic_vector(31 downto 0);
+--signal R10out_tb		: std_logic_vector(31 downto 0);
+--signal R11out_tb		: std_logic_vector(31 downto 0);
+--signal R12out_tb		: std_logic_vector(31 downto 0);
+--signal R13out_tb		: std_logic_vector(31 downto 0);
+--signal R14out_tb		: std_logic_vector(31 downto 0);
+--signal R15out_tb		: std_logic_vector(31 downto 0);
 signal HIout_tb		: std_logic_vector(31 downto 0);
 signal LOout_tb		: std_logic_vector(31 downto 0);
 signal IRout_tb		: std_logic_vector(31 downto 0);
 signal Zout_tb			: std_logic_vector(63 downto 0);
 signal dummyInput_tb : std_logic_vector(31 downto 0);
 
+signal md_tb: std_logic_vector(31 downto 0);
+signal mar_tb:  std_logic_vector(31 downto 0);
+
 type	state is(default, Reg_load1, Reg_load2, Reg_load3, T0, T1, T2, T3, T4, T5, T6, T7);
 signal	present_state: State := default;
 
 component datapath
 	PORT (
+		md_test: out std_logic_vector(31 downto 0);
+		mar_test: out std_logic_vector(31 downto 0);
+
+
+		
 		clk: in std_logic;
 		clr: in std_logic;
 		PC_plus: in std_logic;
@@ -61,7 +69,6 @@ component datapath
 		MDR_read: in std_logic;
 		MDR_write: in std_logic;
 	
-		
 		baout: in std_logic;
 		Gra: in std_logic;
 		Grb: in std_logic;
@@ -78,22 +85,21 @@ component datapath
 		R0out	: out std_logic_vector(31 downto 0);
 		R1out	: out std_logic_vector(31 downto 0);
 		R2out	: out std_logic_vector(31 downto 0);
-		R3out	: out std_logic_vector(31 downto 0);
-		R4out	: out std_logic_vector(31 downto 0);
-		R5out	: out std_logic_vector(31 downto 0);
-		-------------------------------------------------
-		R6out	: out std_logic_vector(31 downto 0);
-		R7out	: out std_logic_vector(31 downto 0);
-		R8out	: out std_logic_vector(31 downto 0);
-		R9out	: out std_logic_vector(31 downto 0);
-		R10out	: out std_logic_vector(31 downto 0);
-		--------------------------------------------------
-		R11out	: out std_logic_vector(31 downto 0);
-		R12out	: out std_logic_vector(31 downto 0);
-		R13out	: out std_logic_vector(31 downto 0);
-		R14out	: out std_logic_vector(31 downto 0);
-		R15out	: out std_logic_vector(31 downto 0);
-
+--		R3out	: out std_logic_vector(31 downto 0);
+--		R4out	: out std_logic_vector(31 downto 0);
+--		R5out	: out std_logic_vector(31 downto 0);
+--		-------------------------------------------------
+--		R6out	: out std_logic_vector(31 downto 0);
+--		R7out	: out std_logic_vector(31 downto 0);
+--		R8out	: out std_logic_vector(31 downto 0);
+--		R9out	: out std_logic_vector(31 downto 0);
+--		R10out	: out std_logic_vector(31 downto 0);
+--		--------------------------------------------------
+--		R11out	: out std_logic_vector(31 downto 0);
+--		R12out	: out std_logic_vector(31 downto 0);
+--		R13out	: out std_logic_vector(31 downto 0);
+--		R14out	: out std_logic_vector(31 downto 0);
+--		R15out	: out std_logic_vector(31 downto 0);
 		-------------------------------------------------
 		HIout	: out std_logic_vector(31 downto 0);
 		LOout	: out std_logic_vector(31 downto 0);
@@ -103,11 +109,12 @@ component datapath
 end component;
 
 begin
-datapathTest : datapath port map (clk_tb, clr_tb, IncPC_tb, encoderIn_tb, RegEnable_tb, dummyInput_tb, MDRRead_tb, MDRWrite_tb, Baout_tb, Gra_tb, Grb_tb, Grc_tb, Rin_tb, Rout_tb, ADD_tb, inport_tb, outport_tb, conffout_tb, BusMuxOut_tb, R0out_tb, R1out_tb, R2out_tb, R3out_tb, R4out_tb, R5out_tb, R6out_tb, R7out_tb, R8out_tb, R9out_tb, R10out_tb, R11out_tb, R12out_tb, R13out_tb, R14out_tb, R15out_tb, HIout_tb, LOout_tb, IRout_tb, Zout_tb);
+datapathTest : datapath port map (md_tb,mar_tb, clk_tb, clr_tb, IncPC_tb, encoderIn_tb, RegEnable_tb, dummyInput_tb, MDRRead_tb, MDRWrite_tb, Baout_tb, Gra_tb, Grb_tb, 
+Grc_tb, Rin_tb, Rout_tb, ADD_tb, inport_tb, outport_tb, conffout_tb, BusMuxOut_tb, R0out_tb, R1out_tb, R2out_tb, HIout_tb, LOout_tb, IRout_tb, Zout_tb);
 
 clk_process: process
 begin
-	clk_tb <= '1', '0' after 10 ns;
+	clk_tb <= '1', '0' after 20 ns;
 	wait for 20 ns;
 end process clk_process;
 
@@ -184,7 +191,7 @@ begin
 			Grb_tb <= '0';
 			Baout_tb <= '0';
 			encoderIn_tb <= (7 => '1', others => '0');
-			ADD_tb <= "00101";
+			ADD_tb <= "00011";
 			RegEnable_tb <= (7 => '1', others => '0');
 		when T5 =>
 			encoderIn_tb <= (3 => '1', others => '0');

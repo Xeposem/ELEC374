@@ -1,5 +1,5 @@
 MIF/HEX Update report for datapath
-Tue Mar 02 00:12:34 2021
+Wed Mar 03 13:14:17 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -35,7 +35,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------+
 ; MIF/HEX Update Summary                                    ;
 +-----------------------+-----------------------------------+
-; MIF/HEX Update Status ; Failed - Tue Mar 02 00:12:34 2021 ;
+; MIF/HEX Update Status ; Failed - Wed Mar 03 13:14:17 2021 ;
 ; Revision Name         ; datapath                          ;
 ; Top-level Entity Name ; datapath                          ;
 ; Family                ; Cyclone III                       ;
@@ -56,13 +56,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit MIF/HEX Update
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Mar 02 00:12:33 2021
+    Info: Processing started: Wed Mar 03 13:14:16 2021
 Info: Command: quartus_cdb datapath -c datapath --update_mif
 Error (39022): Found no valid Memory Initialization File to process
 Error: Quartus II 64-Bit MIF/HEX Update was unsuccessful. 1 error, 0 warnings
-    Error: Peak virtual memory: 4619 megabytes
-    Error: Processing ended: Tue Mar 02 00:12:35 2021
-    Error: Elapsed time: 00:00:02
+    Error: Peak virtual memory: 4608 megabytes
+    Error: Processing ended: Wed Mar 03 13:14:17 2021
+    Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 
 

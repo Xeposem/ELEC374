@@ -3,75 +3,75 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -124.617
-TNS   : -15035.446
+Slack : -129.801
+TNS   : -18074.459
 
-Type  : Slow 1200mV 85C Model Setup 'encoderin[0]'
-Slack : -106.893
-TNS   : -4817.489
+Type  : Slow 1200mV 85C Model Setup 'Gra'
+Slack : -107.824
+TNS   : -4995.930
 
-Type  : Slow 1200mV 85C Model Hold 'encoderin[0]'
-Slack : -20.066
-TNS   : -985.080
+Type  : Slow 1200mV 85C Model Hold 'Gra'
+Slack : -26.087
+TNS   : -1312.452
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 1.080
+Slack : 0.310
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'encoderin[0]'
-Slack : -17.169
-TNS   : -33025.498
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Gra'
+Slack : -21.884
+TNS   : -53270.923
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -771.000
+TNS   : -905.308
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -111.294
-TNS   : -13495.058
+Slack : -115.707
+TNS   : -16090.612
 
-Type  : Slow 1200mV 0C Model Setup 'encoderin[0]'
-Slack : -96.517
-TNS   : -4339.011
+Type  : Slow 1200mV 0C Model Setup 'Gra'
+Slack : -97.349
+TNS   : -4491.586
 
-Type  : Slow 1200mV 0C Model Hold 'encoderin[0]'
-Slack : -17.756
-TNS   : -869.335
+Type  : Slow 1200mV 0C Model Hold 'Gra'
+Slack : -23.263
+TNS   : -1169.111
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.989
+Slack : 0.304
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'encoderin[0]'
-Slack : -15.081
-TNS   : -29333.358
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Gra'
+Slack : -19.337
+TNS   : -47716.017
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -771.000
+TNS   : -905.308
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -71.320
-TNS   : -8698.920
+Slack : -73.953
+TNS   : -10118.048
 
-Type  : Fast 1200mV 0C Model Setup 'encoderin[0]'
-Slack : -62.452
-TNS   : -2804.812
+Type  : Fast 1200mV 0C Model Setup 'Gra'
+Slack : -62.655
+TNS   : -2878.113
 
-Type  : Fast 1200mV 0C Model Hold 'encoderin[0]'
-Slack : -11.865
-TNS   : -583.308
+Type  : Fast 1200mV 0C Model Hold 'Gra'
+Slack : -15.502
+TNS   : -782.118
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.479
+Slack : 0.150
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'encoderin[0]'
-Slack : -10.242
-TNS   : -16533.717
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Gra'
+Slack : -13.129
+TNS   : -27572.861
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -775.295
+TNS   : -867.019
 
 ------------------------------------------------------------
