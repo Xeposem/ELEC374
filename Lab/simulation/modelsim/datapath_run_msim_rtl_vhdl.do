@@ -19,14 +19,15 @@ vcom -93 -work work {D:/Github/ELEC374/Lab/negate32.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/shl32.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/shr32.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/R0.vhd}
-vcom -93 -work work {D:/Github/ELEC374/Lab/sel_and_encode.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/conff_logic.vhd}
-vcom -93 -work work {D:/Github/ELEC374/Lab/Ram512x32.vhd}
+vcom -93 -work work {D:/Github/ELEC374/Lab/ram_init.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/MDR.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/the_bus.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/ALU_path.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/alu.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/datapath.vhd}
+vcom -93 -work work {D:/Github/ELEC374/Lab/sel_and_encode.vhd}
+vcom -93 -work work {D:/Github/ELEC374/Lab/Ram_512x32.vhd}
 
 vcom -93 -work work {D:/Github/ELEC374/Lab/Phase2_tb/ld_tb.vhd}
 

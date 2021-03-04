@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
 
 entity conff_logic is port (
 	clk : in std_logic;
@@ -32,13 +33,13 @@ or Busmux_in(21) or Busmux_in(22) or Busmux_in(23) or Busmux_in(24) or Busmux_in
 
  
 eq <= dec_out(0) and nor_out;
-neq <= dec_out(1) and (not nor_out);
+neq <= dec_out(1) and (not (nor_out));
 gte <= dec_out(2) and (not Busmux_in(31));
 lt<= dec_out(3) and Busmux_in(31);
 
 Con_d <= eq or neq or gte or lt;
 
-Conff: process(clk, Con_in, clr) 
+Conff: process(clk, Con_in) 
 begin 
 if (clr = '0') then 
 	Q<='0';

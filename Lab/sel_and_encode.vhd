@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use work.ram_init.all;
 
 entity sel_and_encode is port (
 	IR_in: in std_logic_vector(31 downto 0);
@@ -37,7 +38,7 @@ c(2)<= IR_in(17) and Grc;
 c(1)<= IR_in(16) and Grc;
 c(0)<= IR_in(15) and Grc;
 
-dec_in<= (a or b or c);
+dec_in<= a or b or c;
 
 with dec_in select 
 dec_out <= "0000000000000000" when "0000",

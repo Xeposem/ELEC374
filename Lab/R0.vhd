@@ -20,7 +20,7 @@ process(clk, clr)
 			if clr = '0' then 
 				q<= (others=>'0');
 			elsif (clk'event and clk='1') then
-            if R0in = '1' then
+            if (R0in = '1') then
                 q <= input;
             end if;
         end if;

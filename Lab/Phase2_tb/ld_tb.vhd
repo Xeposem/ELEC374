@@ -114,7 +114,7 @@ Grc_tb, Rin_tb, Rout_tb, ADD_tb, inport_tb, outport_tb, conffout_tb, BusMuxOut_t
 
 clk_process: process
 begin
-	clk_tb <= '1', '0' after 20 ns;
+	clk_tb <= '1', '0' after 10 ns;
 	wait for 20 ns;
 end process clk_process;
 
@@ -140,6 +140,8 @@ begin
 				present_state <= T6;
 			when T6 =>
 				present_state <= T7;
+--			when T7 => 
+--				present_state <= T8;
 			when others =>
 		end case;
 	end if;
@@ -166,47 +168,61 @@ begin
 			encoderIn_tb <= (others => '0');
 			RegEnable_tb <= (others => '0');
 		when Reg_load1 =>
-			dummyInput_tb <= x"00000000";
-			RegEnable_tb <= (2  => '1', others => '0');
-			encoderIn_tb <= (8 => '1', others => '0');
+			dummyInput_tb <= x"00000000"; 
+			RegEnable_tb <= (2  => '1', others => '0');-- pc enable 
+			encoderIn_tb <= (8 => '1', others => '0'); --all zeros
+			
 		when T0 =>
-			encoderIn_tb <= (4 => '1', others => '0');
-			RegEnable_tb <= (5 => '1', 7 => '1', others => '0');
-			IncPC_tb <= '1';
+			encoderIn_tb <= (4 => '1', others => '0'); --PCout signal to the bus encoder
+			RegEnable_tb <= (5 => '1', 7 => '1', others => '0'); -- MAR enable and Z enable (load pc address to both MAR and Z register)
+			IncPC_tb <= '1'; -- a signal the alu for increment pc 
 		when T1 =>
-			encoderIn_tb <= (3 => '1', others => '0');
-			RegEnable_tb <= (2 => '1', 4 => '1', others => '0');
+			encoderIn_tb <= (3 => '1', others => '0'); --Zlow --(the incremented pc address)
+			RegEnable_tb <= (2 => '1', 4 => '1', others => '0'); --PC enable, MDR enable 
+			
 			IncPC_tb <= '0';
-			MDRRead_tb <= '1';
+			MDRRead_tb <= '1'; -- read from the memory for the first instruction in memory (000000...)
 		when T2 =>
-			MDRRead_tb <= '0';
-			encoderIn_tb <= (5 => '1', others => '0');
-			RegEnable_tb <= (3 => '1', others => '0');
+--			MDRRead_tb <= '0'; -- read from the bus 
+			encoderIn_tb <= (5 => '1', others => '0');--MDR out 
+			RegEnable_tb <= (3 => '1', others => '0');-- IR in (put the content in memory to IR)
 		when T3 =>
 			Grb_tb <= '1';
 			Baout_tb <= '1';
-			encoderIn_tb <= (others => '0');
-			RegEnable_tb <= (6 => '1', others => '0');
+			encoderIn_tb <= (others => '0'); 
+			RegEnable_tb <= (6 => '1', others => '0'); -- Yin (Y get loaded with all zeros)
 		when T4 =>
-			Grb_tb <= '0';
-			Baout_tb <= '0';
-			encoderIn_tb <= (7 => '1', others => '0');
-			ADD_tb <= "00011";
-			RegEnable_tb <= (7 => '1', others => '0');
+--			Grb_tb <= '0';
+--			Baout_tb <= '0';
+			encoderIn_tb <= (7 => '1', others => '0');-- Cout (take C extended as input)
+			ADD_tb <= "00011"; -- in this case is 
+			RegEnable_tb <= (7 => '1', others => '0');--Zin (load the C+R0 in to Z)
+			
 		when T5 =>
-			encoderIn_tb <= (3 => '1', others => '0');
-			RegEnable_tb <= (5 => '1', others => '0');
-		when T6 =>
-			MDRRead_tb <= '1';
-			encoderIn_tb <= (others => '0');
-			RegEnable_tb <= (4 => '1', others => '0');
-		when T7 =>
-			MDRRead_tb <= '0';
-			Gra_tb <= '1';
-			Rin_tb <= '1';
-			encoderIn_tb <= (5 => '1', others => '0');
-			RegEnable_tb <= (others => '0');
+			Gra_tb <= '1'; -- select which register the content should be put in
+			Rin_tb <= '1'; --- enable register 
+			encoderIn_tb <= (3 => '1', others => '0');--Zlow --3
+--			RegEnable_tb <= (5 => '1', others => '0');--MAR enable 
+			
+			
+--		when T6 =>
+		
+--			MDRRead_tb <= '1'; -- read from memory for the content 
+--			encoderIn_tb <= (others => '0'); -- upper encoder off
+--			RegEnable_tb <= (4 => '1', others => '0'); -- MDR enable 
+			
+--		when T7 =>
+--			MDRRead_tb <= '0'; -- read from bus 
+--			Gra_tb <= '1'; -- select which register the content should be put in
+--			Rin_tb <= '1'; --- enable register 
+--			encoderIn_tb <= (5 => '1', others => '0');--MDRout 
+--			RegEnable_tb <= (others => '0'); -- all upper register are off
+--			
+--		when T8 =>
+--			Rout_tb <='1';
+			
 		when others =>
+
 	end case;
 end process;
 end architecture;

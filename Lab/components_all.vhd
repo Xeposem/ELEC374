@@ -253,5 +253,14 @@ component Ram512x32 IS
 	);
 end component Ram512x32;
 ---------------------------------------------------------
+
+component RAM_512x32 is port(
+   data	: in std_logic_vector(31 downto 0);
+   address	: in std_logic_vector(8 downto 0);
+   wren	: in std_logic;
+	rden	: in std_logic;
+   q	: out std_logic_vector(31 downto 0)
+);
+end component RAM_512x32;
  
 end package;
