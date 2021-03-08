@@ -20,7 +20,7 @@ begin
 			if clr = '0' then 
 				Q<= (others=>'0');
 			elsif (clk'event and clk='1') then
-            if ld = '1' then
+            if (ld = '1') then
                 Q <= D;
             end if;
         end if;

@@ -38,10 +38,13 @@ c(2)<= IR_in(17) and Grc;
 c(1)<= IR_in(16) and Grc;
 c(0)<= IR_in(15) and Grc;
 
-dec_in<= a or b or c;
+dec_in(3)<= a(3) or b(3) or c(3);
+dec_in(2)<= a(2) or b(2) or c(2);
+dec_in(1)<= a(1) or b(1) or c(1);
+dec_in(0)<= a(0) or b(0) or c(0);
 
 with dec_in select 
-dec_out <= "0000000000000000" when "0000",
+dec_out <= "0000000000000001" when "0000",
 			  "0000000000000010" when "0001", 
 			  "0000000000000100" when "0010",
 			  "0000000000001000" when "0011",
@@ -56,7 +59,8 @@ dec_out <= "0000000000000000" when "0000",
 			  "0001000000000000" when "1100",
 			  "0010000000000000" when "1101", 
 			  "0100000000000000" when "1110",
-			  "1000000000000000" when others;
+			  "1000000000000000" when others; 
+--			  "0000000000000000" when others;
 			  
 R_in(15) <= Rin and dec_out(15);
 R_in(14) <= Rin and dec_out(14);

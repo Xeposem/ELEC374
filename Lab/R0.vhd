@@ -26,14 +26,6 @@ process(clk, clr)
         end if;
     end process;
 	 
---process(input, Q)
---variable I: std_logic_vector (31 downto 0);
---	begin 
---	for index in 0 to input'length-1 loop 
---		I(index):= (Q(index) and (not BAout));
---	end loop;
---	output<= I;
---end process;
 	
 	output(0) <= q(0) and (not BAout);
 	output(1) <= q(1) and (not BAout);

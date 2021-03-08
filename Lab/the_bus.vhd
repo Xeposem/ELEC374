@@ -43,10 +43,10 @@ end entity the_bus;
 
 architecture structure of the_bus is 
 signal Mux_sel: std_logic_vector(4 downto 0);
-signal default_zeros : std_logic_vector(31 downto 0);
 
 begin 
 Bus_encoder: encoder32to5 port map(encoder32In, Mux_sel);
+
 Bus_Mux: lpm_mua port map (muxIn0, muxIn1, muxIn2, muxIn3, muxIn4, muxIn5, 
 muxIn6, muxIn7, muxIn8, muxIn9, muxIn10, muxIn11, muxIn12, muxIn13,
 muxIn14, muxIn15, muxIn16, muxIn17, muxIn18, muxIn19, muxIn20, muxIn21, 

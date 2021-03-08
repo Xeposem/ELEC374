@@ -17,8 +17,8 @@ end entity MDR;
 architecture behav of MDR is 
 signal MDMux_out: std_logic_vector(31 downto 0);
 begin 
-MDMux_out <= MDR_in1 when MDMux_read = '0' else 
-				 MDR_in2;
+MDMux_out <= MDR_in2 when MDMux_read = '1' else -- '0' from bus, '1' from memory
+				 MDR_in1;
 The_MDR: register32bit port map(MDMux_out, MDR_enable, clr, clk, MDR_out);
 
 end architecture behav;

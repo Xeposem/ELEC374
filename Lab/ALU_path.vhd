@@ -32,6 +32,7 @@ register_Z: register64bit port map(Zin, Z_enable, clr, clk, ToLow, ToHi);
 
 PCinc(31 downto 0)<= std_logic_vector(unsigned(In1)+1); --increment the content of PC by 1
 PCinc(63 downto 32)<= (others=>'0');
+
 Zin<= PCinc when PC_plus ='1' else 
 		ALU_out; -- the mux between alu and Z
 

@@ -105,8 +105,8 @@ BEGIN
 		clock_enable_input_a => "BYPASS",
 		clock_enable_input_b => "BYPASS",
 		clock_enable_output_b => "BYPASS",
-		init_file => "mif.mif",
-		init_file_layout => "PORT_B",
+		init_file => "ram.hex",
+		init_file_layout => "PORT_A",
 		intended_device_family => "Cyclone III",
 		lpm_type => "altsyncram",
 		numwords_a => 512,
@@ -116,7 +116,7 @@ BEGIN
 		outdata_reg_b => "CLOCK0",
 		power_up_uninitialized => "FALSE",
 		rdcontrol_reg_b => "CLOCK0",
-		read_during_write_mode_mixed_ports => "OLD_DATA",
+		read_during_write_mode_mixed_ports => "DONT_CARE",
 		widthad_a => 9,
 		widthad_b => 9,
 		width_a => 32,
@@ -164,7 +164,7 @@ END SYN;
 -- Retrieval info: PRIVATE: IMPLEMENT_IN_LES NUMERIC "0"
 -- Retrieval info: PRIVATE: INDATA_ACLR_B NUMERIC "0"
 -- Retrieval info: PRIVATE: INDATA_REG_B NUMERIC "0"
--- Retrieval info: PRIVATE: INIT_FILE_LAYOUT STRING "PORT_B"
+-- Retrieval info: PRIVATE: INIT_FILE_LAYOUT STRING "PORT_A"
 -- Retrieval info: PRIVATE: INIT_TO_SIM_X NUMERIC "0"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
 -- Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
@@ -172,12 +172,12 @@ END SYN;
 -- Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
 -- Retrieval info: PRIVATE: MEMSIZE NUMERIC "16384"
 -- Retrieval info: PRIVATE: MEM_IN_BITS NUMERIC "0"
--- Retrieval info: PRIVATE: MIFfilename STRING "mif.mif"
+-- Retrieval info: PRIVATE: MIFfilename STRING "ram.hex"
 -- Retrieval info: PRIVATE: OPERATION_MODE NUMERIC "2"
 -- Retrieval info: PRIVATE: OUTDATA_ACLR_B NUMERIC "0"
 -- Retrieval info: PRIVATE: OUTDATA_REG_B NUMERIC "1"
 -- Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
--- Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_MIXED_PORTS NUMERIC "1"
+-- Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_MIXED_PORTS NUMERIC "2"
 -- Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_PORT_A NUMERIC "3"
 -- Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_PORT_B NUMERIC "3"
 -- Retrieval info: PRIVATE: REGdata NUMERIC "1"
@@ -205,8 +205,8 @@ END SYN;
 -- Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_A STRING "BYPASS"
 -- Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_B STRING "BYPASS"
 -- Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_B STRING "BYPASS"
--- Retrieval info: CONSTANT: INIT_FILE STRING "mif.mif"
--- Retrieval info: CONSTANT: INIT_FILE_LAYOUT STRING "PORT_B"
+-- Retrieval info: CONSTANT: INIT_FILE STRING "ram.hex"
+-- Retrieval info: CONSTANT: INIT_FILE_LAYOUT STRING "PORT_A"
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
 -- Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "512"
@@ -216,7 +216,7 @@ END SYN;
 -- Retrieval info: CONSTANT: OUTDATA_REG_B STRING "CLOCK0"
 -- Retrieval info: CONSTANT: POWER_UP_UNINITIALIZED STRING "FALSE"
 -- Retrieval info: CONSTANT: RDCONTROL_REG_B STRING "CLOCK0"
--- Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_MIXED_PORTS STRING "OLD_DATA"
+-- Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_MIXED_PORTS STRING "DONT_CARE"
 -- Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "9"
 -- Retrieval info: CONSTANT: WIDTHAD_B NUMERIC "9"
 -- Retrieval info: CONSTANT: WIDTH_A NUMERIC "32"
