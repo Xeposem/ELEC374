@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity ldi_tb is
+entity ldi_tb is -- ldi R1,85
 end;
 
 architecture logic of ldi_tb is
@@ -26,25 +26,20 @@ signal BusMuxOut_tb	: std_logic_vector(31 downto 0);
 signal R0out_tb		: std_logic_vector(31 downto 0);
 signal R1out_tb		: std_logic_vector(31 downto 0);
 signal R2out_tb		: std_logic_vector(31 downto 0);
-
 signal HIout_tb		: std_logic_vector(31 downto 0);
 signal LOout_tb		: std_logic_vector(31 downto 0);
 signal IRout_tb		: std_logic_vector(31 downto 0);
 signal Zout_tb			: std_logic_vector(63 downto 0);
 signal dummyInput_tb : std_logic_vector(31 downto 0);
 
-signal md_tb: std_logic_vector(31 downto 0);
-signal mar_tb:  std_logic_vector(31 downto 0);
+--signal md_tb: std_logic_vector(31 downto 0);
+--signal mar_tb:  std_logic_vector(31 downto 0);
 
 type	state is(default, Reg_load1, Reg_load2, Reg_load3, T0, T1, T2, T3, T4, T5, T6, T7);
 signal	present_state: State := default;
 
 component datapath
 	PORT (
-		md_test: out std_logic_vector(31 downto 0);
-		mar_test: out std_logic_vector(31 downto 0);
-
-
 		
 		clk: in std_logic;
 		clr: in std_logic;
@@ -81,7 +76,7 @@ component datapath
 end component;
 
 begin
-datapathTest : datapath port map (md_tb,mar_tb, clk_tb, clr_tb, IncPC_tb, encoderIn_tb, RegEnable_tb, dummyInput_tb, MDRRead_tb, MDRWrite_tb, Baout_tb, Gra_tb, Grb_tb, 
+datapathTest : datapath port map (clk_tb, clr_tb, IncPC_tb, encoderIn_tb, RegEnable_tb, dummyInput_tb, MDRRead_tb, MDRWrite_tb, Baout_tb, Gra_tb, Grb_tb, 
 Grc_tb, Rin_tb, Rout_tb, ADD_tb, inport_tb, outport_tb, conffout_tb, BusMuxOut_tb, R0out_tb, R1out_tb, R2out_tb, HIout_tb, LOout_tb, IRout_tb, Zout_tb);
 
 clk_process: process
@@ -108,10 +103,6 @@ begin
 				present_state <= T4;
 			when T4 =>
 				present_state <= T5;
---			when T5 =>
---				present_state <= T6;
---			when T6 =>
---				present_state <= T7;
 		
 			when others =>
 		end case;
@@ -169,7 +160,6 @@ begin
 			RegEnable_tb <= (6 => '1', others => '0'); -- Yin (Y get loaded with all zeros)
 			
 		when T4 =>
-		
 			Grb_tb <= '0';
 			Baout_tb <= '0';
 			encoderIn_tb <= (7 => '1', others => '0');-- Cout (take C extended as input)
@@ -179,12 +169,9 @@ begin
 		when T5 =>
 			Gra_tb <= '1'; -- select which register the content should be put in
 			Rin_tb <= '1'; --- enable register 
---			Baout_tb <= '0';
---			Rout_tb <= '0';
 			encoderIn_tb <= (3 => '1', others => '0');--Zlow --3
---			RegEnable_tb <=( 1=>'1', others =>'0');
 			RegEnable_tb <= (others=>'0');
---			encoderIn_tb <= (others => '0'); 
+
 		when others =>
 
 	end case;

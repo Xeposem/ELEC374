@@ -39,7 +39,7 @@ lt<= dec_out(3) and Busmux_in(31);
 
 Con_d <= eq or neq or gte or lt;
 
-Conff: process(clk, Con_in) 
+Conff: process(clk, Con_in, clr) 
 begin 
 if (clr = '0') then 
 	Q<='0';

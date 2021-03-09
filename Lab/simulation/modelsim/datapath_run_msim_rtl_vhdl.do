@@ -21,17 +21,17 @@ vcom -93 -work work {D:/Github/ELEC374/Lab/shr32.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/R0.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/conff_logic.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/ram_init.vhd}
-vcom -93 -work work {D:/Github/ELEC374/Lab/Ram_mod.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/MDR.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/the_bus.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/ALU_path.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/alu.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/datapath.vhd}
 vcom -93 -work work {D:/Github/ELEC374/Lab/sel_and_encode.vhd}
+vcom -93 -work work {D:/Github/ELEC374/Lab/Ram_512x32.vhd}
 
-vcom -93 -work work {D:/Github/ELEC374/Lab/Phase2_tb/ldi_tb.vhd}
+vcom -93 -work work {D:/Github/ELEC374/Lab/Phase2_tb/st2_tb.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  ldi_tb
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  st2_tb
 
 add wave *
 view structure

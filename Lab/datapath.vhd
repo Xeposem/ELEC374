@@ -5,9 +5,8 @@ use work.components_all.all;
 use work.ram_init.all;
 
 entity datapath is port (
-		md_test: out std_logic_vector(31 downto 0);
-		mar_test: out std_logic_vector(31 downto 0);
-		
+
+
 		clk: in std_logic;
 		clr: in std_logic;
 		PC_plus: in std_logic;
@@ -66,12 +65,10 @@ signal BusMuxIn_MDR: std_logic_vector(31 downto 0);
 signal BusMuxIn_Inport: std_logic_vector(31 downto 0);
 signal C_sign_extended: std_logic_vector(31 downto 0);
 signal internalBusMuxOut: std_logic_vector(31 downto 0);
-
 signal default_zeros: std_logic_vector(31 downto 0);
 signal overflow: std_logic;
 signal MARout: std_logic_vector(31 downto 0);
 signal IIRout: std_logic_vector(31 downto 0);
-
 signal register_enable: std_logic_vector(31 downto 0);
 signal Mdatain: std_logic_vector(31 downto 0);
 signal encoderin: std_logic_vector(31 downto 0);
@@ -80,7 +77,6 @@ signal encoderin: std_logic_vector(31 downto 0);
 begin
 
 default_zeros <= (others =>'0');
-
 encoderin(31 downto 16)<= encoder_In;
 register_enable (31 downto 16)<= reg_enable;
 
@@ -113,13 +109,11 @@ inport_register: register32bit port map ( in_port, register_enable(24),clr,clk, 
 outport_register: register32bit port map (internalBusMuxOut,register_enable(25), clr, clk, out_port);--9
 conff:conff_logic port map (clk, clr, IIRout(20 downto 19), internalBusMuxOut, register_enable(26), conff_out);--10 
 
---
-Ram: Ram_mod port map ( MARout(8 downto 0), clk, BusMuxIn_MDR, MDR_read, Mdatain);
---
---Ram: RAM_512x32 port map (BusMuxIn_MDR, MARout(8 downto 0), MDR_write, MDR_read, Mdatain ); -- the Mdatain is the ram output
 
+--Ram: Ram_mod port map (MARout(8 downto 0), clk, BusMuxIn_MDR, MDR_read, MDR_write, Mdatain);
 --Ram: Ram512x32 port map (clk, BusMuxIn_MDR, MARout(8 downto 0), MDR_read, MARout(8 downto 0), MDR_write, Mdatain ); --doesn seem to work 
 
+Ram: RAM_512x32 port map (BusMuxIn_MDR, MARout(8 downto 0), MDR_write, MDR_read, Mdatain ); -- the Mdatain is the ram output
 select_and_encode: sel_and_encode port map (IIRout, Gra, Grb, Grc, Rin, Rout, baout, C_sign_extended, register_enable(15 downto 0), encoderin(15 downto 0));
 
 
@@ -136,9 +130,6 @@ Zout(63 downto 32) <= BusMuxIn_Zhigh;
 Zout(31 downto 0) <= BusMuxIn_Zlow;
 IRout <= IIRout;
 BusMuxOut <= internalBusMuxOut;
-
-mar_test<=BusMuxIn_PC;
-md_test<= BusMuxIn_Zlow;
 
 
 end architecture;

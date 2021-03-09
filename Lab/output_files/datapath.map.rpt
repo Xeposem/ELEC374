@@ -1,5 +1,5 @@
-Analysis & Synthesis report for datapath
-Mon Mar 08 17:16:26 2021
+Analysis & Elaboration report for datapath
+Mon Mar 08 23:40:15 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -7,30 +7,19 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis IP Cores Summary
- 10. User-Specified and Inferred Latches
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for Ram_mod:Ram|altsyncram:altsyncram_component|altsyncram_q3g1:auto_generated
- 14. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component
- 15. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component
- 16. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component
- 17. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component
- 18. Parameter Settings for User Entity Instance: Ram_mod:Ram|altsyncram:altsyncram_component
- 19. Parameter Settings for User Entity Instance: the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component
- 20. altsyncram Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "the_bus:datapathBus"
- 22. Port Connectivity Checks: "ALU_path:alu_datapath"
- 23. Port Connectivity Checks: "register32bit:MAR"
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration IP Cores Summary
+  5. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component
+  6. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component
+  7. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component
+  8. Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component
+  9. Parameter Settings for User Entity Instance: the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component
+ 10. Analysis & Elaboration Settings
+ 11. Port Connectivity Checks: "the_bus:datapathBus"
+ 12. Port Connectivity Checks: "ALU_path:alu_datapath"
+ 13. Port Connectivity Checks: "register32bit:MAR"
+ 14. Analysis & Elaboration Messages
 
 
 
@@ -54,27 +43,147 @@ applicable agreement for further details.
 
 
 +--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
+; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 08 17:16:26 2021           ;
+; Analysis & Elaboration Status      ; Successful - Mon Mar 08 23:40:15 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; datapath                                        ;
 ; Top-level Entity Name              ; datapath                                        ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 9,898                                           ;
-;     Total combinational functions  ; 9,153                                           ;
-;     Dedicated logic registers      ; 842                                             ;
-; Total registers                    ; 842                                             ;
-; Total pins                         ; 497                                             ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 16,384                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
 +------------------------------------+-------------------------------------------------+
 
 
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration IP Cores Summary                                                                                                                                   ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+---------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                   ; IP Include File                       ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+---------------------------------------+
+; Altera ; LPM_ADD_SUB  ; N/A     ; N/A          ; N/A          ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub ; D:/Github/ELEC374/Lab/lpm_add_sua.vhd ;
+; Altera ; LPM_DIVIDE   ; N/A     ; N/A          ; N/A          ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv     ; D:/Github/ELEC374/Lab/lpm_divida.vhd  ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux                     ; D:/Github/ELEC374/Lab/lpm_mua.vhd     ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+---------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                   ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Signed Integer                                                                         ;
+; LPM_WIDTHD             ; 32             ; Signed Integer                                                                         ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                ;
+; CBXI_PARAMETER         ; lpm_divide_hjp ; Untyped                                                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                         ;
++------------------------+----------------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component ;
++------------------------+-------------+-------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                            ;
++------------------------+-------------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 32          ; Signed Integer                                                                                  ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                         ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                         ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                         ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                                         ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                         ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                         ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                         ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                         ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                              ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                                                         ;
+; USE_WYS                ; OFF         ; Untyped                                                                                         ;
+; STYLE                  ; FAST        ; Untyped                                                                                         ;
+; CBXI_PARAMETER         ; add_sub_ich ; Untyped                                                                                         ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                  ;
++------------------------+-------------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+; Parameter Name ; Value           ; Type                                                                                       ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+; LPM_PIPELINE   ; 0               ; Untyped                                                                                    ;
+; LPM_SHIFTTYPE  ; ROTATE          ; Untyped                                                                                    ;
+; LPM_WIDTH      ; 32              ; Signed Integer                                                                             ;
+; LPM_WIDTHDIST  ; 5               ; Signed Integer                                                                             ;
+; CBXI_PARAMETER ; lpm_clshift_jhc ; Untyped                                                                                    ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+; Parameter Name ; Value           ; Type                                                                                       ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+; LPM_PIPELINE   ; 0               ; Untyped                                                                                    ;
+; LPM_SHIFTTYPE  ; ROTATE          ; Untyped                                                                                    ;
+; LPM_WIDTH      ; 32              ; Signed Integer                                                                             ;
+; LPM_WIDTHDIST  ; 5               ; Signed Integer                                                                             ;
+; CBXI_PARAMETER ; lpm_clshift_iib ; Untyped                                                                                    ;
++----------------+-----------------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+---------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                ;
++------------------------+-------------+---------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                        ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                      ;
+; LPM_WIDTH              ; 32          ; Signed Integer                                                      ;
+; LPM_SIZE               ; 32          ; Signed Integer                                                      ;
+; LPM_WIDTHS             ; 5           ; Signed Integer                                                      ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                      ;
+; CBXI_PARAMETER         ; mux_k9e     ; Untyped                                                             ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                             ;
++------------------------+-------------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
+; Analysis & Elaboration Settings                                                                                      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
@@ -159,520 +268,6 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 12     ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                    ;
-+----------------------------------+-----------------+---------------------------------------+--------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                             ; File Name with Absolute Path                                       ; Library ;
-+----------------------------------+-----------------+---------------------------------------+--------------------------------------------------------------------+---------+
-; lpm_divida.vhd                   ; yes             ; User Wizard-Generated File            ; D:/Github/ELEC374/Lab/lpm_divida.vhd                               ;         ;
-; lpm_mua.vhd                      ; yes             ; User Wizard-Generated File            ; D:/Github/ELEC374/Lab/lpm_mua.vhd                                  ;         ;
-; lpm_add_sua.vhd                  ; yes             ; User Wizard-Generated File            ; D:/Github/ELEC374/Lab/lpm_add_sua.vhd                              ;         ;
-; register32bit.vhd                ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/register32bit.vhd                            ;         ;
-; register64bit.vhd                ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/register64bit.vhd                            ;         ;
-; MDR.vhd                          ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/MDR.vhd                                      ;         ;
-; encoder32to5.vhd                 ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/encoder32to5.vhd                             ;         ;
-; the_bus.vhd                      ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/the_bus.vhd                                  ;         ;
-; booth_logic.vhd                  ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/booth_logic.vhd                              ;         ;
-; ALU_path.vhd                     ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/ALU_path.vhd                                 ;         ;
-; alu.vhd                          ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/alu.vhd                                      ;         ;
-; rol32.vhd                        ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/rol32.vhd                                    ;         ;
-; ror32.vhd                        ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/ror32.vhd                                    ;         ;
-; components_all.vhd               ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/components_all.vhd                           ;         ;
-; datapath.vhd                     ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/datapath.vhd                                 ;         ;
-; negate32.vhd                     ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/negate32.vhd                                 ;         ;
-; shl32.vhd                        ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/shl32.vhd                                    ;         ;
-; shr32.vhd                        ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/shr32.vhd                                    ;         ;
-; R0.vhd                           ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/R0.vhd                                       ;         ;
-; sel_and_encode.vhd               ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/sel_and_encode.vhd                           ;         ;
-; conff_logic.vhd                  ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/conff_logic.vhd                              ;         ;
-; ram_init.vhd                     ; yes             ; User VHDL File                        ; D:/Github/ELEC374/Lab/ram_init.vhd                                 ;         ;
-; Ram_mod.vhd                      ; yes             ; User Wizard-Generated File            ; D:/Github/ELEC374/Lab/Ram_mod.vhd                                  ;         ;
-; ram.hex                          ; yes             ; User Hexadecimal (Intel-Format) File  ; D:/Github/ELEC374/Lab/ram.hex                                      ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
-; db/lpm_divide_hjp.tdf            ; yes             ; Auto-Generated Megafunction           ; D:/Github/ELEC374/Lab/db/lpm_divide_hjp.tdf                        ;         ;
-; db/sign_div_unsign_39h.tdf       ; yes             ; Auto-Generated Megafunction           ; D:/Github/ELEC374/Lab/db/sign_div_unsign_39h.tdf                   ;         ;
-; db/alt_u_div_t8f.tdf             ; yes             ; Auto-Generated Megafunction           ; D:/Github/ELEC374/Lab/db/alt_u_div_t8f.tdf                         ;         ;
-; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction           ; D:/Github/ELEC374/Lab/db/add_sub_unc.tdf                           ;         ;
-; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction           ; D:/Github/ELEC374/Lab/db/add_sub_vnc.tdf                           ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
-; addcore.inc                      ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/addcore.inc             ;         ;
-; look_add.inc                     ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/look_add.inc            ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/bypassff.inc            ;         ;
-; altshift.inc                     ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
-; db/add_sub_ich.tdf               ; yes             ; Auto-Generated Megafunction           ; D:/Github/ELEC374/Lab/db/add_sub_ich.tdf                           ;         ;
-; lpm_clshift.tdf                  ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/lpm_clshift.tdf         ;         ;
-; db/lpm_clshift_jhc.tdf           ; yes             ; Auto-Generated Megafunction           ; D:/Github/ELEC374/Lab/db/lpm_clshift_jhc.tdf                       ;         ;
-; db/lpm_clshift_iib.tdf           ; yes             ; Auto-Generated Megafunction           ; D:/Github/ELEC374/Lab/db/lpm_clshift_iib.tdf                       ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
-; altrom.inc                       ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/altrom.inc              ;         ;
-; altram.inc                       ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/altram.inc              ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/altdpram.inc            ;         ;
-; db/altsyncram_q3g1.tdf           ; yes             ; Auto-Generated Megafunction           ; D:/Github/ELEC374/Lab/db/altsyncram_q3g1.tdf                       ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                          ; d:/quartus/quartus/libraries/megafunctions/muxlut.inc              ;         ;
-; db/mux_k9e.tdf                   ; yes             ; Auto-Generated Megafunction           ; D:/Github/ELEC374/Lab/db/mux_k9e.tdf                               ;         ;
-+----------------------------------+-----------------+---------------------------------------+--------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 9,898     ;
-;                                             ;           ;
-; Total combinational functions               ; 9153      ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 5236      ;
-;     -- 3 input functions                    ; 3430      ;
-;     -- <=2 input functions                  ; 487       ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 6459      ;
-;     -- arithmetic mode                      ; 2694      ;
-;                                             ;           ;
-; Total registers                             ; 842       ;
-;     -- Dedicated logic registers            ; 842       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 497       ;
-; Total memory bits                           ; 16384     ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 874       ;
-; Total fan-out                               ; 36849     ;
-; Average fan-out                             ; 3.34      ;
-+---------------------------------------------+-----------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                              ;
-+-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                 ; Library Name ;
-+-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |datapath                                       ; 9153 (1)          ; 842 (0)      ; 16384       ; 0            ; 0       ; 0         ; 497  ; 0            ; |datapath                                                                                                                                                                                           ; work         ;
-;    |ALU_path:alu_datapath|                      ; 8333 (421)        ; 96 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath                                                                                                                                                                     ; work         ;
-;       |alu:the_alu|                             ; 7870 (65)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu                                                                                                                                                         ; work         ;
-;          |booth_logic:aluMul|                   ; 6000 (6000)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul                                                                                                                                      ; work         ;
-;          |lpm_add_sua:aluAddSub|                ; 65 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub                                                                                                                                   ; work         ;
-;             |lpm_add_sub:LPM_ADD_SUB_component| ; 65 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component                                                                                                 ; work         ;
-;                |add_sub_ich:auto_generated|     ; 65 (65)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component|add_sub_ich:auto_generated                                                                      ; work         ;
-;          |lpm_divida:aluDiv|                    ; 1383 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv                                                                                                                                       ; work         ;
-;             |lpm_divide:LPM_DIVIDE_component|   ; 1383 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component                                                                                                       ; work         ;
-;                |lpm_divide_hjp:auto_generated|  ; 1383 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated                                                                         ; work         ;
-;                   |sign_div_unsign_39h:divider| ; 1383 (241)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated|sign_div_unsign_39h:divider                                             ; work         ;
-;                      |alt_u_div_t8f:divider|    ; 1142 (1141)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated|sign_div_unsign_39h:divider|alt_u_div_t8f:divider                       ; work         ;
-;                         |add_sub_vnc:add_sub_1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated|sign_div_unsign_39h:divider|alt_u_div_t8f:divider|add_sub_vnc:add_sub_1 ; work         ;
-;          |negate32:aluNeg|                      ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|negate32:aluNeg                                                                                                                                         ; work         ;
-;          |rol32:aluRol|                         ; 156 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|rol32:aluRol                                                                                                                                            ; work         ;
-;             |lpm_clshift:LPM_CLSHIFT_component| ; 156 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component                                                                                                          ; work         ;
-;                |lpm_clshift_iib:auto_generated| ; 156 (156)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component|lpm_clshift_iib:auto_generated                                                                           ; work         ;
-;          |ror32:aluRor|                         ; 158 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|ror32:aluRor                                                                                                                                            ; work         ;
-;             |lpm_clshift:LPM_CLSHIFT_component| ; 158 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component                                                                                                          ; work         ;
-;                |lpm_clshift_jhc:auto_generated| ; 158 (158)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component|lpm_clshift_jhc:auto_generated                                                                           ; work         ;
-;          |shl32:aluShl|                         ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|shl32:aluShl                                                                                                                                            ; work         ;
-;          |shr32:aluShr|                         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|shr32:aluShr                                                                                                                                            ; work         ;
-;       |register32bit:register_Y|                ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|register32bit:register_Y                                                                                                                                            ; work         ;
-;       |register64bit:register_Z|                ; 42 (42)           ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU_path:alu_datapath|register64bit:register_Z                                                                                                                                            ; work         ;
-;    |MDR:MD_R|                                   ; 32 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:MD_R                                                                                                                                                                                  ; work         ;
-;       |register32bit:The_MDR|                   ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:MD_R|register32bit:The_MDR                                                                                                                                                            ; work         ;
-;    |R0:Register0|                               ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|R0:Register0                                                                                                                                                                              ; work         ;
-;    |Ram_mod:Ram|                                ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Ram_mod:Ram                                                                                                                                                                               ; work         ;
-;       |altsyncram:altsyncram_component|         ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Ram_mod:Ram|altsyncram:altsyncram_component                                                                                                                                               ; work         ;
-;          |altsyncram_q3g1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Ram_mod:Ram|altsyncram:altsyncram_component|altsyncram_q3g1:auto_generated                                                                                                                ; work         ;
-;    |conff_logic:conff|                          ; 13 (13)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|conff_logic:conff                                                                                                                                                                         ; work         ;
-;    |register32bit:HI|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:HI                                                                                                                                                                          ; work         ;
-;    |register32bit:IR|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:IR                                                                                                                                                                          ; work         ;
-;    |register32bit:LO|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:LO                                                                                                                                                                          ; work         ;
-;    |register32bit:MAR|                          ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:MAR                                                                                                                                                                         ; work         ;
-;    |register32bit:PC|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:PC                                                                                                                                                                          ; work         ;
-;    |register32bit:R10|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R10                                                                                                                                                                         ; work         ;
-;    |register32bit:R11|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R11                                                                                                                                                                         ; work         ;
-;    |register32bit:R12|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R12                                                                                                                                                                         ; work         ;
-;    |register32bit:R13|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R13                                                                                                                                                                         ; work         ;
-;    |register32bit:R14|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R14                                                                                                                                                                         ; work         ;
-;    |register32bit:R15|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R15                                                                                                                                                                         ; work         ;
-;    |register32bit:R1|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R1                                                                                                                                                                          ; work         ;
-;    |register32bit:R2|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R2                                                                                                                                                                          ; work         ;
-;    |register32bit:R3|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R3                                                                                                                                                                          ; work         ;
-;    |register32bit:R4|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R4                                                                                                                                                                          ; work         ;
-;    |register32bit:R5|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R5                                                                                                                                                                          ; work         ;
-;    |register32bit:R6|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R6                                                                                                                                                                          ; work         ;
-;    |register32bit:R7|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R7                                                                                                                                                                          ; work         ;
-;    |register32bit:R8|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R8                                                                                                                                                                          ; work         ;
-;    |register32bit:R9|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:R9                                                                                                                                                                          ; work         ;
-;    |register32bit:inport_register|              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:inport_register                                                                                                                                                             ; work         ;
-;    |register32bit:outport_register|             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|register32bit:outport_register                                                                                                                                                            ; work         ;
-;    |sel_and_encode:select_and_encode|           ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|sel_and_encode:select_and_encode                                                                                                                                                          ; work         ;
-;    |the_bus:datapathBus|                        ; 701 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|the_bus:datapathBus                                                                                                                                                                       ; work         ;
-;       |encoder32to5:Bus_encoder|                ; 96 (96)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|the_bus:datapathBus|encoder32to5:Bus_encoder                                                                                                                                              ; work         ;
-;       |lpm_mua:Bus_Mux|                         ; 605 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux                                                                                                                                                       ; work         ;
-;          |lpm_mux:LPM_MUX_component|            ; 605 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux|lpm_mux:LPM_MUX_component                                                                                                                             ; work         ;
-;             |mux_k9e:auto_generated|            ; 605 (605)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux|lpm_mux:LPM_MUX_component|mux_k9e:auto_generated                                                                                                      ; work         ;
-+-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                         ;
-+---------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+---------+
-; Name                                                                                  ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF     ;
-+---------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+---------+
-; Ram_mod:Ram|altsyncram:altsyncram_component|altsyncram_q3g1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 512          ; 32           ; --           ; --           ; 16384 ; ram.hex ;
-+---------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+---------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                     ;
-+--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+---------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                   ; IP Include File                       ;
-+--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+---------------------------------------+
-; Altera ; LPM_ADD_SUB  ; N/A     ; N/A          ; N/A          ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub ; D:/Github/ELEC374/Lab/lpm_add_sua.vhd ;
-; Altera ; LPM_DIVIDE   ; N/A     ; N/A          ; N/A          ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv     ; D:/Github/ELEC374/Lab/lpm_divida.vhd  ;
-; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux                     ; D:/Github/ELEC374/Lab/lpm_mua.vhd     ;
-; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |datapath|Ram_mod:Ram                                             ; D:/Github/ELEC374/Lab/Ram_mod.vhd     ;
-+--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------+---------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                                                                                                                    ;
-+------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+------------------------+
-; Latch Name                                                       ; Latch Enable Signal                                                                                                        ; Free of Timing Hazards ;
-+------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+------------------------+
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[0]  ; MDR:MD_R|register32bit:The_MDR|Q[0]~0                                                                                      ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[1]  ; ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component|lpm_clshift_iib:auto_generated|sbit_w[64] ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[2]  ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[3]  ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[4]  ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[5]  ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[6]  ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[7]  ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[8]  ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[9]  ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[10] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[11] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[12] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[13] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[14] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[15] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[16] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[17] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[18] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[19] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[20] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[21] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[22] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[23] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[24] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[25] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[26] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[27] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[28] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[29] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[30] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[31] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[32] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[33] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[34] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[35] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[36] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[37] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[38] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[39] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[40] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[41] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[42] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[43] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[44] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[45] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[46] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[47] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[48] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[49] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[50] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[51] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[52] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[53] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[54] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[55] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[56] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[57] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[58] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[59] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[60] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[61] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[62] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[63] ; ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[63]                                                               ; yes                    ;
-; Number of user-specified and inferred latches = 64               ;                                                                                                                            ;                        ;
-+------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 842   ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 36    ;
-; Number of registers using Asynchronous Clear ; 842   ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 841   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; 34:1               ; 32 bits   ; 704 LEs       ; 64 LEs               ; 640 LEs                ; Yes        ; |datapath|ALU_path:alu_datapath|register64bit:register_Z|Q1[27]        ;
-; 40:1               ; 14 bits   ; 364 LEs       ; 140 LEs              ; 224 LEs                ; Yes        ; |datapath|ALU_path:alu_datapath|register64bit:register_Z|Q0[30]        ;
-; 40:1               ; 14 bits   ; 364 LEs       ; 140 LEs              ; 224 LEs                ; Yes        ; |datapath|ALU_path:alu_datapath|register64bit:register_Z|Q0[14]        ;
-; 3:1                ; 33 bits   ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 60 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 59 bits   ; 118 LEs       ; 118 LEs              ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 58 bits   ; 116 LEs       ; 116 LEs              ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 57 bits   ; 114 LEs       ; 114 LEs              ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 56 bits   ; 112 LEs       ; 112 LEs              ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 55 bits   ; 110 LEs       ; 110 LEs              ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 54 bits   ; 108 LEs       ; 108 LEs              ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 53 bits   ; 106 LEs       ; 106 LEs              ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 52 bits   ; 104 LEs       ; 104 LEs              ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 51 bits   ; 102 LEs       ; 102 LEs              ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 50 bits   ; 100 LEs       ; 100 LEs              ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 49 bits   ; 98 LEs        ; 98 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 48 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 47 bits   ; 94 LEs        ; 94 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 46 bits   ; 92 LEs        ; 92 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 45 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 44 bits   ; 88 LEs        ; 88 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 43 bits   ; 86 LEs        ; 86 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 42 bits   ; 84 LEs        ; 84 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 41 bits   ; 82 LEs        ; 82 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 40 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 39 bits   ; 78 LEs        ; 78 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 76 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 37 bits   ; 74 LEs        ; 74 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 36 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 35 bits   ; 70 LEs        ; 70 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 34 bits   ; 68 LEs        ; 68 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 3:1                ; 33 bits   ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 57:1               ; 29 bits   ; 1102 LEs      ; 1073 LEs             ; 29 LEs                 ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[57] ;
-; 63:1               ; 2 bits    ; 84 LEs        ; 82 LEs               ; 2 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[32] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; Source assignments for Ram_mod:Ram|altsyncram:altsyncram_component|altsyncram_q3g1:auto_generated ;
-+---------------------------------+--------------------+------+-------------------------------------+
-; Assignment                      ; Value              ; From ; To                                  ;
-+---------------------------------+--------------------+------+-------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                   ;
-+---------------------------------+--------------------+------+-------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component ;
-+------------------------+----------------+----------------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                                   ;
-+------------------------+----------------+----------------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Signed Integer                                                                         ;
-; LPM_WIDTHD             ; 32             ; Signed Integer                                                                         ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                                ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                ;
-; CBXI_PARAMETER         ; lpm_divide_hjp ; Untyped                                                                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                         ;
-+------------------------+----------------+----------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component ;
-+------------------------+-------------+-------------------------------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                                            ;
-+------------------------+-------------+-------------------------------------------------------------------------------------------------+
-; LPM_WIDTH              ; 32          ; Signed Integer                                                                                  ;
-; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                         ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                         ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                         ;
-; LPM_PIPELINE           ; 0           ; Untyped                                                                                         ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                         ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                                         ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                         ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                         ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                         ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                              ;
-; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                                                         ;
-; USE_WYS                ; OFF         ; Untyped                                                                                         ;
-; STYLE                  ; FAST        ; Untyped                                                                                         ;
-; CBXI_PARAMETER         ; add_sub_ich ; Untyped                                                                                         ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                    ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                  ;
-+------------------------+-------------+-------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component ;
-+----------------+-----------------+--------------------------------------------------------------------------------------------+
-; Parameter Name ; Value           ; Type                                                                                       ;
-+----------------+-----------------+--------------------------------------------------------------------------------------------+
-; LPM_PIPELINE   ; 0               ; Untyped                                                                                    ;
-; LPM_SHIFTTYPE  ; ROTATE          ; Untyped                                                                                    ;
-; LPM_WIDTH      ; 32              ; Signed Integer                                                                             ;
-; LPM_WIDTHDIST  ; 5               ; Signed Integer                                                                             ;
-; CBXI_PARAMETER ; lpm_clshift_jhc ; Untyped                                                                                    ;
-+----------------+-----------------+--------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_path:alu_datapath|alu:the_alu|rol32:aluRol|lpm_clshift:LPM_CLSHIFT_component ;
-+----------------+-----------------+--------------------------------------------------------------------------------------------+
-; Parameter Name ; Value           ; Type                                                                                       ;
-+----------------+-----------------+--------------------------------------------------------------------------------------------+
-; LPM_PIPELINE   ; 0               ; Untyped                                                                                    ;
-; LPM_SHIFTTYPE  ; ROTATE          ; Untyped                                                                                    ;
-; LPM_WIDTH      ; 32              ; Signed Integer                                                                             ;
-; LPM_WIDTHDIST  ; 5               ; Signed Integer                                                                             ;
-; CBXI_PARAMETER ; lpm_clshift_iib ; Untyped                                                                                    ;
-+----------------+-----------------+--------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Ram_mod:Ram|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+------------------------------+
-; Parameter Name                     ; Value                ; Type                         ;
-+------------------------------------+----------------------+------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                      ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                   ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                 ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                 ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE               ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                      ;
-; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                      ;
-; WIDTH_A                            ; 32                   ; Signed Integer               ;
-; WIDTHAD_A                          ; 9                    ; Signed Integer               ;
-; NUMWORDS_A                         ; 512                  ; Signed Integer               ;
-; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                      ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                      ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                      ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                      ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                      ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                      ;
-; WIDTH_B                            ; 1                    ; Untyped                      ;
-; WIDTHAD_B                          ; 1                    ; Untyped                      ;
-; NUMWORDS_B                         ; 1                    ; Untyped                      ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                      ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                      ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                      ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                      ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                      ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                      ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                      ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                      ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                      ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                      ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer               ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                      ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                      ;
-; BYTE_SIZE                          ; 8                    ; Untyped                      ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                      ;
-; READ_DURING_WRITE_MODE_PORT_A      ; DONT_CARE            ; Untyped                      ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
-; INIT_FILE                          ; ram.hex              ; Untyped                      ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                      ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                      ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                      ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                      ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                      ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                      ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                      ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                      ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                      ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                      ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                      ;
-; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                      ;
-; CBXI_PARAMETER                     ; altsyncram_q3g1      ; Untyped                      ;
-+------------------------------------+----------------------+------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component ;
-+------------------------+-------------+---------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                ;
-+------------------------+-------------+---------------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                          ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                        ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                        ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                      ;
-; LPM_WIDTH              ; 32          ; Signed Integer                                                      ;
-; LPM_SIZE               ; 32          ; Signed Integer                                                      ;
-; LPM_WIDTHS             ; 5           ; Signed Integer                                                      ;
-; LPM_PIPELINE           ; 0           ; Signed Integer                                                      ;
-; CBXI_PARAMETER         ; mux_k9e     ; Untyped                                                             ;
-; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                             ;
-+------------------------+-------------+---------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                        ;
-+-------------------------------------------+---------------------------------------------+
-; Name                                      ; Value                                       ;
-+-------------------------------------------+---------------------------------------------+
-; Number of entity instances                ; 1                                           ;
-; Entity Instance                           ; Ram_mod:Ram|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; SINGLE_PORT                                 ;
-;     -- WIDTH_A                            ; 32                                          ;
-;     -- NUMWORDS_A                         ; 512                                         ;
-;     -- OUTDATA_REG_A                      ; CLOCK0                                      ;
-;     -- WIDTH_B                            ; 1                                           ;
-;     -- NUMWORDS_B                         ; 1                                           ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                      ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                        ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                   ;
-+-------------------------------------------+---------------------------------------------+
-
-
 +-------------------------------------------------+
 ; Port Connectivity Checks: "the_bus:datapathBus" ;
 +---------+-------+----------+--------------------+
@@ -706,23 +301,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:01:01     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Mar 08 17:15:19 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datapath -c datapath
+    Info: Processing started: Mon Mar 08 23:40:11 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datapath -c datapath --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file lpm_divida.vhd
     Info (12022): Found design unit 1: lpm_divida-SYN
@@ -837,8 +423,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file ram_mod
 Info (12021): Found 2 design units, including 1 entities, in source file phase2_tb/addi_tb.vhd
     Info (12022): Found design unit 1: addi_tb-logic
     Info (12023): Found entity 1: addi_tb
+Info (12021): Found 2 design units, including 1 entities, in source file phase2_tb/ldi4_tb.vhd
+    Info (12022): Found design unit 1: ldi4_tb-logic
+    Info (12023): Found entity 1: ldi4_tb
+Info (12021): Found 2 design units, including 1 entities, in source file phase2_tb/ld1_tb.vhd
+    Info (12022): Found design unit 1: ld1_tb-logic
+    Info (12023): Found entity 1: ld1_tb
+Info (12021): Found 2 design units, including 1 entities, in source file phase2_tb/ld2_tb.vhd
+    Info (12022): Found design unit 1: ld2_tb-logic
+    Info (12023): Found entity 1: ld2_tb
+Info (12021): Found 2 design units, including 1 entities, in source file phase2_tb/st1_tb.vhd
+    Info (12022): Found design unit 1: st1_tb-logic
+    Info (12023): Found entity 1: st1_tb
+Info (12021): Found 2 design units, including 1 entities, in source file phase2_tb/st2_tb.vhd
+    Info (12022): Found design unit 1: st2_tb-logic
+    Info (12023): Found entity 1: st2_tb
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(71): object "overflow" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(69): object "overflow" assigned a value but never read
 Info (12128): Elaborating entity "R0" for hierarchy "R0:Register0"
 Info (12128): Elaborating entity "register32bit" for hierarchy "register32bit:R1"
 Info (12128): Elaborating entity "MDR" for hierarchy "MDR:MD_R"
@@ -973,29 +574,8 @@ Info (12128): Elaborating entity "shr32" for hierarchy "ALU_path:alu_datapath|al
 Info (12128): Elaborating entity "negate32" for hierarchy "ALU_path:alu_datapath|alu:the_alu|negate32:aluNeg"
 Info (12128): Elaborating entity "register64bit" for hierarchy "ALU_path:alu_datapath|register64bit:register_Z"
 Info (12128): Elaborating entity "conff_logic" for hierarchy "conff_logic:conff"
-Warning (10492): VHDL Process Statement warning at conff_logic.vhd(44): signal "clr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "Ram_mod" for hierarchy "Ram_mod:Ram"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "Ram_mod:Ram|altsyncram:altsyncram_component"
-Info (12130): Elaborated megafunction instantiation "Ram_mod:Ram|altsyncram:altsyncram_component"
-Info (12133): Instantiated megafunction "Ram_mod:Ram|altsyncram:altsyncram_component" with the following parameter:
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "ram.hex"
-    Info (12134): Parameter "intended_device_family" = "Cyclone III"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "512"
-    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
-    Info (12134): Parameter "outdata_aclr_a" = "NONE"
-    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
-    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
-    Info (12134): Parameter "read_during_write_mode_port_a" = "DONT_CARE"
-    Info (12134): Parameter "widthad_a" = "9"
-    Info (12134): Parameter "width_a" = "32"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_q3g1.tdf
-    Info (12023): Found entity 1: altsyncram_q3g1
-Info (12128): Elaborating entity "altsyncram_q3g1" for hierarchy "Ram_mod:Ram|altsyncram:altsyncram_component|altsyncram_q3g1:auto_generated"
+Info (12128): Elaborating entity "RAM_512x32" for hierarchy "RAM_512x32:Ram"
+Warning (10492): VHDL Process Statement warning at Ram_512x32.vhd(29): signal "ram_block" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "sel_and_encode" for hierarchy "sel_and_encode:select_and_encode"
 Info (12128): Elaborating entity "the_bus" for hierarchy "the_bus:datapathBus"
 Info (12128): Elaborating entity "encoder32to5" for hierarchy "the_bus:datapathBus|encoder32to5:Bus_encoder"
@@ -1012,151 +592,10 @@ Info (12133): Instantiated megafunction "the_bus:datapathBus|lpm_mua:Bus_Mux|LPM
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_k9e.tdf
     Info (12023): Found entity 1: mux_k9e
 Info (12128): Elaborating entity "mux_k9e" for hierarchy "the_bus:datapathBus|lpm_mua:Bus_Mux|LPM_MUX:LPM_MUX_component|mux_k9e:auto_generated"
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[0]~0
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[1]~1
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[2]~2
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[3]~3
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[4]~4
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[5]~5
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[6]~6
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[7]~7
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[8]~8
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[9]~9
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[10]~10
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[11]~11
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[12]~12
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[13]~13
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[14]~14
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[16] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[15]~15
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[17] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[16]~16
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[18] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[17]~17
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[19] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[18]~18
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[20] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[19]~19
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[21] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[20]~20
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[22] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[21]~21
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[23] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[22]~22
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[24] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[23]~23
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[25] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[24]~24
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[26] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[25]~25
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[27] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[28] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[27]~27
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[29] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[28]~28
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[30] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[29]~29
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[31] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[32] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[33] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[34] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[35] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[36] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[37] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[38] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[39] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[40] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[41] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[42] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[43] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[44] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[45] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[46] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[47] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[48] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[49] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[50] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[51] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[52] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[53] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[54] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[55] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[56] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[57] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[58] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[59] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[60] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[61] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[62] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[26]~26
-Warning (13012): Latch ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|product[63] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal MDR:MD_R|register32bit:The_MDR|Q[30]~30
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reg_enable[11]"
-    Warning (15610): No output dependent on input pin "reg_enable[12]"
-    Warning (15610): No output dependent on input pin "reg_enable[13]"
-    Warning (15610): No output dependent on input pin "reg_enable[14]"
-    Warning (15610): No output dependent on input pin "reg_enable[15]"
-    Warning (15610): No output dependent on input pin "MDR_write"
-Info (21057): Implemented 10459 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 112 input pins
-    Info (21059): Implemented 385 output pins
-    Info (21061): Implemented 9930 logic cells
-    Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 137 warnings
-    Info: Peak virtual memory: 4748 megabytes
-    Info: Processing ended: Mon Mar 08 17:16:26 2021
-    Info: Elapsed time: 00:01:07
-    Info: Total CPU time (on all processors): 00:01:06
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4698 megabytes
+    Info: Processing ended: Mon Mar 08 23:40:15 2021
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 

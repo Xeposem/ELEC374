@@ -1,5 +1,5 @@
 Flow report for datapath
-Mon Mar 08 17:22:22 2021
+Mon Mar 08 23:40:15 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,22 +40,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Mar 08 17:22:22 2021           ;
+; Flow Status                        ; Successful - Mon Mar 08 23:40:15 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; datapath                                        ;
 ; Top-level Entity Name              ; datapath                                        ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 9,454 / 39,600 ( 24 % )                         ;
-;     Total combinational functions  ; 9,153 / 39,600 ( 23 % )                         ;
-;     Dedicated logic registers      ; 842 / 39,600 ( 2 % )                            ;
-; Total registers                    ; 842                                             ;
-; Total pins                         ; 497 / 536 ( 93 % )                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 16,384 / 1,161,216 ( 1 % )                      ;
-; Embedded Multiplier 9-bit elements ; 0 / 252 ( 0 % )                                 ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
-; Device                             ; EP3C40F780C6                                    ;
-; Timing Models                      ; Final                                           ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -64,85 +62,88 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/08/2021 17:15:20 ;
+; Start date & time ; 03/08/2021 23:40:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; datapath            ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                             ;
-+--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
-; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id      ;
-+--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
-; COMPILER_SIGNATURE_ID                ; 198112230318217.161524172007412       ; --            ; --          ; --              ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; datapath_and_tb ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; addi_tb         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; ldi_tb          ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; ldi_tb                                ; --            ; --          ; eda_simulation  ;
-; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation  ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --              ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation  ;
-; EDA_TEST_BENCH_FILE                  ; datapath_and_tb.vhd                   ; --            ; --          ; datapath_and_tb ;
-; EDA_TEST_BENCH_FILE                  ; Phase2_tb/addi_tb.vhd                 ; --            ; --          ; addi_tb         ;
-; EDA_TEST_BENCH_FILE                  ; Phase2_tb/ldi_tb.vhd                  ; --            ; --          ; ldi_tb          ;
-; EDA_TEST_BENCH_MODULE_NAME           ; datapath_and_tb                       ; --            ; --          ; datapath_and_tb ;
-; EDA_TEST_BENCH_MODULE_NAME           ; addi_tb                               ; --            ; --          ; addi_tb         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; ldi_tb                                ; --            ; --          ; ldi_tb          ;
-; EDA_TEST_BENCH_NAME                  ; datapath_and_tb                       ; --            ; --          ; eda_simulation  ;
-; EDA_TEST_BENCH_NAME                  ; addi_tb                               ; --            ; --          ; eda_simulation  ;
-; EDA_TEST_BENCH_NAME                  ; ldi_tb                                ; --            ; --          ; eda_simulation  ;
-; IP_TOOL_NAME                         ; RAM: 2-PORT                           ; --            ; --          ; --              ;
-; IP_TOOL_NAME                         ; RAM: 1-PORT                           ; --            ; --          ; --              ;
-; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --          ; --              ;
-; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --          ; --              ;
-; MISC_FILE                            ; Ram512x32.cmp                         ; --            ; --          ; --              ;
-; MISC_FILE                            ; Ram_mod_inst.vhd                      ; --            ; --          ; --              ;
-; MISC_FILE                            ; Ram_mod.cmp                           ; --            ; --          ; --              ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top             ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top             ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top             ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --              ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --              ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --              ;
-+--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++--------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 198112230318217.161526481214728       ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; addi_tb        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; ldi_tb         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; ldi4_tb        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; ld1_tb         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; ld2_tb         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; st1_tb         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; st2_tb         ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; st1_tb                                ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; Phase2_tb/addi_tb.vhd                 ; --            ; --          ; addi_tb        ;
+; EDA_TEST_BENCH_FILE                  ; Phase2_tb/ldi_tb.vhd                  ; --            ; --          ; ldi_tb         ;
+; EDA_TEST_BENCH_FILE                  ; Phase2_tb/ldi4_tb.vhd                 ; --            ; --          ; ldi4_tb        ;
+; EDA_TEST_BENCH_FILE                  ; Phase2_tb/ld1_tb.vhd                  ; --            ; --          ; ld1_tb         ;
+; EDA_TEST_BENCH_FILE                  ; Phase2_tb/ld2_tb.vhd                  ; --            ; --          ; ld2_tb         ;
+; EDA_TEST_BENCH_FILE                  ; Phase2_tb/st1_tb.vhd                  ; --            ; --          ; st1_tb         ;
+; EDA_TEST_BENCH_FILE                  ; Phase2_tb/st2_tb.vhd                  ; --            ; --          ; st2_tb         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; addi_tb                               ; --            ; --          ; addi_tb        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ldi_tb                                ; --            ; --          ; ldi_tb         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ldi4_tb                               ; --            ; --          ; ldi4_tb        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ld1_tb                                ; --            ; --          ; ld1_tb         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ld2_tb                                ; --            ; --          ; ld2_tb         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; st1_tb                                ; --            ; --          ; st1_tb         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; st2_tb                                ; --            ; --          ; st2_tb         ;
+; EDA_TEST_BENCH_NAME                  ; addi_tb                               ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; ldi_tb                                ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; ldi4_tb                               ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; ld1_tb                                ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; ld2_tb                                ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; st1_tb                                ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; st2_tb                                ; --            ; --          ; eda_simulation ;
+; IP_TOOL_NAME                         ; RAM: 2-PORT                           ; --            ; --          ; --             ;
+; IP_TOOL_NAME                         ; RAM: 1-PORT                           ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                      ; 13.0                                  ; --            ; --          ; --             ;
+; MISC_FILE                            ; Ram512x32.cmp                         ; --            ; --          ; --             ;
+; MISC_FILE                            ; Ram_mod.cmp                           ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --             ;
++--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:05     ; 1.0                     ; 4745 MB             ; 00:01:05                           ;
-; Fitter                    ; 00:04:05     ; 1.0                     ; 4966 MB             ; 00:04:03                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4579 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:01:21     ; 1.0                     ; 4771 MB             ; 00:01:21                           ;
-; EDA Netlist Writer        ; 00:00:19     ; 1.0                     ; 4627 MB             ; 00:00:15                           ;
-; Total                     ; 00:06:53     ; --                      ; --                  ; 00:06:47                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                          ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Elaboration ; 00:00:04     ; 1.0                     ; 4698 MB             ; 00:00:03                           ;
+; Total                  ; 00:00:04     ; --                      ; --                  ; 00:00:03                           ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-KNKJBT5  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-KNKJBT5  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-KNKJBT5  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-KNKJBT5  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-KNKJBT5  ; Windows 7 ; 6.2        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++-------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                     ;
++------------------------+------------------+-----------+------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++------------------------+------------------+-----------+------------+----------------+
+; Analysis & Elaboration ; DESKTOP-KNKJBT5  ; Windows 7 ; 6.2        ; x86_64         ;
++------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off datapath -c datapath
-quartus_fit --read_settings_files=off --write_settings_files=off datapath -c datapath
-quartus_asm --read_settings_files=off --write_settings_files=off datapath -c datapath
-quartus_sta datapath -c datapath
-quartus_eda --read_settings_files=off --write_settings_files=off datapath -c datapath
+quartus_map --read_settings_files=on --write_settings_files=off datapath -c datapath --analysis_and_elaboration
 
 
 

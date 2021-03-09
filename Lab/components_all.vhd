@@ -264,15 +264,18 @@ component RAM_512x32 is port(
 end component RAM_512x32;
 -------------------------------------------------
 
-component Ram_mod IS PORT
+component Ram_mod IS
+	PORT
 	(
 		address		: IN STD_LOGIC_VECTOR (8 DOWNTO 0);
 		clock		: IN STD_LOGIC  := '1';
 		data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+		rden		: IN STD_LOGIC  := '1';
 		wren		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
-end component Ram_mod;
+END component Ram_mod;
 -----------------------------------------
  
+
 end package;
