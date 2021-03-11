@@ -113,7 +113,6 @@ process (present_state)
 begin
 	case present_state is
 
-		
 		when default =>
 			clr_tb <= '1';
 			IncPC_tb <= '0';
@@ -133,13 +132,13 @@ begin
 			RegEnable_tb <= (others => '0');
 			
 		when Reg_load1 =>
-			dummyInput_tb <= x"00000000"; 
+			dummyInput_tb <= x"00000000"; --ldi R1, $85; 
 			RegEnable_tb <= (2  => '1', others => '0');-- pc enable 
 			encoderIn_tb <= (8 => '1', others => '0'); --all zeros
 			
 		when T0 =>
 			encoderIn_tb <= (4 => '1', others => '0'); --PCout signal to the bus encoder
-			RegEnable_tb <= (5 => '1', 7 => '1', others => '0'); -- MAR enable and Z enable (load pc address to both MAR and Z register)
+			RegEnable_tb <= (5 => '1', 7 => '1', others => '0'); -- MAR enable and Z enable 
 			IncPC_tb <= '1'; -- a signal the alu for increment pc 
 			
 		when T1 =>

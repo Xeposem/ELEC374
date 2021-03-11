@@ -42,7 +42,7 @@ Con_d <= (eq or neq or gte or lt);
 Conff: process(clk, Con_in, clr) 
 begin 
 if (clr = '0') then 
-	Q<='0';
+	Q<= '0';
 elsif (clk'event and clk = '1') then 
 	if(Con_in = '1') then 
 		Q<= Con_d;

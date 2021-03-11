@@ -32,7 +32,7 @@ signal IRout_tb		: std_logic_vector(31 downto 0);
 signal Zout_tb			: std_logic_vector(63 downto 0);
 signal dummyInput_tb : std_logic_vector(31 downto 0);
 
-type	state is(default, Reg_load1, Reg_load2, Reg_load3, T0, T1, T2, T3, T4, T5, T6, T7);
+type	state is(default, Reg_load1, Reg_load2, Reg_load3,Reg_load4, T0, T1, T2, T3, T4, T5, T6, T7);
 signal	present_state: State := default;
 
 component datapath
@@ -59,7 +59,6 @@ component datapath
 		in_port: in std_logic_vector (31 downto 0);
 		out_port: out std_logic_vector (31 downto 0);
 		conff_out: out std_logic;
-		
 		BusMuxOut: out std_logic_vector(31 downto 0);
 		----------------------------------------------
 		R0out	: out std_logic_vector(31 downto 0);
@@ -114,8 +113,7 @@ end process;
 process (present_state)
 begin
 	case present_state is
-
-		
+	
 		when default =>
 			clr_tb <= '1';
 			IncPC_tb <= '0';
@@ -129,7 +127,6 @@ begin
 			Rout_tb <= '0';
 			inport_tb <= (others => '0');
 			outport_tb <= (others => '0');
-			conffout_tb <= '0';
 			ADD_tb <= (others => '0');
 			encoderIn_tb <= (others => '0');
 			RegEnable_tb <= (others => '0');
@@ -148,7 +145,6 @@ begin
 			dummyInput_tb <= x"00000000"; -- put a number in R2 --35
 			RegEnable_tb <= (others => '0');
 			encoderIn_tb <= (8 => '1', others => '0');
-			Rout_tb <= '0';
 			Rin_tb <= '1';
 			Gra_tb <= '1';
 			
@@ -174,7 +170,7 @@ begin
 			Gra_tb <= '1';
 			Rout_tb <= '1';
 			encoderIn_tb <= (others => '0');
-			RegEnable_tb <= (10 => '1', others => '0'); -- conff enable 
+			RegEnable_tb <= (1=>'1', 10 => '1', others => '0'); -- conff enable 
 			
 		when T4 =>
 			Gra_tb <= '0';
@@ -189,10 +185,11 @@ begin
 			
 		when T6=>
 			encoderIn_tb <= (3 => '1', others => '0');--Zlow 
+			
 			if(conffout_tb = '1') then
-				RegEnable_tb <= (1 => '1', 2 => '1', others => '0');-- PC enable
-			else
-				RegEnable_tb <= (others => '0');
+				RegEnable_tb <= (0 => '1', 2 => '1', others => '0');-- PC enable-- hi for testing 
+			else 
+				RegEnable_tb <= (others=>'0');
 			end if;
 		when others =>
 

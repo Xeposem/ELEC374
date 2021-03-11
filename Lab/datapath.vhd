@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use work.components_all.all;
-use work.ram_init.all;
+use work.ram_initialization.all;
 
 entity datapath is port (
 
@@ -110,7 +110,7 @@ outport_register: register32bit port map (internalBusMuxOut,register_enable(25),
 conff:conff_logic port map (clk, clr, IIRout(20 downto 19), internalBusMuxOut, register_enable(26), conff_out);--10 
 
 
---Ram: Ram_mod port map (MARout(8 downto 0), clk, BusMuxIn_MDR, MDR_read, MDR_write, Mdatain);
+--Ram: Ram_mod port map (MARout(8 downto 0), clk, BusMuxIn_MDR, MDR_read, MDR_write, Mdatain);--doesn seem to work as well 
 --Ram: Ram512x32 port map (clk, BusMuxIn_MDR, MARout(8 downto 0), MDR_read, MARout(8 downto 0), MDR_write, Mdatain ); --doesn seem to work 
 
 Ram: RAM_512x32 port map (BusMuxIn_MDR, MARout(8 downto 0), MDR_write, MDR_read, Mdatain ); -- the Mdatain is the ram output
@@ -118,9 +118,13 @@ Ram: RAM_512x32 port map (BusMuxIn_MDR, MARout(8 downto 0), MDR_write, MDR_read,
 select_and_encode: sel_and_encode port map (IIRout, Gra, Grb, Grc, Rin, Rout, baout, C_sign_extended, register_enable(15 downto 0), encoderin(15 downto 0));
 
 
-datapathBus : the_bus port map (BusMuxIn_R0,BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3, BusMuxIn_R4, BusMuxIn_R5, BusMuxIn_R6, BusMuxIn_R7, BusMuxIn_R8, BusMuxIn_R9, BusMuxIn_R10, BusMuxIn_R11,BusMuxIn_R12, BusMuxIn_R13, BusMuxIn_R14, BusMuxIn_R15, BusMuxIn_HI, BusMuxIn_LO, BusMuxIn_Zhigh,BusMuxIn_Zlow, BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_Inport,C_sign_extended, 
-dummyInput, 
-default_zeros, default_zeros, default_zeros, default_zeros, default_zeros, default_zeros, default_zeros, encoderin, internalBusMuxOut);
+datapathBus : the_bus port map (BusMuxIn_R0,BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3, 
+BusMuxIn_R4, BusMuxIn_R5, BusMuxIn_R6, BusMuxIn_R7, BusMuxIn_R8, BusMuxIn_R9, BusMuxIn_R10, 
+BusMuxIn_R11,BusMuxIn_R12, BusMuxIn_R13, BusMuxIn_R14, BusMuxIn_R15, BusMuxIn_HI, BusMuxIn_LO, 
+BusMuxIn_Zhigh,BusMuxIn_Zlow, BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_Inport,C_sign_extended, 
+dummyInput, -- 8
+default_zeros, default_zeros, default_zeros, default_zeros, 
+default_zeros, default_zeros, default_zeros, encoderin, internalBusMuxOut);
 
 R0out <= BusMuxIn_R0;
 R1out <= BusMuxIn_R1;

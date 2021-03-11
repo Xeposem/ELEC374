@@ -166,7 +166,8 @@ begin
 		when T3 =>
 			Gra_tb <= '1';
 			Rout_tb <= '1';
-			RegEnable_tb <= (1 =>'1', 2 => '1', others => '0'); --PC enable -- and low register enable for testing 
+			--PC enable -- and low register enable for testing 
+			RegEnable_tb <= (1 =>'1', 2 => '1', others => '0'); 
 			encoderIn_tb <= (others => '0');
 		when others =>
 

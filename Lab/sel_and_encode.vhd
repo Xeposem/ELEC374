@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.ram_init.all;
+use work.ram_initialization.all;
 
 entity sel_and_encode is port (
 	IR_in: in std_logic_vector(31 downto 0);
