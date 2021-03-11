@@ -114,6 +114,7 @@ conff:conff_logic port map (clk, clr, IIRout(20 downto 19), internalBusMuxOut, r
 --Ram: Ram512x32 port map (clk, BusMuxIn_MDR, MARout(8 downto 0), MDR_read, MARout(8 downto 0), MDR_write, Mdatain ); --doesn seem to work 
 
 Ram: RAM_512x32 port map (BusMuxIn_MDR, MARout(8 downto 0), MDR_write, MDR_read, Mdatain ); -- the Mdatain is the ram output
+
 select_and_encode: sel_and_encode port map (IIRout, Gra, Grb, Grc, Rin, Rout, baout, C_sign_extended, register_enable(15 downto 0), encoderin(15 downto 0));
 
 

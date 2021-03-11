@@ -71,7 +71,7 @@ set_global_assignment -name VHDL_FILE shl32.vhd
 set_global_assignment -name VHDL_FILE shr32.vhd
 set_global_assignment -name VHDL_FILE datapath_and_tb.vhd
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH st2_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH jal_tb -section_id eda_simulation
 set_global_assignment -name VHDL_FILE datapath_or_tb.vhd
 set_global_assignment -name VHDL_FILE datapath_add_tb.vhd
 set_global_assignment -name VHDL_FILE datapath_sub_tb.vhd
@@ -87,7 +87,6 @@ set_global_assignment -name VHDL_FILE R0.vhd
 set_global_assignment -name VHDL_FILE sel_and_encode.vhd
 set_global_assignment -name VHDL_FILE conff_logic.vhd
 set_global_assignment -name QIP_FILE Ram512x32.qip
-set_global_assignment -name VHDL_FILE Phase2_tb/ld_tb.vhd
 set_global_assignment -name VHDL_FILE ram_init.vhd
 set_global_assignment -name VHDL_FILE Ram_512x32.vhd
 set_global_assignment -name QIP_FILE Ram_mod.qip
@@ -119,7 +118,39 @@ set_global_assignment -name VHDL_FILE Phase2_tb/st2_tb.vhd
 set_global_assignment -name EDA_TEST_BENCH_NAME st2_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id st2_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME st2_tb -section_id st2_tb
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VHDL_FILE Phase2_tb/andi_tb.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME andi_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id andi_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME andi_tb -section_id andi_tb
+set_global_assignment -name VHDL_FILE Phase2_tb/ori_tb.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME ori_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ori_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ori_tb -section_id ori_tb
+set_global_assignment -name VHDL_FILE Phase2_tb/in_tb.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME in_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id in_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME in_tb -section_id in_tb
+set_global_assignment -name VHDL_FILE Phase2_tb/out_tb.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME out_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id out_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME out_tb -section_id out_tb
+set_global_assignment -name VHDL_FILE Phase2_tb/brzr_tb.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME brzr_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id brzr_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME brzr_tb -section_id brzr_tb
+set_global_assignment -name VHDL_FILE Phase2_tb/mfhi_tb.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME mfhi_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mfhi_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mfhi_tb -section_id mfhi_tb
+set_global_assignment -name VHDL_FILE Phase2_tb/mflo_tb.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME mflo_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mflo_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mflo_tb -section_id mflo_tb
+set_global_assignment -name VHDL_FILE Phase2_tb/jr_tb.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME jr_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id jr_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME jr_tb -section_id jr_tb
+set_global_assignment -name VHDL_FILE Phase2_tb/jal_tb.vhd
 set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/addi_tb.vhd -section_id addi_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/ldi_tb.vhd -section_id ldi_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/ldi4_tb.vhd -section_id ldi4_tb
@@ -127,3 +158,16 @@ set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/ld1_tb.vhd -section_id
 set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/ld2_tb.vhd -section_id ld2_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/st1_tb.vhd -section_id st1_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/st2_tb.vhd -section_id st2_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/andi_tb.vhd -section_id andi_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/ori_tb.vhd -section_id ori_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/in_tb.vhd -section_id in_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/out_tb.vhd -section_id out_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/brzr_tb.vhd -section_id brzr_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/mfhi_tb.vhd -section_id mfhi_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/mflo_tb.vhd -section_id mflo_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/jr_tb.vhd -section_id jr_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME jal_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id jal_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME jal_tb -section_id jal_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Phase2_tb/jal_tb.vhd -section_id jal_tb
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
