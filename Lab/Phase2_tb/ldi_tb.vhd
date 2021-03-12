@@ -168,7 +168,7 @@ begin
 		when T5 =>
 			Gra_tb <= '1'; -- select which register the content should be put in
 			Rin_tb <= '1'; --- enable register 
-			encoderIn_tb <= (3 => '1', others => '0');--Zlow --3
+			encoderIn_tb <= (3 => '1', others => '0'); --Zlow --3 
 			RegEnable_tb <= (others=>'0');
 
 		when others =>

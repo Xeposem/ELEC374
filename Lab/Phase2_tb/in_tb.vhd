@@ -122,7 +122,7 @@ begin
 			Rout_tb <= '0';
 			inport_tb <= (others => '0');
 			outport_tb <= (others => '0');
-			conffout_tb <= '0';
+			conffout_tb <= '0'; 
 			ADD_tb <= (others => '0');
 			encoderIn_tb <= (others => '0');
 			RegEnable_tb <= (others => '0');
