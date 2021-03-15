@@ -272,10 +272,34 @@ component Ram_mod IS
 		data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 		rden		: IN STD_LOGIC  := '1';
 		wren		: IN STD_LOGIC ;
-		q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+		q			: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
 END component Ram_mod;
------------------------------------------
- 
+-----------------------------------------------------
+TYPE state IS (reset_state0, reset_state1, fetch0, fetch1, fetch2, fetch3, add3, add4, add5, sub3, sub4, sub5, mul3, mul4, mul5, mul6, and3, and4, and5, or3, or4, or5, div3, div4, div5, div6, andi3, andi4, andi5, ori3, ori4, ori5, branch3, branch4, jr3, jal3, jal4, in3, mfhi3, mflo3, shr3, shr4, shr5, shl3, shl4, shl5, ror3, ror4, ror5, rol3, rol4, rol5, neg3, neg4, not3, not4, ld3, ld4, ld5, ld6, ld7, ldi3, ldi4, ldi5, ldr2, ldr3, ldr4, ldr5, ldr6, addi3, addi4, addi5, out3, st3, st4, st5, st6, str3, str4, str5, str6, nop, halt);
+------------------------------------------------------
+component control_unit is port (
+	clk: in std_logic;
+	reset: in std_logic;
+	stop: in std_logic;
+	IR: in std_logic_vector (31 downto 0);
+	con_ff: in std_logic; 
+	Rin: out std_logic;
+	Rout: out std_logic; 
+	Gra: out std_logic;
+	Grb: out std_logic;
+	Grc: out std_logic;
+	BAout: out std_logic;
+	encoder_in: out std_logic_vector (31 downto 0);
+	register_enable: out std_logic_vector (31 downto 0);
+	MDR_read: out std_logic;
+	MDR_write: out std_logic;
+	IncPC: out std_logic;
+	run: out std_logic;
+	clear: out std_logic;
+	OP_code: out std_logic_vector (4 downto 0); -- for alu selection
+	status: out state
+);
+end component control_unit; 
 
 end package;

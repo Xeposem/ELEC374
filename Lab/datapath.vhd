@@ -6,27 +6,17 @@ use work.ram_initialization.all;
 
 entity datapath is port (
 
-
 		clk: in std_logic;
-		clr: in std_logic;
-		PC_plus: in std_logic;
-		encoder_In: in std_logic_vector(15 downto 0); -- upper 16 bit of the encoder 
-		reg_enable: in std_logic_vector(15 downto 0); -- upper register 
-		dummyInput	: in std_logic_vector(31 downto 0);
-		MDR_read: in std_logic;
-		MDR_write: in std_logic;
-		baout: in std_logic;
-		Gra: in std_logic;
-		Grb: in std_logic;
-		Grc: in std_logic;
-		Rin: in std_logic;
-		Rout:in std_logic;
-		ALU_sel: in std_logic_vector(4 downto 0);
-		in_port: in std_logic_vector (31 downto 0);
-		out_port: out std_logic_vector (31 downto 0);
-		conff_out: out std_logic;
-		BusMuxOut: out std_logic_vector(31 downto 0);
+		reset	: in std_logic;
+		stop	: in std_logic;
+		run	: out std_logic;
+		state_out: out state
 		----------------------------------------------
+		----3 general registers are shown here--------
+		--------only for testing purposes ------------
+		----- The full version will have 16 ----------
+		------ which are not shown for concision------
+		BusMuxOut: out std_logic_vector(31 downto 0);
 		R0out	: out std_logic_vector(31 downto 0);
 		R1out	: out std_logic_vector(31 downto 0);
 		R2out	: out std_logic_vector(31 downto 0);
@@ -34,11 +24,12 @@ entity datapath is port (
 		LOout	: out std_logic_vector(31 downto 0);
 		IRout	: out std_logic_vector(31 downto 0);
 		Zout: out std_logic_vector(63 downto 0)
+		
+		-----need to put the Ramcontent-------
 );
 end entity;
 
 architecture behav of datapath is
-
 
 signal BusMuxIn_R0: std_logic_vector(31 downto 0);
 signal BusMuxIn_R1: std_logic_vector(31 downto 0);
@@ -74,8 +65,22 @@ signal Mdatain: std_logic_vector(31 downto 0);
 signal encoderin: std_logic_vector(31 downto 0);
 
 
-begin
 
+signal clr: std_logic;
+signal MDR_read: std_logic;
+signal MDR_write: std_logic;
+signal Baout: std_logic;
+signal Gra: std_logic;
+signal Grb: std_logic;
+signal Grc: std_logic;
+signal Rin: std_logic;
+signal Rout	: std_logic;
+signal ALU_sel	: std_logic_vector(4 downto 0);
+signal PC_plus	: std_logic;
+signal conff_out: std_logic;
+
+
+begin
 default_zeros <= (others =>'0');
 encoderin(31 downto 16)<= encoder_In;
 register_enable (31 downto 16)<= reg_enable;
@@ -115,7 +120,36 @@ conff:conff_logic port map (clk, clr, IIRout(20 downto 19), internalBusMuxOut, r
 
 Ram: RAM_512x32 port map (BusMuxIn_MDR, MARout(8 downto 0), MDR_write, MDR_read, Mdatain ); -- the Mdatain is the ram output
 
-select_and_encode: sel_and_encode port map (IIRout, Gra, Grb, Grc, Rin, Rout, baout, C_sign_extended, register_enable(15 downto 0), encoderin(15 downto 0));
+select_and_encode: sel_and_encode port map (IIRout, Gra, Grb, Grc, Rin, Rout, baout, 
+C_sign_extended, register_enable(15 downto 0), encoderin(15 downto 0));
+
+Control: control_unit port map (clk, reset, stop, IIRout, conff_out, Rin, Rout, Gra, Grb, Grc, baout, encoderin(31 downto 16), register_enable(31 downto 16), MDR_read, MDR_write, PC_plus, run,clr, ALU_sel,state_out);
+
+
+component control_unit is port (
+	clk: in std_logic;
+	reset: in std_logic;
+	stop: in std_logic;
+	IR: in std_logic_vector (31 downto 0);
+	con_ff: in std_logic; 
+	Rin: out std_logic;
+	Rout: out std_logic; 
+	Gra: out std_logic;
+	Grb: out std_logic;
+	Grc: out std_logic;
+	BAout: out std_logic;
+	encoder_in: out std_logic_vector (31 downto 0);
+	register_enable: out std_logic_vector (31 downto 0);
+	MDR_read: out std_logic;
+	MDR_write: out std_logic;
+	IncPC: out std_logic;
+	run: out std_logic;
+	clear: out std_logic;
+	OP_code: out std_logic_vector (4 downto 0); -- for alu selection
+	status: out state
+);
+end component control_unit; 
+
 
 
 datapathBus : the_bus port map (BusMuxIn_R0,BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3, 
@@ -135,6 +169,5 @@ Zout(63 downto 32) <= BusMuxIn_Zhigh;
 Zout(31 downto 0) <= BusMuxIn_Zlow;
 IRout <= IIRout;
 BusMuxOut <= internalBusMuxOut;
-
 
 end architecture;

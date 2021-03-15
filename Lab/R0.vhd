@@ -26,7 +26,6 @@ process(clk, clr)
         end if;
     end process;
 	 
-	
 	output(0) <= q(0) and (not BAout);
 	output(1) <= q(1) and (not BAout);
 	output(2) <= q(2) and (not BAout);
