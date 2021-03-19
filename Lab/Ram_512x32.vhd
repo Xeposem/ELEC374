@@ -10,7 +10,8 @@ entity RAM_512x32 is port(
       address	: in std_logic_vector(8 downto 0);
       wren	: in std_logic;
 		rden	: in std_logic;
-      q		: out std_logic_vector(31 downto 0)
+      q		: out std_logic_vector(31 downto 0);
+		content: out memory   -- for phase3 print out	
 );
 end entity;
 
@@ -19,8 +20,9 @@ signal ram_block : memory := initial_mem;
 
 begin
 process (wren, rden, address, data)
-
 begin
+	q <= (others => '0');
+	content <= ram_block;
 	if(wren = '1') then
 		ram_block(to_integer(unsigned(address))) <= data;
 	elsif(rden = '1') then

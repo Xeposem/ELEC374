@@ -4,25 +4,26 @@ K3
 cModel Technology
 Z0 dD:\Github\ELEC374\Lab\simulation\modelsim
 Ealu
-Z1 w1614794833
-Z2 DPx4 work 14 components_all 0 22 [nFg`9_UPa?V2BedkhCf@3
-Z3 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
-Z4 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
-Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z7 dD:\Github\ELEC374\Lab\simulation\modelsim
-Z8 8D:/Github/ELEC374/Lab/alu.vhd
-Z9 FD:/Github/ELEC374/Lab/alu.vhd
+Z1 w1614798433
+Z2 DPx4 work 18 ram_initialization 0 22 HAVGHzGKMkEzQ_=@gBKI02
+Z3 DPx4 work 14 components_all 0 22 ?WUXn;a3eOnCa7Zh4DnhI0
+Z4 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z5 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z6 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z7 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z8 dD:\Github\ELEC374\Lab\simulation\modelsim
+Z9 8D:/Github/ELEC374/Lab/alu.vhd
+Z10 FD:/Github/ELEC374/Lab/alu.vhd
 l0
 L7
 Vb;a3?OcLYWd9Dn49BzAHX0
-Z10 OV;C;10.1d;51
+Z11 OV;C;10.1d;51
 31
-Z11 !s108 1615519494.264000
-Z12 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/alu.vhd|
-Z13 !s107 D:/Github/ELEC374/Lab/alu.vhd|
-Z14 o-93 -work work -O0
-Z15 tExplicit 1
+Z12 !s108 1616116618.543000
+Z13 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/alu.vhd|
+Z14 !s107 D:/Github/ELEC374/Lab/alu.vhd|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
 !s100 NF?U:M<;iT=O`HKjV?1jZ1
 !i10b 1
 Abehav
@@ -31,405 +32,453 @@ R3
 R4
 R5
 R6
+R7
 DEx4 work 3 alu 0 22 b;a3?OcLYWd9Dn49BzAHX0
 l29
 L17
 V2WUjKfkHi?SaEXgZOVU<h2
-R10
-31
 R11
+31
 R12
 R13
 R14
 R15
+R16
 !s100 =bDP[BX=B@b44EO0d[ZC51
 !i10b 1
 Ealu_path
-Z16 w1615167612
+Z17 w1615171212
 R2
-Z17 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R3
+Z18 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R4
 R5
 R6
 R7
-Z18 8D:/Github/ELEC374/Lab/ALU_path.vhd
-Z19 FD:/Github/ELEC374/Lab/ALU_path.vhd
+R8
+Z19 8D:/Github/ELEC374/Lab/ALU_path.vhd
+Z20 FD:/Github/ELEC374/Lab/ALU_path.vhd
 l0
 L7
 V>mKC3Tl1TYoNz15:bcl=S2
-R10
+R11
 31
-Z20 !s108 1615519494.085000
-Z21 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/ALU_path.vhd|
-Z22 !s107 D:/Github/ELEC374/Lab/ALU_path.vhd|
-R14
+Z21 !s108 1616116618.369000
+Z22 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/ALU_path.vhd|
+Z23 !s107 D:/Github/ELEC374/Lab/ALU_path.vhd|
 R15
+R16
 !s100 IQcC6Z0n1mMzCLCTjn;`A1
 !i10b 1
 Astructure
 R2
-R17
 R3
+R18
 R4
 R5
 R6
+R7
 DEx4 work 8 alu_path 0 22 >mKC3Tl1TYoNz15:bcl=S2
 l28
 L22
 VcV:F:?hiRi?jjoX>BMJVB3
-R10
+R11
 31
-R20
 R21
 R22
-R14
+R23
 R15
+R16
 !s100 c3Z:eom5[JWcfGB;Z`F7F0
 !i10b 1
 Ebooth_logic
-Z23 w1614362915
-R17
-R3
+Z24 w1614366515
+R18
 R4
 R5
 R6
 R7
-Z24 8D:/Github/ELEC374/Lab/booth_logic.vhd
-Z25 FD:/Github/ELEC374/Lab/booth_logic.vhd
+R8
+Z25 8D:/Github/ELEC374/Lab/booth_logic.vhd
+Z26 FD:/Github/ELEC374/Lab/booth_logic.vhd
 l0
 L6
 VQ7ez675[0VAiDeLY=@4cm1
-R10
+R11
 31
-Z26 !s108 1615519492.528000
-Z27 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/booth_logic.vhd|
-Z28 !s107 D:/Github/ELEC374/Lab/booth_logic.vhd|
-R14
+Z27 !s108 1616116616.638000
+Z28 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/booth_logic.vhd|
+Z29 !s107 D:/Github/ELEC374/Lab/booth_logic.vhd|
 R15
+R16
 !s100 _Oc<TASH@WL0Jl[?=RIAQ1
 !i10b 1
 Alogic
-R17
-R3
+R18
 R4
 R5
 R6
+R7
 DEx4 work 11 booth_logic 0 22 Q7ez675[0VAiDeLY=@4cm1
 l14
 L13
 V^b@ZkA<liAzOdi4k6NFz81
-R10
+R11
 31
-R26
 R27
 R28
-R14
+R29
 R15
+R16
 !s100 [TjP:_kHG97izk`CdDP8Y3
 !i10b 1
 Pcomponents_all
-R5
+R2
 R6
-w1615246204
 R7
+w1616116282
+R8
 8D:/Github/ELEC374/Lab/components_all.vhd
 FD:/Github/ELEC374/Lab/components_all.vhd
 l0
-L4
-V[nFg`9_UPa?V2BedkhCf@3
-R10
+L5
+V?WUXn;a3eOnCa7Zh4DnhI0
+R11
 31
-R14
 R15
-!s100 [N=Lmg0`NRb0^hVnda]gH0
+R16
+!s100 F<ZWLCY`me]:Q?PXA_m2c0
 !i10b 1
-!s108 1615519492.869000
+!s108 1616116617.676000
 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/components_all.vhd|
 !s107 D:/Github/ELEC374/Lab/components_all.vhd|
 Econff_logic
-Z29 w1615492865
-R3
+Z30 w1615581669
 R4
 R5
 R6
 R7
-Z30 8D:/Github/ELEC374/Lab/conff_logic.vhd
-Z31 FD:/Github/ELEC374/Lab/conff_logic.vhd
+R8
+Z31 8D:/Github/ELEC374/Lab/conff_logic.vhd
+Z32 FD:/Github/ELEC374/Lab/conff_logic.vhd
 l0
 L5
 VC:4TP<3@NDWWZcg<2J[lg2
-R10
+R11
 31
-Z32 !s108 1615519493.431000
-Z33 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/conff_logic.vhd|
-Z34 !s107 D:/Github/ELEC374/Lab/conff_logic.vhd|
-R14
+Z33 !s108 1616116617.434000
+Z34 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/conff_logic.vhd|
+Z35 !s107 D:/Github/ELEC374/Lab/conff_logic.vhd|
 R15
+R16
 !s100 >kAA[W:lY7Qc`gWFPm95l3
 !i10b 1
 Alogic
-R3
 R4
 R5
 R6
+R7
 DEx4 work 11 conff_logic 0 22 C:4TP<3@NDWWZcg<2J[lg2
 l23
 L16
 VgOk]HcEn?TXDKPlN<?ZH;3
-R10
+R11
 31
-R32
 R33
 R34
-R14
+R35
 R15
-!s100 :F30<lM6>`f950QGin4>73
+R16
+!s100 l9LS0=XgFK7caPaWV5]GL2
 !i10b 1
-Edatapath
-Z35 w1615494880
-Z36 DPx4 work 18 ram_initialization 0 22 Q7b4SJR3QE6L@G7@nOJ?^3
+Econtrol_tb
+Z36 w1616116259
 R2
 R3
-R4
-R5
 R6
 R7
-Z37 8D:/Github/ELEC374/Lab/datapath.vhd
-Z38 FD:/Github/ELEC374/Lab/datapath.vhd
+R8
+Z37 8D:/Github/ELEC374/Lab/control_tb.vhd
+Z38 FD:/Github/ELEC374/Lab/control_tb.vhd
 l0
-L7
-V0O?Ll_IHH`k<^^G52_Rdi3
-R10
+L6
+Vla?jUG4HAC>J=86?gJi=j3
+!s100 Ji>AblRIQ[EEXQBA1[zKR1
+R11
 31
-Z39 !s108 1615519494.451000
-Z40 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/datapath.vhd|
-Z41 !s107 D:/Github/ELEC374/Lab/datapath.vhd|
-R14
-R15
-!s100 Th_NN9[nl84:AJE_]ZF;R2
 !i10b 1
-Abehav
-R36
+Z39 !s108 1616116619.203000
+Z40 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/control_tb.vhd|
+Z41 !s107 D:/Github/ELEC374/Lab/control_tb.vhd|
+R15
+R16
+Alogic
 R2
 R3
-R4
-R5
 R6
-DEx4 work 8 datapath 0 22 0O?Ll_IHH`k<^^G52_Rdi3
-l77
-L40
-V44d4n;bOVGzX0gR0df<131
-R10
+R7
+DEx4 work 10 control_tb 0 22 la?jUG4HAC>J=86?gJi=j3
+l85
+L9
+V:n;Nn6ZCa?>SOSFOh:M5=1
+!s100 _n?LE;UfokgO`U;866z^Q3
+R11
 31
+!i10b 1
 R39
 R40
 R41
-R14
 R15
-!s100 <U@Pi_bR<egK=aEJF2l^N3
-!i10b 1
-Eencoder32to5
-Z42 w1615241381
+R16
+Econtrol_unit
+Z42 w1616097221
+R2
 R3
-R4
-R5
 R6
 R7
-Z43 8D:/Github/ELEC374/Lab/encoder32to5.vhd
-Z44 FD:/Github/ELEC374/Lab/encoder32to5.vhd
+R8
+Z43 8D:/Github/ELEC374/Lab/control_unit.vhd
+Z44 FD:/Github/ELEC374/Lab/control_unit.vhd
 l0
 L5
-Vf]@d?>Kj@KVXIKzE[]6_l1
-R10
+VW668A1@nBLzcUeAmlOkI23
+R11
 31
-Z45 !s108 1615519492.409000
-Z46 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/encoder32to5.vhd|
-Z47 !s107 D:/Github/ELEC374/Lab/encoder32to5.vhd|
-R14
+Z45 !s108 1616116619.077000
+Z46 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/control_unit.vhd|
+Z47 !s107 D:/Github/ELEC374/Lab/control_unit.vhd|
 R15
-!s100 3zKJ?>W>Q1`o?z@5mMj8X1
+R16
+!s100 PD;[7[R_;YE5NG]7N8ZJG0
 !i10b 1
-Abehav
+Abehavior
+R2
 R3
-R4
-R5
 R6
-DEx4 work 12 encoder32to5 0 22 f]@d?>Kj@KVXIKzE[]6_l1
-l12
-L11
-VdiVgJFJoLCh<bdznf6L=F0
-R10
+R7
+DEx4 work 12 control_unit 0 22 W668A1@nBLzcUeAmlOkI23
+l35
+L29
+VFcQ]IFoNl45fI[>J@ABH71
+R11
 31
 R45
 R46
 R47
-R14
 R15
-!s100 jjc]HMDQdlGY@GcN_iG?T2
+R16
+!s100 `KkO7=RaO9h_20LaR0]6Z2
 !i10b 1
-Ein_tb
-Z48 w1615500690
-R5
-R6
-R7
-Z49 8D:/Github/ELEC374/Lab/Phase2_tb/in_tb.vhd
-Z50 FD:/Github/ELEC374/Lab/Phase2_tb/in_tb.vhd
-l0
-L4
-V@e4noAS]:GH]d]m>?_oPW2
-!s100 >zmVj`4d:I2zG:8QSj3m50
-R10
-31
-!i10b 1
-Z51 !s108 1615519494.952000
-Z52 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/Phase2_tb/in_tb.vhd|
-Z53 !s107 D:/Github/ELEC374/Lab/Phase2_tb/in_tb.vhd|
-R14
-R15
-Alogic
-R5
-R6
-DEx4 work 5 in_tb 0 22 @e4noAS]:GH]d]m>?_oPW2
-l75
-L7
-V@=PbNJK7I2PkVJ2P=BMWh3
-!s100 njda;UTN:Q=DRL8be`0882
-R10
-31
-!i10b 1
-R51
-R52
-R53
-R14
-R15
-Elpm_add_sua
-R23
-R5
-R6
-R7
-Z54 8D:/Github/ELEC374/Lab/lpm_add_sua.vhd
-Z55 FD:/Github/ELEC374/Lab/lpm_add_sua.vhd
-l0
-L42
-Vkk6;Q]m@CaLEb93n6gCbb1
-R10
-31
-Z56 !s108 1615519492.075000
-Z57 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/lpm_add_sua.vhd|
-Z58 !s107 D:/Github/ELEC374/Lab/lpm_add_sua.vhd|
-R14
-R15
-!s100 M2>nDj5WNLgP?[XUB2VLL2
-!i10b 1
-Asyn
-R5
-R6
-DEx4 work 11 lpm_add_sua 0 22 kk6;Q]m@CaLEb93n6gCbb1
-l78
-L54
-VBi@>4c73HY`ezRR2dT`@70
-R10
-31
-R56
-R57
-R58
-R14
-R15
-!s100 Sa0chUFWT:7aiXcBEUV<00
-!i10b 1
-Elpm_divida
-R23
-R5
-R6
-R7
-Z59 8D:/Github/ELEC374/Lab/lpm_divida.vhd
-Z60 FD:/Github/ELEC374/Lab/lpm_divida.vhd
-l0
-L42
-V7V6]i4TM2hFMSS_5^6JNE1
-R10
-31
-Z61 !s108 1615519491.804000
-Z62 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/lpm_divida.vhd|
-Z63 !s107 D:/Github/ELEC374/Lab/lpm_divida.vhd|
-R14
-R15
-!s100 ]^emcJL?EEHUK^SLM9U>S3
-!i10b 1
-Asyn
-R5
-R6
-DEx4 work 10 lpm_divida 0 22 7V6]i4TM2hFMSS_5^6JNE1
-l77
-L53
-V?8@9`SIA[X1NdTaa23D5]1
-R10
-31
-R61
-R62
-R63
-R14
-R15
-!s100 34]=2ZSTAH0nH=<DJ_kE50
-!i10b 1
-Elpm_mua
-R23
-Z64 DPx3 lpm 14 lpm_components 0 22 aHRA3clF>2DcWDhgFTAbM3
-R5
-R6
-R7
-Z65 8D:/Github/ELEC374/Lab/lpm_mua.vhd
-Z66 FD:/Github/ELEC374/Lab/lpm_mua.vhd
-l0
-L42
-V??5WR3X^zZ?]ZaoR_^;I32
-R10
-31
-Z67 !s108 1615519491.916000
-Z68 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/lpm_mua.vhd|
-Z69 !s107 D:/Github/ELEC374/Lab/lpm_mua.vhd|
-R14
-R15
-!s100 J<4EY4GnR8RL3EkV=Id1>2
-!i10b 1
-Asyn
-R64
-R5
-R6
-DEx4 work 7 lpm_mua 0 22 ??5WR3X^zZ?]ZaoR_^;I32
-l122
-L83
-V1kNU>1m2Gek]7U0=T3C7Q1
-R10
-31
-R67
-R68
-R69
-R14
-R15
-!s100 T16n8[j2YWDgUd36S[Cek3
-!i10b 1
-Emdr
-Z70 w1615167845
+Edatapath
+Z48 w1616105022
 R2
 R3
 R4
 R5
 R6
 R7
-Z71 8D:/Github/ELEC374/Lab/MDR.vhd
-Z72 FD:/Github/ELEC374/Lab/MDR.vhd
+R8
+Z49 8D:/Github/ELEC374/Lab/datapath.vhd
+Z50 FD:/Github/ELEC374/Lab/datapath.vhd
+l0
+L7
+V]iHmGz^M<8O8LiiQoO9fU2
+R11
+31
+Z51 !s108 1616116618.714000
+Z52 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/datapath.vhd|
+Z53 !s107 D:/Github/ELEC374/Lab/datapath.vhd|
+R15
+R16
+!s100 c6;K5]0Ifc6neiIVVKVT:3
+!i10b 1
+Abehav
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 8 datapath 0 22 ]iHmGz^M<8O8LiiQoO9fU2
+l101
+L48
+V=MnXkE31n@c[Vlc99W5C31
+R11
+31
+R51
+R52
+R53
+R15
+R16
+!s100 DccdQRjX2?GkgJmVF:4WC1
+!i10b 1
+Eencoder32to5
+Z54 w1615244981
+R4
+R5
+R6
+R7
+R8
+Z55 8D:/Github/ELEC374/Lab/encoder32to5.vhd
+Z56 FD:/Github/ELEC374/Lab/encoder32to5.vhd
+l0
+L5
+Vf]@d?>Kj@KVXIKzE[]6_l1
+R11
+31
+Z57 !s108 1616116616.525000
+Z58 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/encoder32to5.vhd|
+Z59 !s107 D:/Github/ELEC374/Lab/encoder32to5.vhd|
+R15
+R16
+!s100 3zKJ?>W>Q1`o?z@5mMj8X1
+!i10b 1
+Abehav
+R4
+R5
+R6
+R7
+DEx4 work 12 encoder32to5 0 22 f]@d?>Kj@KVXIKzE[]6_l1
+l12
+L11
+VdiVgJFJoLCh<bdznf6L=F0
+R11
+31
+R57
+R58
+R59
+R15
+R16
+!s100 jjc]HMDQdlGY@GcN_iG?T2
+!i10b 1
+Elpm_add_sua
+R24
+R6
+R7
+R8
+Z60 8D:/Github/ELEC374/Lab/lpm_add_sua.vhd
+Z61 FD:/Github/ELEC374/Lab/lpm_add_sua.vhd
+l0
+L42
+Vkk6;Q]m@CaLEb93n6gCbb1
+R11
+31
+Z62 !s108 1616116616.193000
+Z63 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/lpm_add_sua.vhd|
+Z64 !s107 D:/Github/ELEC374/Lab/lpm_add_sua.vhd|
+R15
+R16
+!s100 M2>nDj5WNLgP?[XUB2VLL2
+!i10b 1
+Asyn
+R6
+R7
+DEx4 work 11 lpm_add_sua 0 22 kk6;Q]m@CaLEb93n6gCbb1
+l78
+L54
+VBi@>4c73HY`ezRR2dT`@70
+R11
+31
+R62
+R63
+R64
+R15
+R16
+!s100 Sa0chUFWT:7aiXcBEUV<00
+!i10b 1
+Elpm_divida
+R24
+R6
+R7
+R8
+Z65 8D:/Github/ELEC374/Lab/lpm_divida.vhd
+Z66 FD:/Github/ELEC374/Lab/lpm_divida.vhd
+l0
+L42
+V7V6]i4TM2hFMSS_5^6JNE1
+R11
+31
+Z67 !s108 1616116615.911000
+Z68 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/lpm_divida.vhd|
+Z69 !s107 D:/Github/ELEC374/Lab/lpm_divida.vhd|
+R15
+R16
+!s100 ]^emcJL?EEHUK^SLM9U>S3
+!i10b 1
+Asyn
+R6
+R7
+DEx4 work 10 lpm_divida 0 22 7V6]i4TM2hFMSS_5^6JNE1
+l77
+L53
+V?8@9`SIA[X1NdTaa23D5]1
+R11
+31
+R67
+R68
+R69
+R15
+R16
+!s100 34]=2ZSTAH0nH=<DJ_kE50
+!i10b 1
+Elpm_mua
+R24
+Z70 DPx3 lpm 14 lpm_components 0 22 aHRA3clF>2DcWDhgFTAbM3
+R6
+R7
+R8
+Z71 8D:/Github/ELEC374/Lab/lpm_mua.vhd
+Z72 FD:/Github/ELEC374/Lab/lpm_mua.vhd
+l0
+L42
+V??5WR3X^zZ?]ZaoR_^;I32
+R11
+31
+Z73 !s108 1616116616.036000
+Z74 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/lpm_mua.vhd|
+Z75 !s107 D:/Github/ELEC374/Lab/lpm_mua.vhd|
+R15
+R16
+!s100 J<4EY4GnR8RL3EkV=Id1>2
+!i10b 1
+Asyn
+R70
+R6
+R7
+DEx4 work 7 lpm_mua 0 22 ??5WR3X^zZ?]ZaoR_^;I32
+l122
+L83
+V1kNU>1m2Gek]7U0=T3C7Q1
+R11
+31
+R73
+R74
+R75
+R15
+R16
+!s100 T16n8[j2YWDgUd36S[Cek3
+!i10b 1
+Emdr
+Z76 w1615171445
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z77 8D:/Github/ELEC374/Lab/MDR.vhd
+Z78 FD:/Github/ELEC374/Lab/MDR.vhd
 l0
 L6
 VgGM`bbAGgCln]O9zXDVo@2
-R10
+R11
 31
-Z73 !s108 1615519493.734000
-Z74 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/MDR.vhd|
-Z75 !s107 D:/Github/ELEC374/Lab/MDR.vhd|
-R14
+Z79 !s108 1616116618.001000
+Z80 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/MDR.vhd|
+Z81 !s107 D:/Github/ELEC374/Lab/MDR.vhd|
 R15
+R16
 !s100 ;^[iQ_VGB4XY5joAEnVSm1
 !i10b 1
 Abehav
@@ -438,444 +487,446 @@ R3
 R4
 R5
 R6
+R7
 DEx4 work 3 mdr 0 22 gGM`bbAGgCln]O9zXDVo@2
 l19
 L17
 ViEL[XGM`c45h;PQo;bKH<3
-R10
+R11
 31
-R73
-R74
-R75
-R14
+R79
+R80
+R81
 R15
+R16
 !s100 iG;eaG5_EJ7YB8BTgHeYU1
 !i10b 1
 Enegate32
-R23
-R17
-R3
+R24
+R18
 R4
 R5
 R6
 R7
-Z76 8D:/Github/ELEC374/Lab/negate32.vhd
-Z77 FD:/Github/ELEC374/Lab/negate32.vhd
+R8
+Z82 8D:/Github/ELEC374/Lab/negate32.vhd
+Z83 FD:/Github/ELEC374/Lab/negate32.vhd
 l0
 L6
 V;5;m0O[c^akhWNVnM8gi>0
-R10
+R11
 31
-Z78 !s108 1615519492.964000
-Z79 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/negate32.vhd|
-Z80 !s107 D:/Github/ELEC374/Lab/negate32.vhd|
-R14
+Z84 !s108 1616116616.977000
+Z85 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/negate32.vhd|
+Z86 !s107 D:/Github/ELEC374/Lab/negate32.vhd|
 R15
+R16
 !s100 gLlH5`V?eeOL]__Kb1TG:2
 !i10b 1
 Alogic
-R17
-R3
+R18
 R4
 R5
 R6
+R7
 DEx4 work 8 negate32 0 22 ;5;m0O[c^akhWNVnM8gi>0
 l14
 L13
 VJIUbgC:A^;eP8khkOmQK@1
-R10
-31
-R78
-R79
-R80
-R14
-R15
-!s100 =V2a@Ei7bX;W4:S=<V5;J2
-!i10b 1
-Er0
-Z81 w1615167858
-R5
-R6
-R7
-Z82 8D:/Github/ELEC374/Lab/R0.vhd
-Z83 FD:/Github/ELEC374/Lab/R0.vhd
-l0
-L4
-V>m21Njg6dN<6]Ld0E^nle2
-R10
-31
-Z84 !s108 1615519493.316000
-Z85 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/R0.vhd|
-Z86 !s107 D:/Github/ELEC374/Lab/R0.vhd|
-R14
-R15
-!s100 zL9zMEGL4KXD8CLWe_iLO0
-!i10b 1
-Alogic
-R5
-R6
-DEx4 work 2 r0 0 22 >m21Njg6dN<6]Ld0E^nle2
-l16
-L14
-VAih3X8hnMVIXCaUf04LN=2
-R10
+R11
 31
 R84
 R85
 R86
-R14
 R15
-!s100 ]:E]YFR4W]g0nZ]M>88^O1
+R16
+!s100 =V2a@Ei7bX;W4:S=<V5;J2
 !i10b 1
-Eram_512x32
-Z87 w1615494817
-R2
-R36
-R17
-R5
+Er0
+Z87 w1615582025
 R6
 R7
-Z88 8D:/Github/ELEC374/Lab/Ram_512x32.vhd
-Z89 FD:/Github/ELEC374/Lab/Ram_512x32.vhd
+R8
+Z88 8D:/Github/ELEC374/Lab/R0.vhd
+Z89 FD:/Github/ELEC374/Lab/R0.vhd
 l0
-L7
-VBIShMC]VI6OMVzBHTVBkB3
-R10
+L4
+V>m21Njg6dN<6]Ld0E^nle2
+R11
 31
-Z90 !s108 1615519494.835000
-Z91 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/Ram_512x32.vhd|
-Z92 !s107 D:/Github/ELEC374/Lab/Ram_512x32.vhd|
-R14
+Z90 !s108 1616116617.320000
+Z91 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/R0.vhd|
+Z92 !s107 D:/Github/ELEC374/Lab/R0.vhd|
 R15
-!s100 7Hf8@gC;RTRcK]j:VAWMn3
+R16
+!s100 zL9zMEGL4KXD8CLWe_iLO0
 !i10b 1
 Alogic
-R2
-R36
-R17
-R5
 R6
-DEx4 work 10 ram_512x32 0 22 BIShMC]VI6OMVzBHTVBkB3
-l20
-L17
-V0RSICi?W:^_@NbjAb8EEI3
-R10
+R7
+DEx4 work 2 r0 0 22 >m21Njg6dN<6]Ld0E^nle2
+l16
+L14
+VAih3X8hnMVIXCaUf04LN=2
+R11
 31
 R90
 R91
 R92
-R14
 R15
-!s100 :Mb0Bdha3o@=MCHNe^]ln1
+R16
+!s100 TK5=Aof0BF0Jz1@je@86?0
 !i10b 1
-Pram_initialization
-R5
-R6
-w1615495054
-R7
-8D:/Github/ELEC374/Lab/ram_init.vhd
-FD:/Github/ELEC374/Lab/ram_init.vhd
-l0
-L4
-VQ7b4SJR3QE6L@G7@nOJ?^3
-R10
-31
-R14
-R15
-!s100 TTb`QCf]0XC6:53XCz5om3
-!i10b 1
-!s108 1615519493.559000
-!s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/ram_init.vhd|
-!s107 D:/Github/ELEC374/Lab/ram_init.vhd|
-Eregister32bit
-Z93 w1615238575
-R4
+Eram_512x32
+Z93 w1616096041
 R3
-R5
+R2
+R18
 R6
 R7
-Z94 8D:/Github/ELEC374/Lab/register32bit.vhd
-Z95 FD:/Github/ELEC374/Lab/register32bit.vhd
+R8
+Z94 8D:/Github/ELEC374/Lab/Ram_512x32.vhd
+Z95 FD:/Github/ELEC374/Lab/Ram_512x32.vhd
 l0
-L6
-VHGjjeZZ3`PH77W]2mUW362
-R10
+L7
+Vm1lzga^XAIifjH3Oa5^Tc0
+R11
 31
-Z96 !s108 1615519492.186000
-Z97 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/register32bit.vhd|
-Z98 !s107 D:/Github/ELEC374/Lab/register32bit.vhd|
-R14
+Z96 !s108 1616116618.909000
+Z97 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/Ram_512x32.vhd|
+Z98 !s107 D:/Github/ELEC374/Lab/Ram_512x32.vhd|
 R15
-!s100 3MP5VCIkh0O:5]HPn4zbF1
+R16
+!s100 M_cB=7S3;RJkdE8Rm[H^:0
 !i10b 1
-Abehav
-R4
+Alogic
 R3
-R5
+R2
+R18
 R6
-DEx4 work 13 register32bit 0 22 HGjjeZZ3`PH77W]2mUW362
-l17
-L16
-Vj2X:]>C=4c5?OI9MVR32i0
-R10
+R7
+DEx4 work 10 ram_512x32 0 22 m1lzga^XAIifjH3Oa5^Tc0
+l21
+L18
+VVcPK`@fL>kBOF_<A?3n6@0
+R11
 31
 R96
 R97
 R98
-R14
 R15
+R16
+!s100 kcX8><@=imCbT=gNXa`ZV2
+!i10b 1
+Pram_initialization
+R6
+R7
+w1616114954
+R8
+8D:/Github/ELEC374/Lab/ram_init.vhd
+FD:/Github/ELEC374/Lab/ram_init.vhd
+l0
+L4
+VHAVGHzGKMkEzQ_=@gBKI02
+R11
+31
+R15
+R16
+!s100 APoVYLPOZA0SOT<h`Z@K32
+!i10b 1
+!s108 1616116617.548000
+!s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/ram_init.vhd|
+!s107 D:/Github/ELEC374/Lab/ram_init.vhd|
+Eregister32bit
+Z99 w1615242175
+R5
+R4
+R6
+R7
+R8
+Z100 8D:/Github/ELEC374/Lab/register32bit.vhd
+Z101 FD:/Github/ELEC374/Lab/register32bit.vhd
+l0
+L6
+VHGjjeZZ3`PH77W]2mUW362
+R11
+31
+Z102 !s108 1616116616.308000
+Z103 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/register32bit.vhd|
+Z104 !s107 D:/Github/ELEC374/Lab/register32bit.vhd|
+R15
+R16
+!s100 3MP5VCIkh0O:5]HPn4zbF1
+!i10b 1
+Abehav
+R5
+R4
+R6
+R7
+DEx4 work 13 register32bit 0 22 HGjjeZZ3`PH77W]2mUW362
+l17
+L16
+Vj2X:]>C=4c5?OI9MVR32i0
+R11
+31
+R102
+R103
+R104
+R15
+R16
 !s100 BcQgIJcGBK<dXmDWRKJT82
 !i10b 1
 Eregister64bit
-R23
-R4
-R3
+R24
 R5
+R4
 R6
 R7
-Z99 8D:/Github/ELEC374/Lab/register64bit.vhd
-Z100 FD:/Github/ELEC374/Lab/register64bit.vhd
+R8
+Z105 8D:/Github/ELEC374/Lab/register64bit.vhd
+Z106 FD:/Github/ELEC374/Lab/register64bit.vhd
 l0
 L6
 VVzWE11Jh<_lRnJQL=9?b73
-R10
+R11
 31
-Z101 !s108 1615519492.294000
-Z102 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/register64bit.vhd|
-Z103 !s107 D:/Github/ELEC374/Lab/register64bit.vhd|
-R14
+Z107 !s108 1616116616.415000
+Z108 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/register64bit.vhd|
+Z109 !s107 D:/Github/ELEC374/Lab/register64bit.vhd|
 R15
+R16
 !s100 KKkTl[PYbWcNZ0Ba;^aRI1
 !i10b 1
 Abehav
-R4
-R3
 R5
+R4
 R6
+R7
 DEx4 work 13 register64bit 0 22 VzWE11Jh<_lRnJQL=9?b73
 l19
 L18
 V7D5^Of3YE5oj1CX`:MiGO2
-R10
+R11
 31
-R101
-R102
-R103
-R14
+R107
+R108
+R109
 R15
+R16
 !s100 Tm1@jFPEU`F1JNgL2z4>81
 !i10b 1
 Erol32
-R23
-R5
+R24
 R6
 R7
-Z104 8D:/Github/ELEC374/Lab/rol32.vhd
-Z105 FD:/Github/ELEC374/Lab/rol32.vhd
+R8
+Z110 8D:/Github/ELEC374/Lab/rol32.vhd
+Z111 FD:/Github/ELEC374/Lab/rol32.vhd
 l0
 L7
 VY@Id@FDd:D_R@@o5LSY^c3
-R10
+R11
 31
-Z106 !s108 1615519492.646000
-Z107 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/rol32.vhd|
-Z108 !s107 D:/Github/ELEC374/Lab/rol32.vhd|
-R14
+Z112 !s108 1616116616.753000
+Z113 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/rol32.vhd|
+Z114 !s107 D:/Github/ELEC374/Lab/rol32.vhd|
 R15
+R16
 !s100 Eh<EFXXnb;BA7VH<5QA@B0
 !i10b 1
 Asyn
-R5
 R6
+R7
 DEx4 work 5 rol32 0 22 Y@Id@FDd:D_R@@o5LSY^c3
 l39
 L17
 VF03Yg4LBI:FI[e3zTclc62
-R10
+R11
 31
-R106
-R107
-R108
-R14
+R112
+R113
+R114
 R15
+R16
 !s100 EGDS1^zUnQ^]6TBf]8jOD1
 !i10b 1
 Eror32
-R23
-R5
+R24
 R6
 R7
-Z109 8D:/Github/ELEC374/Lab/ror32.vhd
-Z110 FD:/Github/ELEC374/Lab/ror32.vhd
+R8
+Z115 8D:/Github/ELEC374/Lab/ror32.vhd
+Z116 FD:/Github/ELEC374/Lab/ror32.vhd
 l0
 L7
 Vnok2KGPn:b7A:IzmEJabk0
-R10
+R11
 31
-Z111 !s108 1615519492.755000
-Z112 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/ror32.vhd|
-Z113 !s107 D:/Github/ELEC374/Lab/ror32.vhd|
-R14
+Z117 !s108 1616116616.868000
+Z118 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/ror32.vhd|
+Z119 !s107 D:/Github/ELEC374/Lab/ror32.vhd|
 R15
+R16
 !s100 <Em2YLebkE?P>Q:A;>B>93
 !i10b 1
 Asyn
-R5
 R6
+R7
 DEx4 work 5 ror32 0 22 nok2KGPn:b7A:IzmEJabk0
 l39
 L17
 VShfVz7f;@hcRc2Rz0NIQD0
-R10
-31
-R111
-R112
-R113
-R14
-R15
-!s100 k?3mFA9_Z:lQ6]bI0FX[01
-!i10b 1
-Esel_and_encode
-Z114 w1615494728
-R36
-R17
-R5
-R6
-R7
-Z115 8D:/Github/ELEC374/Lab/sel_and_encode.vhd
-Z116 FD:/Github/ELEC374/Lab/sel_and_encode.vhd
-l0
-L6
-VBlZ?]GeNP@1B:X:9S9W^03
-R10
-31
-Z117 !s108 1615519494.663000
-Z118 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/sel_and_encode.vhd|
-Z119 !s107 D:/Github/ELEC374/Lab/sel_and_encode.vhd|
-R14
-R15
-!s100 z6FknoS0dIi<I<6Fz68ma1
-!i10b 1
-Alogic
-R36
-R17
-R5
-R6
-DEx4 work 14 sel_and_encode 0 22 BlZ?]GeNP@1B:X:9S9W^03
-l24
-L20
-V>27GPWfckg[PkSmWn>6k92
-R10
+R11
 31
 R117
 R118
 R119
-R14
 R15
+R16
+!s100 k?3mFA9_Z:lQ6]bI0FX[01
+!i10b 1
+Esel_and_encode
+Z120 w1615589829
+R2
+R18
+R6
+R7
+R8
+Z121 8D:/Github/ELEC374/Lab/sel_and_encode.vhd
+Z122 FD:/Github/ELEC374/Lab/sel_and_encode.vhd
+l0
+L6
+VBlZ?]GeNP@1B:X:9S9W^03
+R11
+31
+Z123 !s108 1616116617.827000
+Z124 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/sel_and_encode.vhd|
+Z125 !s107 D:/Github/ELEC374/Lab/sel_and_encode.vhd|
+R15
+R16
+!s100 z6FknoS0dIi<I<6Fz68ma1
+!i10b 1
+Alogic
+R2
+R18
+R6
+R7
+DEx4 work 14 sel_and_encode 0 22 BlZ?]GeNP@1B:X:9S9W^03
+l24
+L20
+V>27GPWfckg[PkSmWn>6k92
+R11
+31
+R123
+R124
+R125
+R15
+R16
 !s100 Jm1XU_zRQXJF0ocFkP;mH2
 !i10b 1
 Eshl32
-R23
-R17
-R3
+R24
+R18
 R4
 R5
 R6
 R7
-Z120 8D:/Github/ELEC374/Lab/shl32.vhd
-Z121 FD:/Github/ELEC374/Lab/shl32.vhd
+R8
+Z126 8D:/Github/ELEC374/Lab/shl32.vhd
+Z127 FD:/Github/ELEC374/Lab/shl32.vhd
 l0
 L6
 VKEUKUQ7kHQi??B[@]W_`l1
-R10
+R11
 31
-Z122 !s108 1615519493.086000
-Z123 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/shl32.vhd|
-Z124 !s107 D:/Github/ELEC374/Lab/shl32.vhd|
-R14
+Z128 !s108 1616116617.090000
+Z129 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/shl32.vhd|
+Z130 !s107 D:/Github/ELEC374/Lab/shl32.vhd|
 R15
+R16
 !s100 JD746f87K51[<EQ261;Sa1
 !i10b 1
 Alogic
-R17
-R3
+R18
 R4
 R5
 R6
+R7
 DEx4 work 5 shl32 0 22 KEUKUQ7kHQi??B[@]W_`l1
 l14
 L13
 VNm;kGlGX3CblRj6067:dG3
-R10
+R11
 31
-R122
-R123
-R124
-R14
+R128
+R129
+R130
 R15
+R16
 !s100 Bj]^@DCQj2iShG6;VFVmg0
 !i10b 1
 Eshr32
-R23
-R17
-R3
+R24
+R18
 R4
 R5
 R6
 R7
-Z125 8D:/Github/ELEC374/Lab/shr32.vhd
-Z126 FD:/Github/ELEC374/Lab/shr32.vhd
+R8
+Z131 8D:/Github/ELEC374/Lab/shr32.vhd
+Z132 FD:/Github/ELEC374/Lab/shr32.vhd
 l0
 L6
 VBEiKU@FjNn>o1:fGB7=7N2
-R10
+R11
 31
-Z127 !s108 1615519493.201000
-Z128 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/shr32.vhd|
-Z129 !s107 D:/Github/ELEC374/Lab/shr32.vhd|
-R14
+Z133 !s108 1616116617.206000
+Z134 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/shr32.vhd|
+Z135 !s107 D:/Github/ELEC374/Lab/shr32.vhd|
 R15
+R16
 !s100 UoKh9=E_ROMg^Mi_j^nNS3
 !i10b 1
 Alogic
-R17
-R3
+R18
 R4
 R5
 R6
+R7
 DEx4 work 5 shr32 0 22 BEiKU@FjNn>o1:fGB7=7N2
 l14
 L13
 VYMR<Wh;WJ6Glzla9UdW>@3
-R10
+R11
 31
-R127
-R128
-R129
-R14
+R133
+R134
+R135
 R15
+R16
 !s100 ?n8bb2J[c:Y<P6g]d0^EH0
 !i10b 1
 Ethe_bus
-Z130 w1615174938
+Z136 w1615178538
 R2
 R3
 R4
 R5
 R6
 R7
-Z131 8D:/Github/ELEC374/Lab/the_bus.vhd
-Z132 FD:/Github/ELEC374/Lab/the_bus.vhd
+R8
+Z137 8D:/Github/ELEC374/Lab/the_bus.vhd
+Z138 FD:/Github/ELEC374/Lab/the_bus.vhd
 l0
 L6
 Vj@bjnedXn[`Z5kJcA40MD3
-R10
+R11
 31
-Z133 !s108 1615519493.895000
-Z134 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/the_bus.vhd|
-Z135 !s107 D:/Github/ELEC374/Lab/the_bus.vhd|
-R14
+Z139 !s108 1616116618.189000
+Z140 !s90 -reportprogress|300|-93|-work|work|D:/Github/ELEC374/Lab/the_bus.vhd|
+Z141 !s107 D:/Github/ELEC374/Lab/the_bus.vhd|
 R15
+R16
 !s100 FNdkH`[8L1TZA4lS_4YJ;2
 !i10b 1
 Astructure
@@ -884,16 +935,17 @@ R3
 R4
 R5
 R6
+R7
 DEx4 work 7 the_bus 0 22 j@bjnedXn[`Z5kJcA40MD3
 l47
 L44
 Vig9K=M6VgJQi1oNS5WAm13
-R10
+R11
 31
-R133
-R134
-R135
-R14
+R139
+R140
+R141
 R15
+R16
 !s100 A[38m;3>D_2zS5IIfHog02
 !i10b 1

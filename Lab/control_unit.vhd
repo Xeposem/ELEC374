@@ -14,8 +14,8 @@ entity control_unit is port (
 	Grb: out std_logic;
 	Grc: out std_logic;
 	BAout: out std_logic;
-	encoder_in: out std_logic_vector (31 downto 0);
-	register_enable: out std_logic_vector (31 downto 0);
+	encoder_in: out std_logic_vector (15 downto 0);
+	register_enable: out std_logic_vector (15 downto 0);
 	MDR_read: out std_logic;
 	MDR_write: out std_logic;
 	IncPC: out std_logic;
@@ -211,7 +211,7 @@ begin
 				present_state <= ldi4;
 			when ldi4 =>
 				present_state <= ldi5;
-			when ld5 =>
+			when ldi5 =>
 				present_state <= fetch0;
 -------------------------------------------------									
 			when st3 =>

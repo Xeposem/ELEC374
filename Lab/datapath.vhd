@@ -10,16 +10,32 @@ entity datapath is port (
 		reset	: in std_logic;
 		stop	: in std_logic;
 		run	: out std_logic;
-		state_out: out state
+		state_out: out state;
+--		Content: out memory ;
+		in_port: in std_logic_vector (31 downto 0);
+		out_port: out std_logic_vector (31 downto 0);
 		----------------------------------------------
 		----3 general registers are shown here--------
 		--------only for testing purposes ------------
 		----- The full version will have 16 ----------
 		------ which are not shown for concision------
 		BusMuxOut: out std_logic_vector(31 downto 0);
-		R0out	: out std_logic_vector(31 downto 0);
-		R1out	: out std_logic_vector(31 downto 0);
-		R2out	: out std_logic_vector(31 downto 0);
+--		R0out	: out std_logic_vector(31 downto 0);
+--		R1out	: out std_logic_vector(31 downto 0);
+--		R2out	: out std_logic_vector(31 downto 0);
+--		R3out	: out std_logic_vector(31 downto 0);
+--		R4out	: out std_logic_vector(31 downto 0);
+--		R5out	: out std_logic_vector(31 downto 0);
+--		R6out	: out std_logic_vector(31 downto 0);
+--		R7out	: out std_logic_vector(31 downto 0);
+--		R8out	: out std_logic_vector(31 downto 0);
+--		R9out	: out std_logic_vector(31 downto 0);
+--		R10out : out std_logic_vector(31 downto 0);
+--		R11out : out std_logic_vector(31 downto 0);
+--		R12out : out std_logic_vector(31 downto 0);
+--		R13out : out std_logic_vector(31 downto 0);
+--		R14out : out std_logic_vector(31 downto 0);
+--		R15out : out std_logic_vector(31 downto 0);
 		HIout	: out std_logic_vector(31 downto 0);
 		LOout	: out std_logic_vector(31 downto 0);
 		IRout	: out std_logic_vector(31 downto 0);
@@ -79,11 +95,12 @@ signal ALU_sel	: std_logic_vector(4 downto 0);
 signal PC_plus	: std_logic;
 signal conff_out: std_logic;
 
+signal Content: memory ;
+
 
 begin
 default_zeros <= (others =>'0');
-encoderin(31 downto 16)<= encoder_In;
-register_enable (31 downto 16)<= reg_enable;
+
 
 Register0: R0 port map (internalBusMuxOut, register_enable(0),clr, clk, baout, BusMuxIn_R0);
 R1	: register32bit port map (internalBusMuxOut, register_enable(1),clr, clk, BusMuxIn_R1); -- input, enable, clr, clk, out
@@ -110,7 +127,7 @@ MAR: register32bit port map (internalBusMuxOut, register_enable(21), clr, clk, M
 
 alu_datapath : ALU_path port map (clk, clr, register_enable(22), register_enable(23),internalBusMuxOut, --6, 7
 internalBusMuxOut, PC_plus, ALU_sel, overflow, BusMuxIn_Zlow, BusMuxIn_Zhigh);
-inport_register: register32bit port map ( in_port, register_enable(24),clr,clk, BusMuxIn_Inport);--8
+inport_register: register32bit port map (in_port, register_enable(24),clr,clk, BusMuxIn_Inport);--8
 outport_register: register32bit port map (internalBusMuxOut,register_enable(25), clr, clk, out_port);--9
 conff:conff_logic port map (clk, clr, IIRout(20 downto 19), internalBusMuxOut, register_enable(26), conff_out);--10 
 
@@ -118,7 +135,7 @@ conff:conff_logic port map (clk, clr, IIRout(20 downto 19), internalBusMuxOut, r
 --Ram: Ram_mod port map (MARout(8 downto 0), clk, BusMuxIn_MDR, MDR_read, MDR_write, Mdatain);--doesn seem to work as well 
 --Ram: Ram512x32 port map (clk, BusMuxIn_MDR, MARout(8 downto 0), MDR_read, MARout(8 downto 0), MDR_write, Mdatain ); --doesn seem to work 
 
-Ram: RAM_512x32 port map (BusMuxIn_MDR, MARout(8 downto 0), MDR_write, MDR_read, Mdatain ); -- the Mdatain is the ram output
+Ram: RAM_512x32 port map (BusMuxIn_MDR, MARout(8 downto 0), MDR_write, MDR_read, Mdatain, Content); -- the Mdatain is the ram output
 
 select_and_encode: sel_and_encode port map (IIRout, Gra, Grb, Grc, Rin, Rout, baout, 
 C_sign_extended, register_enable(15 downto 0), encoderin(15 downto 0));
@@ -126,43 +143,30 @@ C_sign_extended, register_enable(15 downto 0), encoderin(15 downto 0));
 Control: control_unit port map (clk, reset, stop, IIRout, conff_out, Rin, Rout, Gra, Grb, Grc, baout, encoderin(31 downto 16), register_enable(31 downto 16), MDR_read, MDR_write, PC_plus, run,clr, ALU_sel,state_out);
 
 
-component control_unit is port (
-	clk: in std_logic;
-	reset: in std_logic;
-	stop: in std_logic;
-	IR: in std_logic_vector (31 downto 0);
-	con_ff: in std_logic; 
-	Rin: out std_logic;
-	Rout: out std_logic; 
-	Gra: out std_logic;
-	Grb: out std_logic;
-	Grc: out std_logic;
-	BAout: out std_logic;
-	encoder_in: out std_logic_vector (31 downto 0);
-	register_enable: out std_logic_vector (31 downto 0);
-	MDR_read: out std_logic;
-	MDR_write: out std_logic;
-	IncPC: out std_logic;
-	run: out std_logic;
-	clear: out std_logic;
-	OP_code: out std_logic_vector (4 downto 0); -- for alu selection
-	status: out state
-);
-end component control_unit; 
-
-
-
 datapathBus : the_bus port map (BusMuxIn_R0,BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3, 
 BusMuxIn_R4, BusMuxIn_R5, BusMuxIn_R6, BusMuxIn_R7, BusMuxIn_R8, BusMuxIn_R9, BusMuxIn_R10, 
 BusMuxIn_R11,BusMuxIn_R12, BusMuxIn_R13, BusMuxIn_R14, BusMuxIn_R15, BusMuxIn_HI, BusMuxIn_LO, 
 BusMuxIn_Zhigh,BusMuxIn_Zlow, BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_Inport,C_sign_extended, 
-dummyInput, -- 8
+default_zeros, --dummyInput, -- 8
 default_zeros, default_zeros, default_zeros, default_zeros, 
 default_zeros, default_zeros, default_zeros, encoderin, internalBusMuxOut);
 
-R0out <= BusMuxIn_R0;
-R1out <= BusMuxIn_R1;
-R2out <= BusMuxIn_R2;
+--R0out <= BusMuxIn_R0;
+--R1out <= BusMuxIn_R1;
+--R2out <= BusMuxIn_R2;
+--R3out <= BusMuxIn_R3;
+--R4out <= BusMuxIn_R4;
+--R5out <= BusMuxIn_R5;
+--R6out <= BusMuxIn_R6;
+--R7out <= BusMuxIn_R7;
+--R8out <= BusMuxIn_R8;
+--R9out <= BusMuxIn_R9;
+--R10out <= BusMuxIn_R10;
+--R11out <= BusMuxIn_R11;
+--R12out <= BusMuxIn_R12;
+--R13out <= BusMuxIn_R13;
+--R14out <= BusMuxIn_R14;
+--R15out <= BusMuxIn_R15;
 HIout <= BusMuxIn_HI;
 LOout <= BusMuxIn_LO;
 Zout(63 downto 32) <= BusMuxIn_Zhigh;

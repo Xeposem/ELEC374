@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Ram_Unit is port (
+clk: in std_logic;
+data_in: in std_logic_vector(31 downto 0);
+read_addr: in std_logic_vector(8 downto 0);
+read_en: in std_logic;
+write_addr: in std_logic_vector(8 downto 0);
+write_en: in std_logic;
+output: out std_logic_vector(31 downto 0)
+);
+end entity Ram_Unit;
