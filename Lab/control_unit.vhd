@@ -283,7 +283,12 @@ begin
 			when branch3 =>
 				present_state <= branch4;
 			when branch4 =>
+				present_state <= branch5;
+			when branch5 =>
+				present_state <= branch6;
+			when branch6 => 
 				present_state <= fetch0;
+			
 -------------------------------------------------						
 			when jr3 =>
 				present_state <= fetch0;		
@@ -578,8 +583,16 @@ begin
 			Gra <= '1';
 			CONin <= '1';
 		when branch4 =>
-			Grb <= '1';
-			Rout <= '1';
+			Gra <='0';
+			Rout<= '0';
+			PCout<='1';
+			Yin<='1';
+		when branch5 =>
+			Cout <='1';
+			OP_code <= "00011";
+			Zin <='1';
+		when branch6 =>
+			Zlowout <= '1';
 			if(con_ff = '1') then
 				PCin <= '1';
 			end if;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for datapath
-Sat Mar 20 20:43:36 2021
+Sat Mar 20 21:43:28 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -53,16 +53,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar 20 20:43:34 2021           ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 20 21:43:26 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; datapath                                        ;
 ; Top-level Entity Name              ; datapath                                        ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 37,695                                          ;
-;     Total combinational functions  ; 36,991                                          ;
-;     Dedicated logic registers      ; 906                                             ;
-; Total registers                    ; 906                                             ;
-; Total pins                         ; 17,335                                          ;
+; Total logic elements               ; 37,733                                          ;
+;     Total combinational functions  ; 37,029                                          ;
+;     Dedicated logic registers      ; 908                                             ;
+; Total registers                    ; 908                                             ;
+; Total pins                         ; 17,337                                          ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -226,27 +226,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 37,695                 ;
+; Estimated Total logic elements              ; 37,733                 ;
 ;                                             ;                        ;
-; Total combinational functions               ; 36991                  ;
+; Total combinational functions               ; 37029                  ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 16836                  ;
-;     -- 3 input functions                    ; 19685                  ;
-;     -- <=2 input functions                  ; 470                    ;
+;     -- 4 input functions                    ; 16860                  ;
+;     -- 3 input functions                    ; 19732                  ;
+;     -- <=2 input functions                  ; 437                    ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 34297                  ;
+;     -- normal mode                          ; 34335                  ;
 ;     -- arithmetic mode                      ; 2694                   ;
 ;                                             ;                        ;
-; Total registers                             ; 906                    ;
-;     -- Dedicated logic registers            ; 906                    ;
+; Total registers                             ; 908                    ;
+;     -- Dedicated logic registers            ; 908                    ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
-; I/O pins                                    ; 17335                  ;
+; I/O pins                                    ; 17337                  ;
 ; Embedded Multiplier 9-bit elements          ; 0                      ;
 ; Maximum fan-out node                        ; register32bit:MAR|Q[6] ;
 ; Maximum fan-out                             ; 2336                   ;
-; Total fan-out                               ; 165458                 ;
+; Total fan-out                               ; 165639                 ;
 ; Average fan-out                             ; 2.28                   ;
 +---------------------------------------------+------------------------+
 
@@ -256,18 +256,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins  ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                 ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |datapath                                       ; 36991 (1)         ; 906 (0)      ; 0           ; 0            ; 0       ; 0         ; 17335 ; 0            ; |datapath                                                                                                                                                                                           ; work         ;
-;    |ALU_path:alu_datapath|                      ; 8287 (339)        ; 96 (0)       ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath                                                                                                                                                                     ; work         ;
-;       |alu:the_alu|                             ; 7910 (104)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu                                                                                                                                                         ; work         ;
-;          |booth_logic:aluMul|                   ; 5988 (5988)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul                                                                                                                                      ; work         ;
+; |datapath                                       ; 37029 (1)         ; 908 (0)      ; 0           ; 0            ; 0       ; 0         ; 17337 ; 0            ; |datapath                                                                                                                                                                                           ; work         ;
+;    |ALU_path:alu_datapath|                      ; 8285 (339)        ; 96 (0)       ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath                                                                                                                                                                     ; work         ;
+;       |alu:the_alu|                             ; 7909 (102)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu                                                                                                                                                         ; work         ;
+;          |booth_logic:aluMul|                   ; 5987 (5987)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul                                                                                                                                      ; work         ;
 ;          |lpm_add_sua:aluAddSub|                ; 65 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub                                                                                                                                   ; work         ;
 ;             |lpm_add_sub:LPM_ADD_SUB_component| ; 65 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component                                                                                                 ; work         ;
 ;                |add_sub_ich:auto_generated|     ; 65 (65)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_add_sua:aluAddSub|lpm_add_sub:LPM_ADD_SUB_component|add_sub_ich:auto_generated                                                                      ; work         ;
-;          |lpm_divida:aluDiv|                    ; 1391 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv                                                                                                                                       ; work         ;
-;             |lpm_divide:LPM_DIVIDE_component|   ; 1391 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component                                                                                                       ; work         ;
-;                |lpm_divide_hjp:auto_generated|  ; 1391 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated                                                                         ; work         ;
-;                   |sign_div_unsign_39h:divider| ; 1391 (249)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated|sign_div_unsign_39h:divider                                             ; work         ;
-;                      |alt_u_div_t8f:divider|    ; 1142 (1141)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated|sign_div_unsign_39h:divider|alt_u_div_t8f:divider                       ; work         ;
+;          |lpm_divida:aluDiv|                    ; 1393 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv                                                                                                                                       ; work         ;
+;             |lpm_divide:LPM_DIVIDE_component|   ; 1393 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component                                                                                                       ; work         ;
+;                |lpm_divide_hjp:auto_generated|  ; 1393 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated                                                                         ; work         ;
+;                   |sign_div_unsign_39h:divider| ; 1393 (248)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated|sign_div_unsign_39h:divider                                             ; work         ;
+;                      |alt_u_div_t8f:divider|    ; 1145 (1144)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated|sign_div_unsign_39h:divider|alt_u_div_t8f:divider                       ; work         ;
 ;                         |add_sub_vnc:add_sub_1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|lpm_divida:aluDiv|lpm_divide:LPM_DIVIDE_component|lpm_divide_hjp:auto_generated|sign_div_unsign_39h:divider|alt_u_div_t8f:divider|add_sub_vnc:add_sub_1 ; work         ;
 ;          |negate32:aluNeg|                      ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|negate32:aluNeg                                                                                                                                         ; work         ;
 ;          |rol32:aluRol|                         ; 158 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|rol32:aluRol                                                                                                                                            ; work         ;
@@ -278,13 +278,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                |lpm_clshift_jhc:auto_generated| ; 157 (157)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|ror32:aluRor|lpm_clshift:LPM_CLSHIFT_component|lpm_clshift_jhc:auto_generated                                                                           ; work         ;
 ;          |shl32:aluShl|                         ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|alu:the_alu|shl32:aluShl                                                                                                                                            ; work         ;
 ;       |register32bit:register_Y|                ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|register32bit:register_Y                                                                                                                                            ; work         ;
-;       |register64bit:register_Z|                ; 38 (38)           ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|register64bit:register_Z                                                                                                                                            ; work         ;
+;       |register64bit:register_Z|                ; 37 (37)           ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|ALU_path:alu_datapath|register64bit:register_Z                                                                                                                                            ; work         ;
 ;    |MDR:MD_R|                                   ; 10945 (10944)     ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|MDR:MD_R                                                                                                                                                                                  ; work         ;
 ;       |register32bit:The_MDR|                   ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|MDR:MD_R|register32bit:The_MDR                                                                                                                                                            ; work         ;
 ;    |R0:Register0|                               ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|R0:Register0                                                                                                                                                                              ; work         ;
 ;    |RAM_512x32:Ram|                             ; 16920 (16920)     ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|RAM_512x32:Ram                                                                                                                                                                            ; work         ;
 ;    |conff_logic:conff|                          ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|conff_logic:conff                                                                                                                                                                         ; work         ;
-;    |control_unit:Control|                       ; 164 (164)         ; 73 (73)      ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|control_unit:Control                                                                                                                                                                      ; work         ;
+;    |control_unit:Control|                       ; 168 (168)         ; 75 (75)      ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|control_unit:Control                                                                                                                                                                      ; work         ;
 ;    |register32bit:HI|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|register32bit:HI                                                                                                                                                                          ; work         ;
 ;    |register32bit:IR|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|register32bit:IR                                                                                                                                                                          ; work         ;
 ;    |register32bit:LO|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|register32bit:LO                                                                                                                                                                          ; work         ;
@@ -306,12 +306,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |register32bit:R8|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|register32bit:R8                                                                                                                                                                          ; work         ;
 ;    |register32bit:R9|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|register32bit:R9                                                                                                                                                                          ; work         ;
 ;    |register32bit:outport_register|             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|register32bit:outport_register                                                                                                                                                            ; work         ;
-;    |sel_and_encode:select_and_encode|           ; 55 (55)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|sel_and_encode:select_and_encode                                                                                                                                                          ; work         ;
-;    |the_bus:datapathBus|                        ; 585 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|the_bus:datapathBus                                                                                                                                                                       ; work         ;
-;       |encoder32to5:Bus_encoder|                ; 61 (61)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|the_bus:datapathBus|encoder32to5:Bus_encoder                                                                                                                                              ; work         ;
-;       |lpm_mua:Bus_Mux|                         ; 524 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux                                                                                                                                                       ; work         ;
-;          |lpm_mux:LPM_MUX_component|            ; 524 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux|lpm_mux:LPM_MUX_component                                                                                                                             ; work         ;
-;             |mux_k9e:auto_generated|            ; 524 (524)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux|lpm_mux:LPM_MUX_component|mux_k9e:auto_generated                                                                                                      ; work         ;
+;    |sel_and_encode:select_and_encode|           ; 57 (57)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|sel_and_encode:select_and_encode                                                                                                                                                          ; work         ;
+;    |the_bus:datapathBus|                        ; 619 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|the_bus:datapathBus                                                                                                                                                                       ; work         ;
+;       |encoder32to5:Bus_encoder|                ; 63 (63)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|the_bus:datapathBus|encoder32to5:Bus_encoder                                                                                                                                              ; work         ;
+;       |lpm_mua:Bus_Mux|                         ; 556 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux                                                                                                                                                       ; work         ;
+;          |lpm_mux:LPM_MUX_component|            ; 556 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux|lpm_mux:LPM_MUX_component                                                                                                                             ; work         ;
+;             |mux_k9e:auto_generated|            ; 556 (556)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |datapath|the_bus:datapathBus|lpm_mua:Bus_Mux|lpm_mux:LPM_MUX_component|mux_k9e:auto_generated                                                                                                      ; work         ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -332,7 +332,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------+-------------------------------+------------------------+
 ; Latch Name                                             ; Latch Enable Signal           ; Free of Timing Hazards ;
 +--------------------------------------------------------+-------------------------------+------------------------+
-; control_unit:Control|run                               ; control_unit:Control|WideOr51 ; yes                    ;
+; control_unit:Control|run                               ; control_unit:Control|WideOr53 ; yes                    ;
 ; RAM_512x32:Ram|ram_block[511][0]                       ; RAM_512x32:Ram|Decoder0       ; yes                    ;
 ; RAM_512x32:Ram|ram_block[511][1]                       ; RAM_512x32:Ram|Decoder0       ; yes                    ;
 ; RAM_512x32:Ram|ram_block[511][2]                       ; RAM_512x32:Ram|Decoder0       ; yes                    ;
@@ -462,10 +462,10 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 906   ;
+; Total registers                              ; 908   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 4     ;
-; Number of registers using Asynchronous Clear ; 906   ;
+; Number of registers using Asynchronous Clear ; 908   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 832   ;
 ; Number of registers using Preset             ; 0     ;
@@ -477,10 +477,10 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; 66:1               ; 32 bits   ; 1408 LEs      ; 64 LEs               ; 1344 LEs               ; Yes        ; |datapath|ALU_path:alu_datapath|register64bit:register_Z|Q1[18]        ;
-; 515:1              ; 32 bits   ; 10976 LEs     ; 10944 LEs            ; 32 LEs                 ; Yes        ; |datapath|MDR:MD_R|register32bit:The_MDR|Q[14]                         ;
-; 72:1               ; 14 bits   ; 672 LEs       ; 140 LEs              ; 532 LEs                ; Yes        ; |datapath|ALU_path:alu_datapath|register64bit:register_Z|Q0[19]        ;
-; 72:1               ; 14 bits   ; 672 LEs       ; 140 LEs              ; 532 LEs                ; Yes        ; |datapath|ALU_path:alu_datapath|register64bit:register_Z|Q0[8]         ;
+; 66:1               ; 32 bits   ; 1408 LEs      ; 64 LEs               ; 1344 LEs               ; Yes        ; |datapath|ALU_path:alu_datapath|register64bit:register_Z|Q1[4]         ;
+; 515:1              ; 32 bits   ; 10976 LEs     ; 10944 LEs            ; 32 LEs                 ; Yes        ; |datapath|MDR:MD_R|register32bit:The_MDR|Q[4]                          ;
+; 72:1               ; 14 bits   ; 672 LEs       ; 140 LEs              ; 532 LEs                ; Yes        ; |datapath|ALU_path:alu_datapath|register64bit:register_Z|Q0[22]        ;
+; 72:1               ; 14 bits   ; 672 LEs       ; 140 LEs              ; 532 LEs                ; Yes        ; |datapath|ALU_path:alu_datapath|register64bit:register_Z|Q0[14]        ;
 ; 3:1                ; 33 bits   ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
 ; 3:1                ; 60 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
@@ -511,8 +511,8 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; 3:1                ; 35 bits   ; 70 LEs        ; 70 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
 ; 3:1                ; 34 bits   ; 68 LEs        ; 68 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
 ; 3:1                ; 33 bits   ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum     ;
-; 32:1               ; 29 bits   ; 609 LEs       ; 522 LEs              ; 87 LEs                 ; No         ; |datapath|control_unit:Control|Mux82                                   ;
-; 57:1               ; 29 bits   ; 1102 LEs      ; 1073 LEs             ; 29 LEs                 ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[50] ;
+; 32:1               ; 29 bits   ; 609 LEs       ; 522 LEs              ; 87 LEs                 ; No         ; |datapath|control_unit:Control|Mux71                                   ;
+; 57:1               ; 29 bits   ; 1102 LEs      ; 1073 LEs             ; 29 LEs                 ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[52] ;
 ; 63:1               ; 2 bits    ; 84 LEs        ; 82 LEs               ; 2 LEs                  ; No         ; |datapath|ALU_path:alu_datapath|alu:the_alu|booth_logic:aluMul|sum[32] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 
@@ -654,7 +654,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:02:18     ;
+; Top            ; 00:02:23     ;
 +----------------+--------------+
 
 
@@ -664,7 +664,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Mar 20 20:40:57 2021
+    Info: Processing started: Sat Mar 20 21:40:43 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datapath -c datapath
 Warning (125092): Tcl Script File Ram512x32.qip not found
     Info (125063): set_global_assignment -name QIP_FILE Ram512x32.qip
@@ -17336,11 +17336,11 @@ Info (10041): Inferred latch for "ram_block[0][30]" at Ram_512x32.vhd(22)
 Info (10041): Inferred latch for "ram_block[0][31]" at Ram_512x32.vhd(22)
 Info (12128): Elaborating entity "sel_and_encode" for hierarchy "sel_and_encode:select_and_encode"
 Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:Control"
-Warning (10492): VHDL Process Statement warning at control_unit.vhd(583): signal "con_ff" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at control_unit.vhd(315): inferring latch(es) for signal or variable "clear", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at control_unit.vhd(315): inferring latch(es) for signal or variable "run", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "run" at control_unit.vhd(315)
-Info (10041): Inferred latch for "clear" at control_unit.vhd(315)
+Warning (10492): VHDL Process Statement warning at control_unit.vhd(596): signal "con_ff" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at control_unit.vhd(320): inferring latch(es) for signal or variable "clear", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit.vhd(320): inferring latch(es) for signal or variable "run", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "run" at control_unit.vhd(320)
+Info (10041): Inferred latch for "clear" at control_unit.vhd(320)
 Info (10018): Can't recognize finite state machine "present_state" because it has a complex reset state
 Info (12128): Elaborating entity "the_bus" for hierarchy "the_bus:datapathBus"
 Info (12128): Elaborating entity "encoder32to5" for hierarchy "the_bus:datapathBus|encoder32to5:Bus_encoder"
@@ -17533,14 +17533,14 @@ Warning (21074): Design contains 32 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "in_port[29]"
     Warning (15610): No output dependent on input pin "in_port[30]"
     Warning (15610): No output dependent on input pin "in_port[31]"
-Info (21057): Implemented 55062 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 55102 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 35 input pins
-    Info (21059): Implemented 17300 output pins
-    Info (21061): Implemented 37727 logic cells
+    Info (21059): Implemented 17302 output pins
+    Info (21061): Implemented 37765 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 195 warnings
     Info: Peak virtual memory: 4878 megabytes
-    Info: Processing ended: Sat Mar 20 20:43:36 2021
-    Info: Elapsed time: 00:02:39
-    Info: Total CPU time (on all processors): 00:02:37
+    Info: Processing ended: Sat Mar 20 21:43:28 2021
+    Info: Elapsed time: 00:02:45
+    Info: Total CPU time (on all processors): 00:02:43
 
 
