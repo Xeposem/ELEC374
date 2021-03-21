@@ -73,7 +73,7 @@ status <= present_state;
 process (clk, reset, stop)
 begin
 	if (reset = '1') then
-		present_state <= reset_state1;
+		present_state <= reset_state0;
 	elsif (stop = '1') then 
 		present_state <= halt;
 	elsif (clk'event and clk = '1') then 
@@ -314,9 +314,6 @@ end process;
 				
 process(present_state) 
 begin
-
-	case present_state is 
-		when reset_state0 => -- initialize everything 
 			Gra<= '0';
 			Grb<= '0';
 			Grc<= '0';
@@ -346,10 +343,12 @@ begin
 			In_in <= '0';
 			Out_in <= '0';
 			CONin <= '0';
-			clear <= '0';
+	case present_state is 
+		when reset_state0 => -- initialize everything 
+			clear <= '0'; -- set registers to 0 
 			run <= '0';
-		when reset_state1 => -- when reset ='1'
-			clear <= '1'; -- set all the register to zero 
+		when reset_state1 => 
+			clear <= '1'; 
 			run <= '1'; 
 		when fetch0 =>
 			Zin <='1';
@@ -643,6 +642,8 @@ begin
 			Grb <= '1';
 			Yin <= '1';
 		when ldi4 =>
+			Grb <= '0';
+			BAout <= '0';
 			Cout <= '1';
 			OP_code <= "00011";
 			Zin <= '1';

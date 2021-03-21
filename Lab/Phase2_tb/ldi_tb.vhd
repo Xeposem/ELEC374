@@ -140,7 +140,7 @@ begin
 			encoderIn_tb <= (4 => '1', others => '0'); --PCout signal to the bus encoder
 			RegEnable_tb <= (5 => '1', 7 => '1', others => '0'); -- MAR enable and Z enable 
 			IncPC_tb <= '1'; -- a signal the alu for increment pc 
-			
+		
 		when T1 =>
 			encoderIn_tb <= (3 => '1', others => '0'); --Zlow --(the incremented pc address)
 			RegEnable_tb <= (2 => '1', 4 => '1', others => '0'); --PC enable, MDR enable 
