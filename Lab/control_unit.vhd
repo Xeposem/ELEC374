@@ -32,8 +32,7 @@ signal present_state: state;
 signal PCout, MDRout, Zhighout, Zlowout, HIout, LOout, Inportout: std_logic;
 signal HIin, LOin, CONin, PCin, IRin, Yin, Zin, MARin, MDRin, Cout, Out_in, In_in: std_logic; -- outport, inport enable
 
-begin
-	
+begin	
 encoder_in(0) <= HIout;
 encoder_in(1) <= LOout;
 encoder_in(2) <= Zhighout;
@@ -393,6 +392,7 @@ begin
 			Rout <= '1';
 			Grc <= '1';
 			OP_code <= "00100";
+			Zin <= '1';
 		when sub5 =>
 			Zlowout <= '1';
 			Rin <= '1';

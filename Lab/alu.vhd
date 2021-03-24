@@ -1,7 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
---use ieee.numeric_std.all;
 use work.components_all.all;
 
 entity alu is port(
@@ -36,7 +35,8 @@ aluShl: shl32 port map (A, B, shlout);
 aluShr: shr32 port map (A, B, shrout);
 aluNeg: negate32 port map(B, negout);
 
-process(A,B,ALU_sel,Mulout,Divout,addorsub,addsuboverflow,addsubout,negout, shlout, shrout, rorout, rolout) is
+process(A,B,ALU_sel,Mulout,Divout,addorsub,addsuboverflow,addsubout,
+negout, shlout, shrout, rorout, rolout) is
 
 begin
 addorsub <= '0';

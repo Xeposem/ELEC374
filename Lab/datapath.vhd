@@ -92,8 +92,8 @@ begin
 default_zeros <= (others =>'0');
 
 Register0: R0 port map (internalBusMuxOut, register_enable(0),clr, clk, baout, BusMuxIn_R0);
-R1	: register32bit port map (internalBusMuxOut, register_enable(1),clr, clk, BusMuxIn_R1); -- input, enable, clr, clk, out
-R2 : register32bit port map (internalBusMuxOut, register_enable(2),clr, clk, BusMuxIn_R2); -- register_enable is internal 
+R1	: register32bit port map (internalBusMuxOut, register_enable(1),clr, clk, BusMuxIn_R1); 
+R2 : register32bit port map (internalBusMuxOut, register_enable(2),clr, clk, BusMuxIn_R2); 
 R3 : register32bit port map (internalBusMuxOut, register_enable(3),clr, clk, BusMuxIn_R3);
 R4 : register32bit port map (internalBusMuxOut, register_enable(4),clr, clk, BusMuxIn_R4);
 R5 : register32bit port map (internalBusMuxOut, register_enable(5),clr, clk, BusMuxIn_R5);
@@ -107,7 +107,7 @@ R12: register32bit port map (internalBusMuxOut, register_enable(12),clr, clk,Bus
 R13: register32bit port map (internalBusMuxOut, register_enable(13),clr, clk,BusMuxIn_R13);
 R14: register32bit port map (internalBusMuxOut, register_enable(14),clr, clk,BusMuxIn_R14);
 R15: register32bit port map (internalBusMuxOut, register_enable(15),clr, clk,BusMuxIn_R15);
-HI : register32bit port map (internalBusMuxOut, register_enable(16),clr, clk,BusMuxIn_HI);--0 -- reg_enable is external 
+HI : register32bit port map (internalBusMuxOut, register_enable(16),clr, clk,BusMuxIn_HI);--0 
 LO : register32bit port map (internalBusMuxOut, register_enable(17),clr, clk, BusMuxIn_LO);  --1
 PC : register32bit port map (internalBusMuxOut, register_enable(18),clr, clk,BusMuxIn_PC);--2
 IR	: register32bit port map (internalBusMuxOut, register_enable(19),clr, clk, IIRout);--3
@@ -120,12 +120,13 @@ inport_register: register32bit port map (in_port, register_enable(24),clr,clk, B
 outport_register: register32bit port map (internalBusMuxOut,register_enable(25), clr, clk, out_port);--9
 conff:conff_logic port map (clk, clr, IIRout(20 downto 19), internalBusMuxOut, register_enable(26), conff_out);--10 
 
-Ram: RAM_512x32 port map (BusMuxIn_MDR, MARout(8 downto 0), MDR_write, MDR_read, Mdatain, Content); -- the Mdatain is the ram output
+Ram: RAM_512x32 port map (BusMuxIn_MDR, MARout(8 downto 0), MDR_write, MDR_read, Mdatain, Content);
 
 select_and_encode: sel_and_encode port map (IIRout, Gra, Grb, Grc, Rin, Rout, baout, 
 C_sign_extended, register_enable(15 downto 0), encoderin(15 downto 0));
 
-Control: control_unit port map (clk, reset, stop, IIRout, conff_out, Rin, Rout, Gra, Grb, Grc, baout, encoderin(31 downto 16), 
+Control: control_unit port map (clk, reset, stop, IIRout, conff_out, Rin, Rout, 
+Gra, Grb, Grc, baout, encoderin(31 downto 16), 
 register_enable(31 downto 16), MDR_read, MDR_write, PC_plus, run,clr, ALU_sel,state_out);
 
 
@@ -133,7 +134,7 @@ datapathBus : the_bus port map (BusMuxIn_R0,BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R
 BusMuxIn_R4, BusMuxIn_R5, BusMuxIn_R6, BusMuxIn_R7, BusMuxIn_R8, BusMuxIn_R9, BusMuxIn_R10, 
 BusMuxIn_R11,BusMuxIn_R12, BusMuxIn_R13, BusMuxIn_R14, BusMuxIn_R15, BusMuxIn_HI, BusMuxIn_LO, 
 BusMuxIn_Zhigh,BusMuxIn_Zlow, BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_Inport,C_sign_extended, 
-default_zeros, --dummyInput, -- 8
+default_zeros, 
 default_zeros, default_zeros, default_zeros, default_zeros, 
 default_zeros, default_zeros, default_zeros, encoderin, internalBusMuxOut);
 

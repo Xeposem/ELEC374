@@ -58,9 +58,6 @@ process(clk, clr)
 	output(29) <= q(29) and (not BAout);
 	output(30) <= q(30) and (not BAout);
 	output(31) <= q(31) and (not BAout);
-	
-
-
 end architecture logic;
 
 	

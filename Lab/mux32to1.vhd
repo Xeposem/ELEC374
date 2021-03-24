@@ -49,7 +49,6 @@ begin
 	BusMuxin26,BusMuxin27,BusMuxin28,BusMuxin29,BusMuxin30,BusMuxin31) is 
 	
 	begin 
-	
 	BusMuxOut <= BusMuxinR0 when (Sin = "00000") 
 					else BusMuxinR1 when (Sin = "00001") 
 					else BusMuxinR2 when (Sin = "00010") 
@@ -60,12 +59,12 @@ begin
 					else BusMuxinR7 when (Sin = "00111") 
 					else BusMuxinR8 when (Sin = "01000")
 					else BusMuxinR9 when (Sin = "01001") 
-					else BusMuxinR10  when  (Sin = "01010") 
-					else BusMuxinR11	when  (Sin = "01011") 
-					else BusMuxinR12	when	(Sin = "01100") 
-					else BusMuxinR13	when	(Sin = "01101") 
-					else BusMuxinR14	when 	(Sin = "01110") 
-					else BusMuxinR15	when	(Sin = "01111") 
+					else BusMuxinR10 when(Sin = "01010") 
+					else BusMuxinR11 when(Sin = "01011") 
+					else BusMuxinR12 when(Sin = "01100") 
+					else BusMuxinR13 when(Sin = "01101") 
+					else BusMuxinR14 when(Sin = "01110") 
+					else BusMuxinR15 when(Sin = "01111") 
 					else BusMuxinHI when (Sin = "10000") 
 					else BusMuxinLO when (Sin = "10001") 
 					else BusMuxinZhighwhen(Sin = "10010") 
