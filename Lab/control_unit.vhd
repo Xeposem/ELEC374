@@ -544,7 +544,7 @@ begin
 			Yin <= '1';
 		when andi4 =>
 			Cout <= '1';
-			OP_code <= "01100";
+			OP_code <= "01001";
 			Zin <= '1';
 		when andi5 =>
 			Zlowout <= '1';
@@ -557,7 +557,7 @@ begin
 			Yin <= '1';
 		when ori4 =>
 			Cout <= '1';
-			OP_code <= "01101";
+			OP_code <= "01010";
 			Zin <= '1';
 		when ori5 =>
 			Zlowout <= '1';
@@ -571,7 +571,7 @@ begin
 			Yin <= '1';
 		when addi4 =>
 			Cout <= '1';
-			OP_code <= "01011";
+			OP_code <= "00011";
 			Zin <= '1';
 		when addi5 =>
 			Zlowout <= '1';

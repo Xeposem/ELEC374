@@ -1446,4 +1446,4 @@
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 0 ps  Iteration: 3  Instance: /control_tb/datapathTest/alu_datapath/the_alu/aluRol/LPM_CLSHIFT_component
 # Break key hit 
-# Simulation stop requested.
+# Break in Process line__2859 at D:/Quartus/modelsim_ase/win32aloem/../altera/vhdl/src/220model/220model.vhd line 2818
